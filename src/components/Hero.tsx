@@ -94,7 +94,7 @@ const Hero = () => {
               </AnimatePresence>
 
               <h1 className="text-4xl md:text-5xl font-medium leading-tight tracking-tight">
-                Scalysis stops dumb shipping.<br /><span className="text-blue-500">Kills RTO before it happens.</span>
+                Scalysis stops <span className="text-blue-500">dumb shipping.</span>
               </h1>
               
               <p className="text-lg font-normal text-black mt-4 mx-auto leading-relaxed">
