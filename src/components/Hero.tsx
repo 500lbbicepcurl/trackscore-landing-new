@@ -94,11 +94,11 @@ const Hero = () => {
               </AnimatePresence>
 
               <h1 className="text-4xl md:text-5xl font-medium leading-tight tracking-tight">
-                Scale D2C 10x Faster.<br /><span className="text-blue-500">Without RTO.</span>
+                Scalysis stops dumb shipping.<br /><span className="text-blue-500">Kills RTO before it happens.</span>
               </h1>
               
               <p className="text-lg font-normal text-black mt-4 mx-auto leading-relaxed">
-                <span className="font-semibold">30%</span> of COD shoppers have low intent — our AI filters them out.
+                <span className="font-semibold">1 in 3 COD</span> orders were never meant to convert. AI filters them.
               </p>
               
               <p className="text-base font-light text-gray-600 mt-3 mx-auto flex items-center justify-center gap-2">
