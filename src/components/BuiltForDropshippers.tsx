@@ -16,7 +16,7 @@ const BuiltForDropshippers = () => {
         duration: 0.6
       }} className="text-center mb-12">
           <h2 className="text-5xl font-bold leading-tight mb-4 md:text-5xl">
-            Offer COD Without <span className="text-blue-500">Second Thought.</span> 
+            Offer COD Without <span className="text-blue-500">Fear.</span> 
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Unlimited Fun. Zero RTO risk. No ROAS drop.
