@@ -99,7 +99,7 @@ const Hero = () => {
               </h1>
               
               <p className="text-lg font-normal text-black mt-4 mx-auto leading-relaxed">
-                <span className="font-semibold"></span>Ship clean cash on delivery orders.
+                <span className="font-semibold"></span>Experience mess free COD feels like.
               </p>
               
               <p className="text-base font-light text-gray-600 mt-3 mx-auto flex items-center justify-center gap-2">
