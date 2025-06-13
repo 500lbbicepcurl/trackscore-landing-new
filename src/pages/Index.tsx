@@ -48,13 +48,14 @@ const Index = () => {
       <Navbar />
       <main className="flex-grow">
         <Hero />
+         <BuiltForDropshippers />
         <GeminiEffectSection />
         <CoreValuePoints />
         <FeatureEcosystem />
         <MarketComparisonSlider />
         <CodMarketStats />
        
-        <BuiltForDropshippers />
+    
         <WhatsInsideScalysis />
         
         <motion.div
