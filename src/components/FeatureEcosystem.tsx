@@ -3,84 +3,69 @@ import { cn } from "@/lib/utils";
 import { Zap, Shield, Target, TrendingUp, Brain, Activity, ArrowUp, ArrowDown } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
-
 const FeatureEcosystem = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [hoveredFeature, setHoveredFeature] = useState<number | null>(null);
-  
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-    
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setIsVisible(true);
+      }
+    }, {
+      threshold: 0.1
+    });
     const currentElement = document.getElementById("feature-ecosystem-section");
-    
     if (currentElement) {
       observer.observe(currentElement);
     }
-    
     return () => {
       if (currentElement) {
         observer.unobserve(currentElement);
       }
     };
   }, []);
-
-  const features = [
-    {
-      icon: <Brain className="h-5 w-5" />,
-      title: "Scalysis AI — Spot Customer Intent",
-      description: "No manual blocking, general fraud rules, pincode blocking.",
-      highlight: "15% RTO drop from day 1 — scales to 45% in 60 days.",
-      emoji: "⚡️"
-    },
-    {
-      icon: <Shield className="h-5 w-5" />,
-      title: "Smart Order Selection — 20% RTO Cut",
-      description: "AI filters fake, low-intent, and high-risk COD orders.",
-      highlight: "No more wasted packaging, shipping, or reverse logistics.",
-      emoji: "🚫"
-    },
-    {
-      icon: <Target className="h-5 w-5" />,
-      title: "Meta Targeting Block — Cut 8% Ad Waste",
-      description: "Auto-detects high RTO pin codes and bad ad audiences.",
-      highlight: "Block them at ad level — before bad traffic enters funnel.",
-      emoji: "📉"
-    },
-    {
-      icon: <TrendingUp className="h-5 w-5" />,
-      title: "Trends — Spot Scaling Regions",
-      description: "Real-time insights on failed orders — SKUs, cities, campaigns.",
-      highlight: "Act fast before the damage spreads.",
-      emoji: "📊"
-    },
-    {
-      icon: <Brain className="h-5 w-5" />,
-      title: "ScalysisGPT — Replace Analyst",
-      description: "Ask: \"Which SKU causes most RTO in Tier 2?\"",
-      highlight: "Your AI business analyst, trained on your store.",
-      emoji: "🧠"
-    },
-    {
-      icon: <Activity className="h-5 w-5" />,
-      title: "Health Dashboard — AI Model Status",
-      description: "Track model accuracy, rejection rate, delivery impact.",
-      highlight: "Know exactly how much better your shipping is getting.",
-      emoji: "🎯"
-    }
-  ];
-
+  const features = [{
+    icon: <Brain className="h-5 w-5" />,
+    title: "Scalysis AI — Spot Customer Intent",
+    description: "No manual blocking, general fraud rules, pincode blocking.",
+    highlight: "15% RTO drop from day 1 — scales to 45% in 60 days.",
+    emoji: "⚡️"
+  }, {
+    icon: <Shield className="h-5 w-5" />,
+    title: "Smart Order Selection — 20% RTO Cut",
+    description: "AI filters fake, low-intent, and high-risk COD orders.",
+    highlight: "No more wasted packaging, shipping, or reverse logistics.",
+    emoji: "🚫"
+  }, {
+    icon: <Target className="h-5 w-5" />,
+    title: "Meta Targeting Block — Cut 8% Ad Waste",
+    description: "Auto-detects high RTO pin codes and bad ad audiences.",
+    highlight: "Block them at ad level — before bad traffic enters funnel.",
+    emoji: "📉"
+  }, {
+    icon: <TrendingUp className="h-5 w-5" />,
+    title: "Trends — Spot Scaling Regions",
+    description: "Real-time insights on failed orders — SKUs, cities, campaigns.",
+    highlight: "Act fast before the damage spreads.",
+    emoji: "📊"
+  }, {
+    icon: <Brain className="h-5 w-5" />,
+    title: "ScalysisGPT — Replace Analyst",
+    description: "Ask: \"Which SKU causes most RTO in Tier 2?\"",
+    highlight: "Your AI business analyst, trained on your store.",
+    emoji: "🧠"
+  }, {
+    icon: <Activity className="h-5 w-5" />,
+    title: "Health Dashboard — AI Model Status",
+    description: "Track model accuracy, rejection rate, delivery impact.",
+    highlight: "Know exactly how much better your shipping is getting.",
+    emoji: "🎯"
+  }];
   const renderDashboard = (index: number) => {
     switch (index) {
-      case 0: // Scalysis AI
-        return (
-          <div className="bg-white rounded-lg p-6 shadow-lg">
+      case 0:
+        // Scalysis AI
+        return <div className="bg-white rounded-lg p-6 shadow-lg">
             <h4 className="text-lg font-semibold mb-4">AI Intent Detection Dashboard</h4>
             <div className="space-y-4">
               <div className="flex justify-between items-center p-3 bg-green-50 rounded">
@@ -101,17 +86,17 @@ const FeatureEcosystem = () => {
               <div className="mt-4 p-3 bg-gray-50 rounded">
                 <div className="text-xs text-gray-600 mb-2">Learning Progress</div>
                 <div className="w-full bg-gray-200 rounded-full h-2">
-                  <div className="bg-blue-600 h-2 rounded-full" style={{ width: '78%' }}></div>
+                  <div className="bg-blue-600 h-2 rounded-full" style={{
+                  width: '78%'
+                }}></div>
                 </div>
                 <div className="text-xs text-gray-600 mt-1">78% Model Training Complete</div>
               </div>
             </div>
-          </div>
-        );
-
-      case 1: // Smart Order Selection
-        return (
-          <div className="bg-white rounded-lg p-6 shadow-lg">
+          </div>;
+      case 1:
+        // Smart Order Selection
+        return <div className="bg-white rounded-lg p-6 shadow-lg">
             <h4 className="text-lg font-semibold mb-4">Order Filtering Dashboard</h4>
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
@@ -146,12 +131,10 @@ const FeatureEcosystem = () => {
                 <div className="text-lg font-bold text-blue-600">₹28,400</div>
               </div>
             </div>
-          </div>
-        );
-
-      case 2: // Meta Targeting Block
-        return (
-          <div className="bg-white rounded-lg p-6 shadow-lg">
+          </div>;
+      case 2:
+        // Meta Targeting Block
+        return <div className="bg-white rounded-lg p-6 shadow-lg">
             <h4 className="text-lg font-semibold mb-4">Meta Ads Optimization</h4>
             <Tabs defaultValue="blocked" className="w-full">
               <TabsList className="grid w-full grid-cols-2">
@@ -179,12 +162,10 @@ const FeatureEcosystem = () => {
                 </div>
               </TabsContent>
             </Tabs>
-          </div>
-        );
-
-      case 3: // Trends
-        return (
-          <div className="bg-white rounded-lg p-6 shadow-lg">
+          </div>;
+      case 3:
+        // Trends
+        return <div className="bg-white rounded-lg p-6 shadow-lg">
             <h4 className="text-lg font-semibold mb-4">Trends Analytics</h4>
             <div className="space-y-4">
               <div className="p-3 bg-green-50 rounded">
@@ -213,12 +194,10 @@ const FeatureEcosystem = () => {
                 </div>
               </div>
             </div>
-          </div>
-        );
-
-      case 4: // ScalysisGPT
-        return (
-          <div className="bg-white rounded-lg p-6 shadow-lg">
+          </div>;
+      case 4:
+        // ScalysisGPT
+        return <div className="bg-white rounded-lg p-6 shadow-lg">
             <h4 className="text-lg font-semibold mb-4">ScalysisGPT Chat</h4>
             <div className="space-y-3">
               <div className="p-3 bg-blue-50 rounded-lg">
@@ -244,12 +223,10 @@ const FeatureEcosystem = () => {
                 </div>
               </div>
             </div>
-          </div>
-        );
-
-      case 5: // Health Dashboard
-        return (
-          <div className="bg-white rounded-lg p-6 shadow-lg">
+          </div>;
+      case 5:
+        // Health Dashboard
+        return <div className="bg-white rounded-lg p-6 shadow-lg">
             <h4 className="text-lg font-semibold mb-4">AI Model Health</h4>
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
@@ -287,105 +264,11 @@ const FeatureEcosystem = () => {
                 </div>
               </div>
             </div>
-          </div>
-        );
-
+          </div>;
       default:
         return null;
     }
   };
-
-  return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div 
-          id="feature-ecosystem-section"
-          className={cn(
-            "max-w-7xl mx-auto transition-all duration-500",
-            isVisible ? "animate-fadeIn" : "opacity-0"
-          )}
-        >
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-light mb-3 text-black">
-              <span className="font-semibold">Full Data-Driven Ecosystem</span>
-            </h2>
-            <p className="text-xl md:text-2xl font-light text-gray-600">
-              Cut RTO, Scale COD Without Friction.
-            </p>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
-            {/* Features List with Scroll */}
-            <div className="lg:h-[600px]">
-              <ScrollArea className="h-full pr-4">
-                <div className="space-y-6">
-                  {features.map((feature, index) => (
-                    <div 
-                      key={index} 
-                      className={cn(
-                        "transition-all duration-300 border-b border-gray-100 pb-4 last:border-b-0 cursor-pointer",
-                        "hover:bg-gray-50 p-3 rounded-lg",
-                        hoveredFeature === index ? "bg-blue-50 border-blue-200" : "",
-                        isVisible ? `animate-fadeIn animation-delay-${(index + 1) * 100}` : "opacity-0"
-                      )}
-                      onMouseEnter={() => setHoveredFeature(index)}
-                      onMouseLeave={() => setHoveredFeature(null)}
-                    >
-                      <div className="flex gap-4">
-                        {/* Icon and Number */}
-                        <div className="flex-shrink-0 flex items-start gap-3">
-                          <div className="bg-blue-50 rounded-lg p-2 text-blue-600">
-                            {feature.icon}
-                          </div>
-                          <div className="text-lg font-light text-gray-400">
-                            {String(index + 1).padStart(2, '0')}
-                          </div>
-                        </div>
-                        
-                        {/* Content */}
-                        <div className="flex-1 space-y-1">
-                          <h3 className="text-base font-medium text-black">
-                            {feature.title}
-                          </h3>
-                          <p className="text-sm font-light text-gray-700 leading-relaxed">
-                            {feature.description}
-                          </p>
-                          <div className="flex items-start gap-2">
-                            <span className="text-sm">{feature.emoji}</span>
-                            <p className="text-sm font-medium text-black">
-                              {feature.highlight}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </ScrollArea>
-            </div>
-
-            {/* Dashboard/Preview */}
-            <div className="lg:sticky lg:top-8">
-              <div className="bg-gray-50 rounded-xl p-8 min-h-[500px] flex items-center justify-center">
-                {hoveredFeature !== null ? (
-                  <div className="transition-all duration-300 w-full">
-                    {renderDashboard(hoveredFeature)}
-                  </div>
-                ) : (
-                  <div className="text-center text-gray-500">
-                    <Activity className="h-16 w-16 mx-auto mb-4 text-gray-300" />
-                    <p className="text-lg font-light">Hover over a feature to see it in action</p>
-                    <p className="text-sm mt-2">Interactive dashboard preview</p>
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+  return;
 };
-
 export default FeatureEcosystem;
