@@ -94,7 +94,7 @@ const Hero = () => {
               </AnimatePresence>
 
               <h1 className="text-4xl md:text-5xl font-medium leading-tight tracking-tight">
-                 Start <span className="text-blue-500">Profitable</span> Shipping. <br />
+                 Start Profitable Shipping. <br />
                  <span className="text-blue-500">Get Less RTOs.</span>
               </h1>
               
