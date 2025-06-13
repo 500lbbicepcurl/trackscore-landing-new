@@ -98,7 +98,7 @@ const Hero = () => {
               </h1>
               
               <p className="text-lg font-normal text-black mt-4 mx-auto leading-relaxed">
-                <span className="font-semibold">Scale Your D2C</span> PAN India, Without RTO headaches.
+                <span className="font-semibold"></span>Scale Your D2C PAN India, With Smart Order Selection. No RTOs.
               </p>
               
               <p className="text-base font-light text-gray-600 mt-3 mx-auto flex items-center justify-center gap-2">
