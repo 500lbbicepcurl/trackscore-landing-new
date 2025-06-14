@@ -25,7 +25,7 @@ const Hero = () => {
     setIsLoaded(true);
   }, []);
   
-  const messages = ["Instantly 20% Less Returns, from day one. • Save On Shipping", "Product Specific Training (PST) • Train Smarter", "Worst 10% Pincodes, accounts for 90% RTOs • Spot Them", "Smart Meta Targeting, Save 30% On Marketing • Every Rupee counts"];
+  const messages = ["Instantly 20% Less Returns, from day one • Save On Shipping", "Product Specific Training (PST) • Train Smarter", "Worst 10% Pincodes, accounts for 90% RTOs • Spot Them", "Smart Meta Targeting, Save 30% On Marketing • Every Rupee counts"];
   const [index, setIndex] = useState(0);
   
   useEffect(() => {
@@ -93,16 +93,16 @@ const Hero = () => {
                 </motion.p>
               </AnimatePresence>
 
-              <h1 className="text-4xl md:text-5xl font-medium leading-tight tracking-tight">
-                 Start Profitable Shipping. <br />
-                 <span className="text-blue-500">Get Less RTOs.</span>
+              <h1 className="text-4xl md:text-6xl font-black leading-tight tracking-tight text-black">
+                Scale D2C 10x Faster. <br />
+                <span className="text-blue-500 font-black">Without RTO.</span>
               </h1>
               
-              <p className="text-lg font-normal text-black mt-4 mx-auto leading-relaxed">
-                <span className="font-semibold"></span>Experience mess free COD feels like.
+              <p className="text-xl font-normal text-black mt-4 mx-auto leading-relaxed">
+                30% of COD shoppers have low intent — our AI filters them out.
               </p>
               
-              <p className="text-base font-light text-gray-600 mt-3 mx-auto flex items-center justify-center gap-2">
+              <p className="text-base font-normal text-black mt-3 mx-auto flex items-center justify-center gap-2">
                 <span className="text-lg">👨‍💼</span>
                 Built by a ₹6Cr D2C founder — out of RTO pain.
               </p>
