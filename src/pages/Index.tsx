@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -26,6 +25,7 @@ import YouDecideWhatShips from "@/components/YouDecideWhatShips";
 import GlassBoxSection from "@/components/GlassBoxSection";
 import CoreValuePoints from "@/components/CoreValuePoints";
 import FeatureEcosystem from "@/components/FeatureEcosystem";
+import OrderFilteringSection from "@/components/OrderFilteringSection";
 
 const Index = () => {
   useEffect(() => {
@@ -48,14 +48,13 @@ const Index = () => {
       <Navbar />
       <main className="flex-grow">
         <Hero />
-         <BuiltForDropshippers />
+        <BuiltForDropshippers />
+        <OrderFilteringSection />
         <GeminiEffectSection />
         <CoreValuePoints />
         <FeatureEcosystem />
         <MarketComparisonSlider />
         <CodMarketStats />
-       
-    
         <WhatsInsideScalysis />
         
         <motion.div
