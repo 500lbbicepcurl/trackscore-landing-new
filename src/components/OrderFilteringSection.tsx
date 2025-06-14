@@ -1,21 +1,22 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Check, ArrowRight } from 'lucide-react';
-
 const OrderFilteringSection = () => {
-  return (
-    <section className="py-20 bg-white">
+  return <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Infographic */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          x: -20
+        }} whileInView={{
+          opacity: 1,
+          x: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.6
+        }} className="relative">
             {/* Infographic Container */}
             <div className="bg-gray-50 rounded-2xl p-8 shadow-soft">
               {/* Title */}
@@ -63,42 +64,43 @@ const OrderFilteringSection = () => {
           </motion.div>
 
           {/* Right Column - Text Content */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-6"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          x: 20
+        }} whileInView={{
+          opacity: 1,
+          x: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.6,
+          delay: 0.2
+        }} className="space-y-6">
             <div className="space-y-4">
               <h2 className="text-4xl font-bold leading-tight text-gray-900">
                 Smart Order <span className="text-blue-500">Filtering</span>
               </h2>
               
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Our AI analyzes your historical delivery data to identify patterns between high-converting and high-RTO orders, creating seller-specific and product-specific filters that protect your revenue.
-              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">Scalysis is built for the $350B 2030 D2C market. High-quality audience filtering to reduce RTO. Trained on your delivery data. Spots loss-making regions and next scaling zones. Used by new-age brands.</p>
               
               <div className="space-y-3 mt-6">
                 <div className="flex items-start gap-3">
                   <Check className="h-6 w-6 text-blue-500 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-700">Automatically filter out risky RTO orders</p>
+                  <p className="text-gray-700">Tap into profitable COD market</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="h-6 w-6 text-blue-500 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-700">Focus shipping on high-intent clean COD orders</p>
+                  <p className="text-gray-700">Avoid RTO audiences</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="h-6 w-6 text-blue-500 flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-700">Learns from your specific business patterns</p>
+                  <p className="text-gray-700">Scale without inventory blockage</p>
                 </div>
               </div>
             </div>
           </motion.div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default OrderFilteringSection;
