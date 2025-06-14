@@ -16,7 +16,7 @@ const BuiltForDropshippers = () => {
         duration: 0.6
       }} className="text-center mb-12">
           <h2 className="text-5xl font-bold leading-tight mb-4 md:text-5xl">
-            Imagine COD Scale <span className="text-blue-500">Without RTO.</span> 
+            Imagine COD <span className="text-blue-500">without RTO.</span> 
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Enjoy High Roas Without The RTO Bullsh*t.
