@@ -86,7 +86,7 @@ const Hero = () => {
               </AnimatePresence>
 
               <h1 className="text-4xl md:text-6xl font-black leading-tight tracking-tight text-black">
-                Scale D2C 10x Faster. <br />
+               2.8× More Accurate Tagging<br />
                 <span className="text-blue-500 font-black">Than Go-Kwik</span>
               </h1>
               
