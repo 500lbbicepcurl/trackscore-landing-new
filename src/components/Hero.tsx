@@ -1,3 +1,4 @@
+
 import { useEffect, useState, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
@@ -87,7 +88,7 @@ const Hero = () => {
 
               <h1 className="text-4xl md:text-6xl font-black leading-tight tracking-tight text-black">
               5X More Accurate <br />
-                <span className="text-blue-500 font-black">COD Risk Tagging.</span>
+                <span className="text-blue-500 font-black text-2xl md:text-3xl">COD Risk Tagging.</span>
               </h1>
               
               <p className="text-xl text-black mt-4 mx-auto leading-relaxed font-normal">Smart Quick-Decision Dashboard</p>
