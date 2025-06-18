@@ -48,7 +48,6 @@ const Index = () => {
       <Navbar />
       <main className="flex-grow">
         <Hero />
-              <OldVsNew />
         <BuiltForDropshippers />
         <OrderFilteringSection />
         <GeminiEffectSection />
@@ -75,7 +74,7 @@ const Index = () => {
           <HowSelectionWorks />
         </motion.div>
         <SavingStats />
-  
+        <OldVsNew />
         <motion.div
           initial="hidden"
           whileInView="visible"

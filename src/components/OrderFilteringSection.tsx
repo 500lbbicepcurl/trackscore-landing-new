@@ -1,40 +1,38 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
+
 const OrderFilteringSection = () => {
-  return <section className="bg-white py-[2px]">
+  return (
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Image */}
-          <motion.div initial={{
-          opacity: 0,
-          x: -20
-        }} whileInView={{
-          opacity: 1,
-          x: 0
-        }} viewport={{
-          once: true
-        }} transition={{
-          duration: 0.6
-        }} className="relative">
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }} 
+            whileInView={{ opacity: 1, x: 0 }} 
+            viewport={{ once: true }} 
+            transition={{ duration: 0.6 }} 
+            className="relative"
+          >
             <div className="bg-gray-50 rounded-2xl p-8 shadow-soft">
-              <img src="/lovable-uploads/b6eafa43-aefc-4692-a694-5f104f90a2b8.png" alt="Scalysis Unlocks Profitable COD TAM - Smart Order Filtering Infographic" className="w-full h-auto rounded-lg" />
+              <img 
+                src="/lovable-uploads/b6eafa43-aefc-4692-a694-5f104f90a2b8.png" 
+                alt="Scalysis Unlocks Profitable COD TAM - Smart Order Filtering Infographic"
+                className="w-full h-auto rounded-lg"
+              />
             </div>
           </motion.div>
 
           {/* Right Column - Text Content */}
-          <motion.div initial={{
-          opacity: 0,
-          x: 20
-        }} whileInView={{
-          opacity: 1,
-          x: 0
-        }} viewport={{
-          once: true
-        }} transition={{
-          duration: 0.6,
-          delay: 0.2
-        }} className="space-y-6">
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }} 
+            whileInView={{ opacity: 1, x: 0 }} 
+            viewport={{ once: true }} 
+            transition={{ duration: 0.6, delay: 0.2 }} 
+            className="space-y-6"
+          >
             <div className="space-y-4">
               <h2 className="text-4xl font-bold leading-tight text-gray-900">
                 Smart Order <span className="text-blue-500">Filtering</span>
@@ -62,6 +60,8 @@ const OrderFilteringSection = () => {
           </motion.div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default OrderFilteringSection;

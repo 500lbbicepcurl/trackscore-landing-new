@@ -34,9 +34,9 @@ const Hero = () => {
       behavior: "smooth"
     });
   };
-  return <motion.section ref={sectionRef} style={{
+  return <motion.section ref={sectionRef} className="relative pt-28 pb-20 overflow-hidden" style={{
     opacity
-  }} className="relative pt-28 pb-20 overflow-hidden py-[105px]">
+  }}>
       {/* Background Elements */}
       <motion.div className="absolute inset-0 -z-10 overflow-hidden">
         <motion.div className="absolute top-1/4 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl transform translate-x-1/2" style={{
@@ -47,7 +47,7 @@ const Hero = () => {
       }}></motion.div>
       </motion.div>
 
-      <div className="container mx-auto sm:px-6 lg:px-8 mt-8 px-0 my-0">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-8">
         <div className="flex flex-col items-center text-center">
           {/* Centered Text Content */}
           <motion.div className={`space-y-6 max-w-4xl mb-12 ${isLoaded ? 'animate-fadeIn' : 'opacity-0'}`} initial={{
