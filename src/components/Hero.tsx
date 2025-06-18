@@ -1,8 +1,10 @@
+
 import { useEffect, useState, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -18,22 +20,27 @@ const Hero = () => {
   const y1 = useTransform(scrollYProgress, [0, 1], [0, 100]);
   const y2 = useTransform(scrollYProgress, [0, 1], [0, -100]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  
   useEffect(() => {
     setIsLoaded(true);
   }, []);
+  
   const messages = ["Instantly 20% Less Returns, from day one • Save On Shipping", "Product Specific Training (PST) • Train Smarter", "Worst 10% Pincodes, accounts for 90% RTOs • Spot Them", "Smart Meta Targeting, Save 30% On Marketing • Every Rupee counts"];
   const [index, setIndex] = useState(0);
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex(prev => (prev + 1) % messages.length);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
+  
   const handleCTAClick = () => {
     document.getElementById("get-started")?.scrollIntoView({
       behavior: "smooth"
     });
   };
+  
   return <motion.section ref={sectionRef} className="relative pt-28 pb-20 overflow-hidden" style={{
     opacity
   }}>
@@ -112,7 +119,7 @@ const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Centered Full-width Video */}
+          {/* Centered Full-width Dashboard Image */}
           <motion.div className={`w-[90%] mx-auto ${isLoaded ? 'animate-slideUp animation-delay-200' : 'opacity-0'}`} initial={{
           opacity: 0,
           y: 40
@@ -125,13 +132,15 @@ const Hero = () => {
         }} style={{
           opacity: 1
         }}>
-            <video autoPlay loop muted className="w-full rounded-lg shadow-lg">
-              <source src="https://framerusercontent.com/assets/viTcCR1FxpC0CsC06mwO0B2Grks.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <img 
+              src="/lovable-uploads/b6858e3f-3dea-4698-831e-2064ef4ce46c.png" 
+              alt="Scalysis Dashboard - COD Risk Analysis and Order Management"
+              className="w-full rounded-lg shadow-lg"
+            />
           </motion.div>
         </div>
       </div>
     </motion.section>;
 };
+
 export default Hero;
