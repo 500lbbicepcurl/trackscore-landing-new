@@ -90,7 +90,7 @@ const Hero = () => {
                 <span className="text-blue-500 font-black">COD Risk Tagging.</span>
               </h1>
               
-              <p className="text-xl text-black mt-4 mx-auto leading-relaxed font-normal">Smart Quick-Decision Dashboard</p>
+              <p className="text-xl text-black mt-4 mx-auto leading-relaxed font-normal">Say goodbye to vague 'high medium low' risk tagging.</p>
               
               <p className="text-base font-normal text-black mt-3 mx-auto flex items-center justify-center gap-2">
                 <span className="text-lg">👨‍💼</span>
