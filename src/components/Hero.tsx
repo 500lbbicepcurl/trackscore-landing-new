@@ -86,7 +86,7 @@ const Hero = () => {
               </AnimatePresence>
 
               <h1 className="text-4xl md:text-6xl font-black leading-tight tracking-tight text-black">
-               2.8× More Accurate Tagging<br />
+              5X More Accurate <br />
                 <span className="text-blue-500 font-black">COD Risk Tagging.</span>
               </h1>
               
