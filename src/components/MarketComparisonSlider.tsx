@@ -238,7 +238,7 @@ const MarketComparisonSlider = () => {
     const totalMarkers = getTotalMarkers();
     return allMarkers.slice(0, Math.min(totalMarkers, allMarkers.length));
   };
-  return <section className="py-20 bg-white overflow-hidden">
+  return <section className="bg-white overflow-hidden py-[12px]">
       <div className="container mx-auto px-4">
         <motion.div initial={{
         opacity: 0,
