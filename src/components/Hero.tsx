@@ -87,7 +87,7 @@ const Hero = () => {
 
               <h1 className="text-4xl md:text-6xl font-black leading-tight tracking-tight text-black">
                2.8× More Accurate Tagging<br />
-                <span className="text-blue-500 font-black">Than Go-Kwik</span>
+                <span className="text-blue-500 font-black">COD Risk Tagging.</span>
               </h1>
               
               <p className="text-xl text-black mt-4 mx-auto leading-relaxed font-normal">Smart Quick-Decision Dashboard</p>
