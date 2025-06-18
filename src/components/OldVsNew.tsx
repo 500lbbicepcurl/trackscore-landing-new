@@ -24,7 +24,7 @@ const OldVsNew = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div id="old-vs-new-section" className={cn("max-w-6xl mx-auto transition-all duration-500", isVisible ? "animate-fadeIn" : "opacity-0")}>
           <h2 className="text-2xl md:text-3xl font-medium text-center mb-10 md:mb-16 lg:text-5xl">
-            Scalysis Vs <span className="font-semibold">Scalysis AI</span>
+            Go Kwik Vs <span className="font-semibold">Scalysis AI</span>
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8 md:gap-12">
