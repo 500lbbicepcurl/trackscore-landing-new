@@ -3,11 +3,9 @@ import { cn } from "@/lib/utils";
 import { Zap, Shield, Target, TrendingUp, Brain, Activity, ArrowUp, ArrowDown } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
-
 const FeatureEcosystem = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [hoveredFeature, setHoveredFeature] = useState<number | null>(null);
-
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
@@ -16,19 +14,16 @@ const FeatureEcosystem = () => {
     }, {
       threshold: 0.1
     });
-
     const currentElement = document.getElementById("feature-ecosystem-section");
     if (currentElement) {
       observer.observe(currentElement);
     }
-
     return () => {
       if (currentElement) {
         observer.unobserve(currentElement);
       }
     };
   }, []);
-
   const features = [{
     icon: <Brain className="h-5 w-5" />,
     title: "Scalysis AI — Spot Customer Intent",
@@ -66,7 +61,6 @@ const FeatureEcosystem = () => {
     highlight: "Know exactly how much better your shipping is getting.",
     emoji: "🎯"
   }];
-
   const renderDashboard = (index: number) => {
     switch (index) {
       case 0:
@@ -275,54 +269,6 @@ const FeatureEcosystem = () => {
         return null;
     }
   };
-
-  return (
-    <section id="feature-ecosystem-section" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
-            Full Data-Driven Ecosystem
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Cut RTO, Scale COD Without Friction
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="space-y-4">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className={cn(
-                  "p-6 rounded-lg border cursor-pointer transition-all duration-300",
-                  hoveredFeature === index
-                    ? "bg-blue-50 border-blue-200"
-                    : "bg-white border-gray-200 hover:border-gray-300"
-                )}
-                onMouseEnter={() => setHoveredFeature(index)}
-              >
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0">
-                    {feature.icon}
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-                    <p className="text-gray-600 text-sm mb-2">{feature.description}</p>
-                    <p className="text-blue-600 text-sm font-medium">{feature.highlight}</p>
-                  </div>
-                  <div className="text-2xl">{feature.emoji}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          <div className="lg:sticky lg:top-8">
-            {hoveredFeature !== null && renderDashboard(hoveredFeature)}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+  return;
 };
-
 export default FeatureEcosystem;
