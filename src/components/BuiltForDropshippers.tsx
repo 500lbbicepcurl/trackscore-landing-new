@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 const BuiltForDropshippers = () => {
-  return <section className="py-20 bg-white">
+  return <section className="bg-white py-[12px]">
       <div className="container mx-auto px-4">
         <motion.div initial={{
         opacity: 0,
@@ -14,7 +14,7 @@ const BuiltForDropshippers = () => {
         once: true
       }} transition={{
         duration: 0.6
-      }} className="text-center mb-12">
+      }} className="text-center mb-12 py-[15px]">
           <h2 className="text-5xl font-bold leading-tight mb-4 md:text-5xl">
             Imagine COD <span className="text-blue-500">Without RTO.</span> 
           </h2>

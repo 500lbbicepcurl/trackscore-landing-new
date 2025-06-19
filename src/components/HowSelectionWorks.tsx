@@ -71,7 +71,7 @@ const HowSelectionWorks = () => {
     title: "AI Retrains & Gets Better Overtime",
     description: "Save working capital on shipping costs as our AI continuously learns from new data, improving predictions and reducing waste."
   }];
-  return <section id="how-selection-works" className="py-20 bg-gradient-to-b from-white to-blue-50">
+  return <section id="how-selection-works" className="bg-gradient-to-b from-white to-blue-50 py-0">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className={cn("text-center max-w-3xl mx-auto mb-16 transition-opacity duration-700", isVisible ? "opacity-100" : "opacity-0")}>
           <p className="inline-block text-sm font-medium px-3 py-1 bg-blue-50 text-blue-600 rounded-full mb-4">

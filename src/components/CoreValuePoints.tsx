@@ -62,7 +62,7 @@ const CoreValuePoints = () => {
       icon: <Check className="h-4 w-4" />
     }]
   }];
-  return <section className="py-20 bg-gray-50">
+  return <section className="bg-gray-50 py-[45px]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div id="core-value-section" className={cn("max-w-7xl mx-auto transition-all duration-500", isVisible ? "animate-fadeIn" : "opacity-0")}>
           <div className="text-center mb-12">
