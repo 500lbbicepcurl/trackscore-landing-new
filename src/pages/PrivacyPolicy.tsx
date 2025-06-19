@@ -161,8 +161,8 @@ const PrivacyPolicy = () => {
                     If you have any questions about this Privacy Policy or how we handle your data, please contact us:
                   </p>
                   <div className="space-y-2 text-gray-700">
-                    <p><strong>Email:</strong> privacy@scalysis.com</p>
-                    <p><strong>Address:</strong> Tech Park, Electronic City, Bangalore, 560100, India</p>
+                    <p><strong>Email:</strong> scalysiswork@gmail.com</p>
+                      <p><strong>Address:</strong> Near pretty day apartments, sainik colony sector d extension jammu, j&k</p>
                     <p><strong>Phone:</strong> +91 9149874123</p>
                   </div>
                 </div>
