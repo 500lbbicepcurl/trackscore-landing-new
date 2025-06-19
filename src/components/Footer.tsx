@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { 
   Mail, 
@@ -117,6 +118,14 @@ const Footer = () => {
                   className="text-gray-600 hover:text-primary transition-colors"
                 >
                   Reduce RTO Blog
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/privacy-policy" 
+                  className="text-gray-600 hover:text-primary transition-colors"
+                >
+                  Privacy Policy
                 </Link>
               </li>
               {["Features", "How It Works", "Results", "About Us", "Contact"].map((link) => (

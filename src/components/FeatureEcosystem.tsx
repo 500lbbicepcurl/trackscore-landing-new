@@ -1,274 +1,77 @@
-import { useEffect, useState } from "react";
-import { cn } from "@/lib/utils";
-import { Zap, Shield, Target, TrendingUp, Brain, Activity, ArrowUp, ArrowDown } from "lucide-react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ScrollArea } from "@/components/ui/scroll-area";
+
+import React from "react";
+import { motion } from "framer-motion";
+import { Check, ArrowRight } from "lucide-react";
+
 const FeatureEcosystem = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [hoveredFeature, setHoveredFeature] = useState<number | null>(null);
-  useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setIsVisible(true);
-      }
-    }, {
-      threshold: 0.1
-    });
-    const currentElement = document.getElementById("feature-ecosystem-section");
-    if (currentElement) {
-      observer.observe(currentElement);
-    }
-    return () => {
-      if (currentElement) {
-        observer.unobserve(currentElement);
-      }
-    };
-  }, []);
-  const features = [{
-    icon: <Brain className="h-5 w-5" />,
-    title: "Scalysis AI — Spot Customer Intent",
-    description: "No manual blocking, general fraud rules, pincode blocking.",
-    highlight: "15% RTO drop from day 1 — scales to 45% in 60 days.",
-    emoji: "⚡️"
-  }, {
-    icon: <Shield className="h-5 w-5" />,
-    title: "Smart Order Selection — 20% RTO Cut",
-    description: "AI filters fake, low-intent, and high-risk COD orders.",
-    highlight: "No more wasted packaging, shipping, or reverse logistics.",
-    emoji: "🚫"
-  }, {
-    icon: <Target className="h-5 w-5" />,
-    title: "Meta Targeting Block — Cut 8% Ad Waste",
-    description: "Auto-detects high RTO pin codes and bad ad audiences.",
-    highlight: "Block them at ad level — before bad traffic enters funnel.",
-    emoji: "📉"
-  }, {
-    icon: <TrendingUp className="h-5 w-5" />,
-    title: "Trends — Spot Scaling Regions",
-    description: "Real-time insights on failed orders — SKUs, cities, campaigns.",
-    highlight: "Act fast before the damage spreads.",
-    emoji: "📊"
-  }, {
-    icon: <Brain className="h-5 w-5" />,
-    title: "ScalysisGPT — Replace Analyst",
-    description: "Ask: \"Which SKU causes most RTO in Tier 2?\"",
-    highlight: "Your AI business analyst, trained on your store.",
-    emoji: "🧠"
-  }, {
-    icon: <Activity className="h-5 w-5" />,
-    title: "Health Dashboard — AI Model Status",
-    description: "Track model accuracy, rejection rate, delivery impact.",
-    highlight: "Know exactly how much better your shipping is getting.",
-    emoji: "🎯"
-  }];
-  const renderDashboard = (index: number) => {
-    switch (index) {
-      case 0:
-        // Scalysis AI
-        return <div className="bg-white rounded-lg p-6 shadow-lg">
-            <h4 className="text-lg font-semibold mb-4">AI Intent Detection Dashboard</h4>
+  return (
+    <section className="bg-white py-16">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-4xl font-bold leading-tight mb-4">
+            Complete <span className="text-blue-500">Feature Ecosystem</span>
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Everything you need to optimize your COD operations and reduce RTO rates.
+          </p>
+        </motion.div>
+
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="space-y-6"
+          >
             <div className="space-y-4">
-              <div className="flex justify-between items-center p-3 bg-green-50 rounded">
-                <span className="text-sm font-medium">Customer Intent Score</span>
-                <span className="text-green-600 font-bold">89%</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-blue-50 rounded">
-                <span className="text-sm font-medium">RTO Reduction</span>
-                <span className="text-blue-600 font-bold flex items-center gap-1">
-                  <ArrowDown className="h-4 w-4" />
-                  15% → 45%
-                </span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-purple-50 rounded">
-                <span className="text-sm font-medium">Orders Processed Today</span>
-                <span className="text-purple-600 font-bold">2,847</span>
-              </div>
-              <div className="mt-4 p-3 bg-gray-50 rounded">
-                <div className="text-xs text-gray-600 mb-2">Learning Progress</div>
-                <div className="w-full bg-gray-200 rounded-full h-2">
-                  <div className="bg-blue-600 h-2 rounded-full" style={{
-                  width: '78%'
-                }}></div>
+              {[
+                "Smart Order Filtering & Risk Assessment",
+                "Real-time RTO Prediction Analytics",
+                "Automated Pincode Risk Mapping",
+                "Customer Behavior Pattern Analysis",
+                "Delivery Success Rate Optimization",
+                "Comprehensive Reporting Dashboard"
+              ].map((feature, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <Check className="h-6 w-6 text-blue-500 flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-700 text-lg">{feature}</p>
                 </div>
-                <div className="text-xs text-gray-600 mt-1">78% Model Training Complete</div>
-              </div>
+              ))}
             </div>
-          </div>;
-      case 1:
-        // Smart Order Selection
-        return <div className="bg-white rounded-lg p-6 shadow-lg">
-            <h4 className="text-lg font-semibold mb-4">Order Filtering Dashboard</h4>
-            <div className="space-y-4">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="p-3 bg-red-50 rounded text-center">
-                  <div className="text-2xl font-bold text-red-600">142</div>
-                  <div className="text-xs text-red-600">Orders Blocked</div>
-                </div>
-                <div className="p-3 bg-green-50 rounded text-center">
-                  <div className="text-2xl font-bold text-green-600">1,205</div>
-                  <div className="text-xs text-green-600">Orders Approved</div>
-                </div>
-              </div>
-              <div className="p-3 bg-orange-50 rounded">
-                <div className="text-sm font-medium mb-2">Risk Categories</div>
-                <div className="space-y-2">
-                  <div className="flex justify-between text-xs">
-                    <span>Fake Orders</span>
-                    <span className="text-red-600">67</span>
-                  </div>
-                  <div className="flex justify-between text-xs">
-                    <span>Low Intent</span>
-                    <span className="text-orange-600">45</span>
-                  </div>
-                  <div className="flex justify-between text-xs">
-                    <span>High Risk COD</span>
-                    <span className="text-yellow-600">30</span>
-                  </div>
-                </div>
-              </div>
-              <div className="p-3 bg-blue-50 rounded">
-                <div className="text-sm font-medium">Savings Today</div>
-                <div className="text-lg font-bold text-blue-600">₹28,400</div>
-              </div>
-            </div>
-          </div>;
-      case 2:
-        // Meta Targeting Block
-        return <div className="bg-white rounded-lg p-6 shadow-lg">
-            <h4 className="text-lg font-semibold mb-4">Meta Ads Optimization</h4>
-            <Tabs defaultValue="blocked" className="w-full">
-              <TabsList className="grid w-full grid-cols-2">
-                <TabsTrigger value="blocked">Blocked</TabsTrigger>
-                <TabsTrigger value="performance">Performance</TabsTrigger>
-              </TabsList>
-              <TabsContent value="blocked" className="space-y-3">
-                <div className="p-3 bg-red-50 rounded">
-                  <div className="text-sm font-medium">High RTO Pincodes</div>
-                  <div className="text-xs text-gray-600 mt-1">110001, 400001, 560001 +23 more</div>
-                </div>
-                <div className="p-3 bg-orange-50 rounded">
-                  <div className="text-sm font-medium">Bad Audiences</div>
-                  <div className="text-xs text-gray-600 mt-1">Lookalike 1%, Interest: Fast Fashion +5 more</div>
-                </div>
-              </TabsContent>
-              <TabsContent value="performance" className="space-y-3">
-                <div className="flex justify-between items-center p-3 bg-green-50 rounded">
-                  <span className="text-sm font-medium">Ad Waste Reduced</span>
-                  <span className="text-green-600 font-bold">8%</span>
-                </div>
-                <div className="flex justify-between items-center p-3 bg-blue-50 rounded">
-                  <span className="text-sm font-medium">RTO Improvement</span>
-                  <span className="text-blue-600 font-bold">-15%</span>
-                </div>
-              </TabsContent>
-            </Tabs>
-          </div>;
-      case 3:
-        // Trends
-        return <div className="bg-white rounded-lg p-6 shadow-lg">
-            <h4 className="text-lg font-semibold mb-4">Trends Analytics</h4>
-            <div className="space-y-4">
-              <div className="p-3 bg-green-50 rounded">
-                <div className="text-sm font-medium text-green-700">🔥 Scaling Regions</div>
-                <div className="text-xs text-green-600 mt-1">
-                  Mumbai: +23% conversion, Delhi: +18% conversion
-                </div>
-              </div>
-              <div className="p-3 bg-red-50 rounded">
-                <div className="text-sm font-medium text-red-700">⚠️ Loss-Making Zones</div>
-                <div className="text-xs text-red-600 mt-1">
-                  Kolkata: 45% RTO, Pune: 38% RTO
-                </div>
-              </div>
-              <div className="space-y-2">
-                <div className="text-sm font-medium">Top Issues</div>
-                <div className="space-y-1">
-                  <div className="flex justify-between text-xs p-2 bg-gray-50 rounded">
-                    <span>SKU: Blue T-Shirt</span>
-                    <span className="text-red-600">67% RTO</span>
-                  </div>
-                  <div className="flex justify-between text-xs p-2 bg-gray-50 rounded">
-                    <span>Campaign: Summer Sale</span>
-                    <span className="text-orange-600">45% RTO</span>
-                  </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative"
+          >
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8 shadow-xl">
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Integrated Solution
+                </h3>
+                <p className="text-gray-700 mb-6">
+                  All features work together seamlessly to provide maximum RTO reduction.
+                </p>
+                <div className="flex justify-center">
+                  <ArrowRight className="h-8 w-8 text-blue-500" />
                 </div>
               </div>
             </div>
-          </div>;
-      case 4:
-        // ScalysisGPT
-        return <div className="bg-white rounded-lg p-6 shadow-lg">
-            <h4 className="text-lg font-semibold mb-4">ScalysisGPT Chat</h4>
-            <div className="space-y-3">
-              <div className="p-3 bg-blue-50 rounded-lg">
-                <div className="text-sm font-medium">You:</div>
-                <div className="text-xs text-gray-700">Which SKU causes most RTO in Tier 2?</div>
-              </div>
-              <div className="p-3 bg-green-50 rounded-lg">
-                <div className="text-sm font-medium">ScalysisGPT:</div>
-                <div className="text-xs text-gray-700">
-                  Red Sneakers (SKU: RS001) has 52% RTO rate in Tier 2 cities. 
-                  Main issues: Size complaints (67%), Color mismatch (23%).
-                </div>
-              </div>
-              <div className="p-3 bg-blue-50 rounded-lg">
-                <div className="text-sm font-medium">You:</div>
-                <div className="text-xs text-gray-700">How did RTO shift post-offer?</div>
-              </div>
-              <div className="p-3 bg-green-50 rounded-lg">
-                <div className="text-sm font-medium">ScalysisGPT:</div>
-                <div className="text-xs text-gray-700">
-                  RTO decreased by 12% after "Buy 2 Get 1" offer launch. 
-                  Higher order value customers show 34% better delivery rates.
-                </div>
-              </div>
-            </div>
-          </div>;
-      case 5:
-        // Health Dashboard
-        return <div className="bg-white rounded-lg p-6 shadow-lg">
-            <h4 className="text-lg font-semibold mb-4">AI Model Health</h4>
-            <div className="space-y-4">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="p-3 bg-blue-50 rounded text-center">
-                  <div className="text-2xl font-bold text-blue-600">89.2%</div>
-                  <div className="text-xs text-blue-600">Model Accuracy</div>
-                </div>
-                <div className="p-3 bg-orange-50 rounded text-center">
-                  <div className="text-2xl font-bold text-orange-600">12.3%</div>
-                  <div className="text-xs text-orange-600">Rejection Rate</div>
-                </div>
-              </div>
-              <div className="p-3 bg-green-50 rounded">
-                <div className="text-sm font-medium mb-2">Delivery Impact</div>
-                <div className="flex justify-between text-xs">
-                  <span>This Week</span>
-                  <span className="text-green-600 font-bold">+18% Success</span>
-                </div>
-                <div className="flex justify-between text-xs">
-                  <span>This Month</span>
-                  <span className="text-green-600 font-bold">+27% Success</span>
-                </div>
-              </div>
-              <div className="p-3 bg-purple-50 rounded">
-                <div className="text-sm font-medium mb-2">Future Uplift Prediction</div>
-                <div className="text-xs text-purple-600">
-                  Expected 35% RTO reduction by next month based on current learning rate.
-                </div>
-              </div>
-              <div className="mt-4 p-3 bg-gray-50 rounded">
-                <div className="text-xs text-gray-600 mb-2">Model Status</div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span className="text-xs text-green-600">Healthy & Learning</span>
-                </div>
-              </div>
-            </div>
-          </div>;
-      default:
-        return null;
-    }
-  };
-  return;
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
 };
+
 export default FeatureEcosystem;
