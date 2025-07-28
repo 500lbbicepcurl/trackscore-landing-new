@@ -1,64 +1,80 @@
-
-import { useEffect, useState } from "react";
-import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Phone, TrendingDown, ArrowRight } from "lucide-react";
 
 const CTA = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  
-  useEffect(() => {
-    // Observer for fade-in animation
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-    
-    const currentElement = document.getElementById("typeform-container");
-    
-    if (currentElement) {
-      observer.observe(currentElement);
-    }
-    
-    // Load Typeform embed script
-    const script = document.createElement('script');
-    script.src = "//embed.typeform.com/next/embed.js";
-    script.async = true;
-    document.body.appendChild(script);
-    
-    return () => {
-      if (currentElement) {
-        observer.unobserve(currentElement);
-      }
-      // Clean up script if component unmounts
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
-      }
-    };
-  }, []);
-  
+  const handleGetStarted = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
-    <section id="get-started" className="py-20 relative overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to <span className="text-gradient">Optimize</span> Your Shipping?
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Get early access to Scalysis and start making data-driven shipping decisions today.
-          </p>
-        </div>
-        <div 
-          id="typeform-container"
-          className={cn(
-            "max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-medium transition-all duration-700",
-            isVisible ? "animate-fadeIn" : "opacity-0"
-          )}
+    <section id="get-started" className="py-20 gradient-primary relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+      </div>
+      
+      <div className="container mx-auto px-6 lg:px-8 relative">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center text-white"
         >
-          <div data-tf-live="01JVWDWG3HHEAD58J2SYJYFMAG" className="w-full aspect-video"></div>
-        </div>
+          <div className="flex justify-center mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 border border-white/30 rounded-full text-sm font-medium">
+              <TrendingDown className="w-4 h-4" />
+              Cut RTO by 40% with AI calling
+            </div>
+          </div>
+          
+          <h2 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
+            Stop losing money on 
+            <br />
+            <span className="text-white/90">failed COD deliveries</span>
+          </h2>
+          
+          <p className="text-xl text-white/80 mb-10 max-w-3xl mx-auto leading-relaxed">
+            Join 200+ D2C brands using Scalysis AI to call every COD customer, 
+            confirm orders, and reduce returns before they happen.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+            <Button
+              size="lg"
+              className="bg-white text-primary hover:bg-white/90 px-8 py-6 text-lg font-semibold shadow-large"
+              onClick={handleGetStarted}
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Book Your Demo Call
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-6 text-lg font-semibold"
+            >
+              See Live Demo
+            </Button>
+          </div>
+          
+          <div className="flex items-center justify-center gap-8 text-white/60 text-sm">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+              <span>Free 14-day trial</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+              <span>No setup fees</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+              <span>Cancel anytime</span>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,137 +1,191 @@
 import { useEffect, useState, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
-import { AnimatePresence } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Play, Phone, TrendingDown } from "lucide-react";
+
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
-  const navigate = useNavigate();
-  const {
-    scrollYProgress
-  } = useScroll({
+  
+  const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end start"]
   });
 
-  // Parallax effect values
   const y1 = useTransform(scrollYProgress, [0, 1], [0, 100]);
   const y2 = useTransform(scrollYProgress, [0, 1], [0, -100]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+
   useEffect(() => {
     setIsLoaded(true);
   }, []);
-  const messages = ["Instantly 20% Less Returns, from day one • Save On Shipping", "Product Specific Training (PST) • Train Smarter", "Worst 10% Pincodes, accounts for 90% RTOs • Spot Them", "Smart Meta Targeting, Save 30% On Marketing • Every Rupee counts"];
-  const [index, setIndex] = useState(0);
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex(prev => (prev + 1) % messages.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
+
   const handleCTAClick = () => {
     document.getElementById("get-started")?.scrollIntoView({
       behavior: "smooth"
     });
   };
-  return <motion.section ref={sectionRef} style={{
-    opacity
-  }} className="relative pt-28 pb-20 overflow-hidden py-[105px]">
+
+  // Waveform visualization component
+  const Waveform = () => (
+    <div className="flex items-center justify-center gap-1 h-16">
+      {Array.from({ length: 20 }).map((_, i) => (
+        <div
+          key={i}
+          className="w-1 bg-gradient-to-t from-primary to-accent rounded-full animate-waveform"
+          style={{
+            animationDelay: `${i * 0.1}s`,
+            height: `${Math.random() * 40 + 10}px`
+          }}
+        />
+      ))}
+    </div>
+  );
+
+  return (
+    <motion.section 
+      ref={sectionRef} 
+      style={{ opacity }} 
+      className="relative min-h-screen gradient-hero overflow-hidden"
+    >
       {/* Background Elements */}
       <motion.div className="absolute inset-0 -z-10 overflow-hidden">
-        <motion.div className="absolute top-1/4 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl transform translate-x-1/2" style={{
-        y: y1
-      }}></motion.div>
-        <motion.div className="absolute bottom-0 left-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2" style={{
-        y: y2
-      }}></motion.div>
+        <motion.div 
+          className="absolute top-1/4 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" 
+          style={{ y: y1 }}
+        />
+        <motion.div 
+          className="absolute bottom-0 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl" 
+          style={{ y: y2 }}
+        />
       </motion.div>
 
-      <div className="container mx-auto sm:px-6 lg:px-8 mt-8 px-0 my-0">
-        <div className="flex flex-col items-center text-center">
-          {/* Centered Text Content */}
-          <motion.div className={`space-y-6 max-w-4xl mb-12 ${isLoaded ? 'animate-fadeIn' : 'opacity-0'}`} initial={{
-          opacity: 0,
-          y: 20
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.6
-        }}>
-            
-            <motion.div className="space-y-6" initial={{
-            opacity: 0
-          }} animate={{
-            opacity: 1
-          }} transition={{
-            delay: 0.2,
-            duration: 0.6
-          }}>
-              <AnimatePresence mode="wait">
-                <motion.p key={index} initial={{
-                opacity: 0,
-                y: 8
-              }} animate={{
-                opacity: 1,
-                y: 0
-              }} exit={{
-                opacity: 0,
-                y: -8
-              }} transition={{
-                duration: 0.4
-              }} className="inline-block text-sm font-normal px-3 py-1 bg-blue-50 text-blue-600 rounded-full">
-                  {messages[index]}
-                </motion.p>
-              </AnimatePresence>
-
-              <h1 className="text-4xl md:text-6xl font-black leading-tight tracking-tight text-black">
-              5X More Accurate <br />
-                <span className="text-blue-500 font-black">COD Risk Tagging.</span>
-              </h1>
-              
-              <p className="text-xl text-black mt-4 mx-auto leading-relaxed font-normal">Say goodbye to vague 'high medium low' risk tagging.</p>
-              
-              <p className="text-base font-normal text-black mt-3 mx-auto flex items-center justify-center gap-2">
-                <span className="text-lg">👨‍💼</span>
-                Built by a ₹6Cr D2C founder — out of RTO pain.
-              </p>
-            </motion.div>
-
-            <motion.div className="flex justify-center mt-8" initial={{
-            opacity: 0
-          }} animate={{
-            opacity: 1
-          }} transition={{
-            delay: 0.4,
-            duration: 0.6
-          }}>
-              <ShimmerButton background="rgba(37, 99, 235, 1)" shimmerColor="rgba(255, 255, 255, 0.4)" className="w-40" onClick={handleCTAClick}>
-                <span className="text-sm font-medium">Try Scalysis Early</span>
-              </ShimmerButton>
-            </motion.div>
+      <div className="container mx-auto px-6 lg:px-8 pt-32 pb-20">
+        <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
+          
+          {/* Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm font-medium text-primary mb-8"
+          >
+            <TrendingDown className="w-4 h-4" />
+            Reduce RTO by 40% with AI-powered calling
           </motion.div>
 
-          {/* Centered Full-width Video */}
-          <motion.div className={`w-[90%] mx-auto ${isLoaded ? 'animate-slideUp animation-delay-200' : 'opacity-0'}`} initial={{
-          opacity: 0,
-          y: 40
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          delay: 0.6,
-          duration: 0.8
-        }} style={{
-          opacity: 1
-        }}>
-            <video autoPlay loop muted className="w-full rounded-lg shadow-lg">
-              <source src="https://framerusercontent.com/assets/viTcCR1FxpC0CsC06mwO0B2Grks.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+          {/* Main Headline */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-5xl md:text-7xl font-black leading-tight tracking-tight text-foreground mb-6"
+          >
+            Talk to every COD customer.{" "}
+            <span className="text-gradient">Filter fraud.</span>{" "}
+            Reduce RTO.{" "}
+            <span className="text-gradient">With AI.</span>
+          </motion.h1>
+
+          {/* Subheadline */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mb-8"
+          >
+            Scalysis calls your customers instantly, understands intent, confirms address, 
+            and learns who will RTO – before it's too late.
+          </motion.p>
+
+          {/* Founder badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex items-center gap-3 text-muted-foreground mb-10"
+          >
+            <div className="w-8 h-8 bg-gradient-primary rounded-full flex items-center justify-center text-white text-sm font-bold">
+              A
+            </div>
+            <span>Built by a ₹6Cr D2C founder — out of RTO pain.</span>
+          </motion.div>
+
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex flex-col sm:flex-row gap-4 mb-16"
+          >
+            <Button size="lg" className="gradient-primary text-white px-8 py-6 text-lg font-semibold shadow-large">
+              <Phone className="w-5 h-5 mr-2" />
+              Book a Demo
+            </Button>
+            <Button variant="outline" size="lg" className="px-8 py-6 text-lg font-semibold border-2">
+              Try Free
+            </Button>
+          </motion.div>
+
+          {/* Interactive Demo Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="w-full max-w-4xl"
+          >
+            <div className="bg-card border border-border rounded-2xl p-8 shadow-large">
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center gap-3">
+                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                </div>
+                <div className="text-sm text-muted-foreground">Live AI Call Demo</div>
+              </div>
+              
+              {/* Waveform visualization */}
+              <div className="bg-muted/50 rounded-xl p-6 mb-6">
+                <Waveform />
+              </div>
+              
+              {/* Call transcript preview */}
+              <div className="space-y-4 text-left">
+                <div className="flex gap-3">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                  <div>
+                    <p className="text-sm text-muted-foreground">AI Assistant</p>
+                    <p className="text-foreground">"Hello! This is regarding your recent order. Can you confirm your delivery address?"</p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <div className="w-2 h-2 bg-accent rounded-full mt-2"></div>
+                  <div>
+                    <p className="text-sm text-muted-foreground">Customer</p>
+                    <p className="text-foreground">"Yes, it's 123 MG Road, Bangalore. But I might not be available tomorrow."</p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                  <div>
+                    <p className="text-sm text-muted-foreground">AI Assistant</p>
+                    <p className="text-foreground">"No problem! When would be a better time for delivery?"</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-6 flex items-center justify-center">
+                <Button variant="ghost" className="text-primary">
+                  <Play className="w-4 h-4 mr-2" />
+                  Hear a real call
+                </Button>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
-    </motion.section>;
+    </motion.section>
+  );
 };
 export default Hero;

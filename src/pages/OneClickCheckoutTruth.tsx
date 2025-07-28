@@ -189,7 +189,7 @@ const OneClickCheckoutTruth = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
-                ONE FLOW > BROKEN FLOWS
+                ONE FLOW {">"} BROKEN FLOWS
               </h2>
               
               <div className="grid md:grid-cols-2 gap-8">
@@ -505,7 +505,7 @@ const OneClickCheckoutTruth = () => {
                   className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3"
                   onClick={() => window.location.href = "/#get-started"}
                 >
-                  Fix My Tracking Now →
+                  Fix My Tracking Now {"->"}
                 </Button>
                 <Button 
                   size="lg" 
@@ -513,7 +513,7 @@ const OneClickCheckoutTruth = () => {
                   className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3"
                   onClick={() => window.location.href = "/#get-started"}
                 >
-                  Run Pixel Health Check →
+                  Run Pixel Health Check {"->"}
                 </Button>
               </div>
             </div>
