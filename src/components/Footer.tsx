@@ -61,12 +61,7 @@ const Footer = () => {
   };
   
   return (
-    <footer id="contact" className="bg-gradient-primary pt-16 pb-8 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-white/10 rounded-full blur-3xl"></div>
-      </div>
+    <footer id="contact" className="bg-gray-50 pt-16 pb-8">
       <div 
         id="footer-section"
         className={cn(
@@ -85,20 +80,20 @@ const Footer = () => {
                 onClick={() => navigate("/")}
               />
             </div>
-            <p className="text-white/80 font-light">
-              <span className="font-semibold text-white">Smart order selection</span> for COD orders. Reducing RTO rates for e-commerce businesses across India.
+            <p className="text-gray-700 font-light">
+              <span className="font-semibold">Smart order selection</span> for COD orders. Reducing RTO rates for e-commerce businesses across India.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-white/60 hover:text-white transition-colors">
+              <a href="#" className="text-gray-600 hover:text-primary transition-colors">
                 <Facebook size={18} />
               </a>
-              <a href="#" className="text-white/60 hover:text-white transition-colors">
+              <a href="#" className="text-gray-600 hover:text-primary transition-colors">
                 <Twitter size={18} />
               </a>
-              <a href="#" className="text-white/60 hover:text-white transition-colors">
+              <a href="#" className="text-gray-600 hover:text-primary transition-colors">
                 <Instagram size={18} />
               </a>
-              <a href="#" className="text-white/60 hover:text-white transition-colors">
+              <a href="#" className="text-gray-600 hover:text-primary transition-colors">
                 <Linkedin size={18} />
               </a>
             </div>
@@ -106,12 +101,12 @@ const Footer = () => {
           
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="text-lg font-medium text-white">Quick Links</h3>
+            <h3 className="text-lg font-medium">Quick Links</h3>
             <ul className="space-y-2 font-light">
               <li>
                 <a 
                   href="/"
-                  className="text-white/80 hover:text-white transition-colors"
+                  className="text-gray-600 hover:text-primary transition-colors"
                 >
                   Home
                 </a>
@@ -119,7 +114,7 @@ const Footer = () => {
               <li>
                 <Link 
                   to="/reduce-rto" 
-                  className="text-white/80 hover:text-white transition-colors"
+                  className="text-gray-600 hover:text-primary transition-colors"
                 >
                   Reduce RTO Blog
                 </Link>
@@ -127,7 +122,7 @@ const Footer = () => {
               <li>
                 <Link 
                   to="/privacy-policy" 
-                  className="text-white/80 hover:text-white transition-colors"
+                  className="text-gray-600 hover:text-primary transition-colors"
                 >
                   Privacy Policy
                 </Link>
@@ -135,7 +130,7 @@ const Footer = () => {
               <li>
                 <Link 
                   to="/privacy-data-protection" 
-                  className="text-white/80 hover:text-white transition-colors"
+                  className="text-gray-600 hover:text-primary transition-colors"
                 >
                   Privacy & Data Protection
                 </Link>
@@ -144,7 +139,7 @@ const Footer = () => {
                 <li key={link}>
                   <a 
                     href={`#${link.toLowerCase().replace(/\s+/g, '-')}`} 
-                    className="text-white/80 hover:text-white transition-colors"
+                    className="text-gray-600 hover:text-primary transition-colors"
                   >
                     {link}
                   </a>
@@ -155,24 +150,24 @@ const Footer = () => {
           
           {/* Contact Info */}
           <div className="space-y-4">
-            <h3 className="text-lg font-medium text-white">Contact Us</h3>
+            <h3 className="text-lg font-medium">Contact Us</h3>
             <ul className="space-y-3 font-light">
               <li className="flex items-start">
-                <MapPin size={18} className="text-white mr-2 mt-0.5" />
-                <span className="text-white/80">
+                <MapPin size={18} className="text-primary mr-2 mt-0.5" />
+                <span className="text-gray-600">
                   Tech Park, Electronic City<br />
                   Bangalore, 560100, India
                 </span>
               </li>
               <li className="flex items-center">
-                <Phone size={18} className="text-white mr-2" />
-                <a href="tel:+919876543210" className="text-white/80 hover:text-white transition-colors">
+                <Phone size={18} className="text-primary mr-2" />
+                <a href="tel:+919876543210" className="text-gray-600 hover:text-primary transition-colors">
                   +91 9149874123
                 </a>
               </li>
               <li className="flex items-center">
-                <Mail size={18} className="text-white mr-2" />
-                <a href="mailto:info@scalysis.com" className="text-white/80 hover:text-white transition-colors">
+                <Mail size={18} className="text-primary mr-2" />
+                <a href="mailto:info@scalysis.com" className="text-gray-600 hover:text-primary transition-colors">
                   aditya.kotwal@scalysis.com
                 </a>
               </li>
@@ -181,28 +176,28 @@ const Footer = () => {
           
           {/* Newsletter */}
           <div className="space-y-4">
-            <h3 className="text-lg font-medium text-white">Subscribe to Our Newsletter</h3>
-            <p className="text-white/80 font-light">
-              Get the latest updates on <span className="font-semibold text-white">RTO reduction strategies</span> and e-commerce optimization.
+            <h3 className="text-lg font-medium">Subscribe to Our Newsletter</h3>
+            <p className="text-gray-700 font-light">
+              Get the latest updates on <span className="font-semibold">RTO reduction strategies</span> and e-commerce optimization.
             </p>
             <form onSubmit={handleSubmit} className="flex space-x-2">
               <Input 
                 type="email" 
                 placeholder="Your email address" 
-                className="bg-white/20 border-white/30 text-white placeholder:text-white/60 backdrop-blur-sm"
+                className="bg-white"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
-              <Button type="submit" size="icon" className="bg-white/20 hover:bg-white/30 border-white/30 backdrop-blur-sm">
-                <Send size={16} className="text-white" />
+              <Button type="submit" size="icon">
+                <Send size={16} />
               </Button>
             </form>
           </div>
         </div>
         
-        <div className="border-t border-white/20 pt-8 mt-8 text-center">
-          <p className="text-white/60 text-sm font-light">
+        <div className="border-t border-gray-200 pt-8 mt-8 text-center">
+          <p className="text-gray-600 text-sm font-light">
             &copy; {new Date().getFullYear()} Scalysis. All rights reserved.
           </p>
         </div>
