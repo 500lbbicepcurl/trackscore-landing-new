@@ -48,7 +48,7 @@ const Navbar = () => {
     <header className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
       isScrolled 
-        ? "py-1 sm:py-2 glass-morphism shadow-soft" 
+        ? "py-1 sm:py-2 backdrop-blur-xl bg-white/20 border-b border-white/20 shadow-elegant" 
         : "py-2 sm:py-4 bg-transparent"
     )}>
       <div className="container mx-auto sm:px-6 lg:px-10 px-0">
@@ -64,36 +64,36 @@ const Navbar = () => {
                   e.currentTarget.style.display = "none";
                 }} 
               />
-              <span className="text-xl font-semibold text-gray-800"></span>
+              <span className="text-xl font-semibold text-white"></span>
             </a>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors">
+            <a href="#features" className="text-sm font-medium text-white/80 hover:text-white transition-colors">
               Features
             </a>
-            <a href="#how-it-works" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors">
+            <a href="#how-it-works" className="text-sm font-medium text-white/80 hover:text-white transition-colors">
               How It Works
             </a>
-            <a href="#stats" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors">
+            <a href="#stats" className="text-sm font-medium text-white/80 hover:text-white transition-colors">
               Results
             </a>
             <Link 
               to="/one-click-checkout-truth" 
-              className="text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+              className="text-sm font-medium text-white/80 hover:text-white transition-colors"
             >
               One-Click Truth
             </Link>
-            <Button asChild variant="ghost">
+            <Button asChild variant="ghost" className="text-white/80 hover:text-white hover:bg-white/10">
               <a href="#contact" className="text-sm font-medium">
                 Contact
               </a>
             </Button>
             <ShimmerButton 
-              background="rgba(37, 99, 235, 1)" 
-              shimmerColor="rgba(255, 255, 255, 0.4)" 
-              className="w-auto px-5 text-white" 
+              background="rgba(255, 255, 255, 0.2)" 
+              shimmerColor="rgba(255, 255, 255, 0.6)" 
+              className="w-auto px-5 text-white border border-white/30 backdrop-blur-sm" 
               onClick={handleCTAClick}
             >
               <span className="text-sm font-medium">Try Scalysis Early</span>
@@ -103,56 +103,56 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button 
             onClick={toggleMobileMenu} 
-            className="md:hidden text-gray-700 hover:text-primary" 
+            className="md:hidden text-white/80 hover:text-white" 
             aria-label="Toggle Menu"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
-        {/* Mobile Navigation - With Frosted Glass Effect */}
+        {/* Mobile Navigation - With Modern Glass Effect */}
         {isMobileMenuOpen && (
           <div className="md:hidden pt-4 pb-2 animate-fadeIn">
-            <nav className="flex flex-col space-y-4 backdrop-blur-md bg-white/70 rounded-lg p-4 border border-gray-200/50 shadow-md">
+            <nav className="flex flex-col space-y-4 backdrop-blur-xl bg-white/10 rounded-2xl p-4 border border-white/20 shadow-glow">
               <a 
                 href="#features" 
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors px-2 py-1.5 rounded-md hover:bg-gray-100/50" 
+                className="text-sm font-medium text-white/80 hover:text-white transition-colors px-2 py-1.5 rounded-md hover:bg-white/10" 
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Features
               </a>
               <a 
                 href="#how-it-works" 
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors px-2 py-1.5 rounded-md hover:bg-gray-100/50" 
+                className="text-sm font-medium text-white/80 hover:text-white transition-colors px-2 py-1.5 rounded-md hover:bg-white/10" 
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 How It Works
               </a>
               <a 
                 href="#stats" 
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors px-2 py-1.5 rounded-md hover:bg-gray-100/50" 
+                className="text-sm font-medium text-white/80 hover:text-white transition-colors px-2 py-1.5 rounded-md hover:bg-white/10" 
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Results
               </a>
               <Link 
                 to="/one-click-checkout-truth" 
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors px-2 py-1.5 rounded-md hover:bg-gray-100/50" 
+                className="text-sm font-medium text-white/80 hover:text-white transition-colors px-2 py-1.5 rounded-md hover:bg-white/10" 
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 One-Click Truth
               </Link>
               <a 
                 href="#contact" 
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors px-2 py-1.5 rounded-md hover:bg-gray-100/50" 
+                className="text-sm font-medium text-white/80 hover:text-white transition-colors px-2 py-1.5 rounded-md hover:bg-white/10" 
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact
               </a>
               <ShimmerButton 
-                background="rgba(37, 99, 235, 1)" 
-                shimmerColor="rgba(255, 255, 255, 0.4)" 
-                className="w-full text-white" 
+                background="rgba(255, 255, 255, 0.2)" 
+                shimmerColor="rgba(255, 255, 255, 0.6)" 
+                className="w-full text-white border border-white/30" 
                 onClick={() => {
                   handleCTAClick();
                   setIsMobileMenuOpen(false);

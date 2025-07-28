@@ -36,15 +36,16 @@ const Hero = () => {
   };
   return <motion.section ref={sectionRef} style={{
     opacity
-  }} className="relative pt-28 pb-20 overflow-hidden py-[105px]">
+  }} className="relative pt-28 pb-20 overflow-hidden py-[105px] bg-gradient-hero">
       {/* Background Elements */}
       <motion.div className="absolute inset-0 -z-10 overflow-hidden">
-        <motion.div className="absolute top-1/4 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl transform translate-x-1/2" style={{
+        <motion.div className="absolute top-1/4 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl transform translate-x-1/2" style={{
         y: y1
       }}></motion.div>
-        <motion.div className="absolute bottom-0 left-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2" style={{
+        <motion.div className="absolute bottom-0 left-1/4 w-[600px] h-[600px] bg-white/5 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2" style={{
         y: y2
       }}></motion.div>
+        <motion.div className="absolute top-1/2 left-1/2 w-[800px] h-[800px] bg-gradient-radial from-white/5 to-transparent rounded-full blur-2xl transform -translate-x-1/2 -translate-y-1/2"></motion.div>
       </motion.div>
 
       <div className="container mx-auto sm:px-6 lg:px-8 mt-8 px-0 my-0">
@@ -78,21 +79,21 @@ const Hero = () => {
               }} exit={{
                 opacity: 0,
                 y: -8
-              }} transition={{
+               }} transition={{
                 duration: 0.4
-              }} className="inline-block text-sm font-normal px-3 py-1 bg-blue-50 text-blue-600 rounded-full">
+              }} className="inline-block text-sm font-normal px-4 py-2 bg-white/20 text-white rounded-full border border-white/30 backdrop-blur-sm">
                   {messages[index]}
                 </motion.p>
               </AnimatePresence>
 
-              <h1 className="text-4xl md:text-6xl font-black leading-tight tracking-tight text-black">
+              <h1 className="text-4xl md:text-6xl font-black leading-tight tracking-tight text-white">
               5X More Accurate <br />
-                <span className="text-blue-500 font-black">COD Risk Tagging.</span>
+                <span className="text-gradient font-black">COD Risk Tagging.</span>
               </h1>
               
-              <p className="text-xl text-black mt-4 mx-auto leading-relaxed font-normal">Say goodbye to vague 'high medium low' risk tagging.</p>
+              <p className="text-xl text-white/90 mt-4 mx-auto leading-relaxed font-normal">Say goodbye to vague 'high medium low' risk tagging.</p>
               
-              <p className="text-base font-normal text-black mt-3 mx-auto flex items-center justify-center gap-2">
+              <p className="text-base font-normal text-white/80 mt-3 mx-auto flex items-center justify-center gap-2">
                 <span className="text-lg">👨‍💼</span>
                 Built by a ₹6Cr D2C founder — out of RTO pain.
               </p>
@@ -106,8 +107,8 @@ const Hero = () => {
             delay: 0.4,
             duration: 0.6
           }}>
-              <ShimmerButton background="rgba(37, 99, 235, 1)" shimmerColor="rgba(255, 255, 255, 0.4)" className="w-40" onClick={handleCTAClick}>
-                <span className="text-sm font-medium">Try Scalysis Early</span>
+              <ShimmerButton background="rgba(255, 255, 255, 0.2)" shimmerColor="rgba(255, 255, 255, 0.6)" className="w-40 border border-white/30 backdrop-blur-sm" onClick={handleCTAClick}>
+                <span className="text-sm font-medium text-white">Try Scalysis Early</span>
               </ShimmerButton>
             </motion.div>
           </motion.div>
@@ -125,7 +126,7 @@ const Hero = () => {
         }} style={{
           opacity: 1
         }}>
-            <video autoPlay loop muted className="w-full rounded-lg shadow-lg">
+            <video autoPlay loop muted className="w-full rounded-2xl shadow-glow border border-white/20">
               <source src="https://framerusercontent.com/assets/viTcCR1FxpC0CsC06mwO0B2Grks.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>

@@ -189,7 +189,7 @@ const OneClickCheckoutTruth = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
-                ONE FLOW > BROKEN FLOWS
+                ONE FLOW &gt; BROKEN FLOWS
               </h2>
               
               <div className="grid md:grid-cols-2 gap-8">
@@ -201,11 +201,11 @@ const OneClickCheckoutTruth = () => {
                   <div className="space-y-3 text-sm">
                     <div className="flex items-center">
                       <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
-                      <span>Ad click → yourbrand.com</span>
+                      <span>Ad click &rarr; yourbrand.com</span>
                     </div>
                     <div className="flex items-center">
                       <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
-                      <span>Product viewed → Add to Cart → Initiate Checkout</span>
+                      <span>Product viewed &rarr; Add to Cart &rarr; Initiate Checkout</span>
                     </div>
                     <div className="flex items-center">
                       <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
@@ -235,11 +235,11 @@ const OneClickCheckoutTruth = () => {
                   <div className="space-y-3 text-sm">
                     <div className="flex items-center">
                       <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
-                      <span>Ad click → yourbrand.com</span>
+                      <span>Ad click &rarr; yourbrand.com</span>
                     </div>
                     <div className="flex items-center">
                       <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
-                      <span>Customer clicks Buy Now → redirected to checkout.gokwik.co</span>
+                      <span>Customer clicks Buy Now &rarr; redirected to checkout.gokwik.co</span>
                     </div>
                     <div className="flex items-center">
                       <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
@@ -505,7 +505,7 @@ const OneClickCheckoutTruth = () => {
                   className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3"
                   onClick={() => window.location.href = "/#get-started"}
                 >
-                  Fix My Tracking Now →
+                  Fix My Tracking Now &rarr;
                 </Button>
                 <Button 
                   size="lg" 
@@ -513,7 +513,7 @@ const OneClickCheckoutTruth = () => {
                   className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3"
                   onClick={() => window.location.href = "/#get-started"}
                 >
-                  Run Pixel Health Check →
+                  Run Pixel Health Check &rarr;
                 </Button>
               </div>
             </div>

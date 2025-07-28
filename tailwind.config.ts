@@ -143,12 +143,19 @@ export default {
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-				'hero-pattern': 'linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8))'
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-secondary': 'var(--gradient-secondary)',
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-card': 'var(--gradient-card)',
+				'hero-pattern': 'linear-gradient(135deg, hsla(234, 89%, 74%, 0.1), hsla(270, 91%, 65%, 0.1))'
 			},
 			boxShadow: {
 				soft: '0 2px 10px rgba(0, 0, 0, 0.05)',
 				medium: '0 4px 20px rgba(0, 0, 0, 0.08)',
 				strong: '0 8px 30px rgba(0, 0, 0, 0.12)',
+				elegant: 'var(--shadow-elegant)',
+				glow: 'var(--shadow-glow)',
+				'card-hover': '0 20px 60px -10px hsla(234, 89%, 74%, 0.25)',
 				highlight: '0 0 15px rgba(66, 153, 225, 0.5)'
 			},
 			transitionDuration: {
