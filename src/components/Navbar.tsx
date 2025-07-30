@@ -35,14 +35,14 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glass-morphism shadow-medium" : "bg-transparent"
+        isScrolled ? "bg-background/95 backdrop-blur border-b border-border shadow-newspaper" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-lg gradient-primary flex items-center justify-center">
-              <Phone className="w-5 h-5 text-white" />
+            <div className="w-8 h-8 rounded-md bg-primary flex items-center justify-center">
+              <Phone className="w-5 h-5 text-primary-foreground" />
             </div>
             <span className="text-2xl font-bold text-foreground">Scalysis</span>
           </Link>
@@ -64,7 +64,7 @@ const Navbar = () => {
               </Link>
             </div>
             <Button
-              className="gradient-primary text-white px-6 py-2"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-2 shadow-newspaper"
               onClick={handleGetStarted}
             >
               Get Started
@@ -88,7 +88,7 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden bg-card border border-border rounded-lg mt-4 p-4 shadow-medium"
+            className="md:hidden newspaper-card mt-4 p-4"
           >
             <div className="flex flex-col space-y-4">
               <Link
@@ -107,7 +107,7 @@ const Navbar = () => {
               </Link>
               <Button
                 onClick={handleGetStarted}
-                className="gradient-primary text-white text-left justify-start"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground text-left justify-start"
               >
                 Get Started
               </Button>

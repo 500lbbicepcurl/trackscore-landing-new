@@ -85,7 +85,7 @@ const CountUp = ({
 
 const SavingStats = () => {
   return (
-    <section className="py-4 bg-blue-600 text-white">
+    <section className="py-4 bg-primary text-primary-foreground border-y border-border">
       <div className="container mx-auto px-4">
         <motion.div 
           className="flex flex-col md:flex-row md:items-center md:justify-between"
@@ -128,9 +128,9 @@ const SavingStats = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            <p className="px-3 py-1 bg-blue-500 rounded-full inline-block text-sm font-medium">
+            <div className="px-3 py-1 bg-primary-foreground/20 border border-primary-foreground/30 rounded-md inline-block text-sm font-medium">
               — powered by Scalysis
-            </p>
+            </div>
           </motion.div>
         </motion.div>
         
@@ -141,9 +141,9 @@ const SavingStats = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
-          <p className="px-3 py-1 bg-blue-500 rounded-full inline-block text-sm font-medium">
+          <div className="px-3 py-1 bg-primary-foreground/20 border border-primary-foreground/30 rounded-md inline-block text-sm font-medium">
             — powered by Scalysis
-          </p>
+          </div>
         </motion.div>
       </div>
     </section>

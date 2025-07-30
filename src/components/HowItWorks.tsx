@@ -94,13 +94,13 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-20 bg-gray-50">
+    <section id="how-it-works" className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="inline-block text-sm font-medium px-3 py-1 bg-primary/10 text-primary rounded-full mb-4">
+            <div className="inline-block text-sm font-medium px-3 py-1 bg-secondary border border-border rounded-md mb-4">
               Simple Process
-            </p>
+            </div>
             <h2 className="text-3xl md:text-4xl font-medium mb-4">
               <span className="text-gradient font-semibold">Get Started</span> in 3 Simple Steps
             </h2>
@@ -124,68 +124,65 @@ const HowItWorks = () => {
           </div>
           
           <div className="relative lg:pl-12">
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-accent/20 rounded-3xl blur-lg"></div>
-              <div className="relative bg-white rounded-2xl shadow-medium overflow-hidden border border-gray-100 p-6">
-                <div className="space-y-6">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-xl font-semibold">Order Risk Assessment</h3>
-                    <div className="px-2 py-1 bg-green-50 text-green-600 text-xs font-medium rounded flex items-center">
-                      <span className="w-1.5 h-1.5 rounded-full bg-green-500 mr-1"></span>
-                      Live
-                    </div>
+            <div className="elevated-card p-6">
+              <div className="space-y-6">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xl font-semibold">Order Risk Assessment</h3>
+                  <div className="px-2 py-1 bg-green-50 text-green-600 text-xs font-medium rounded flex items-center">
+                    <span className="w-1.5 h-1.5 rounded-full bg-green-500 mr-1"></span>
+                    Live
                   </div>
-                  
-                  <div className="space-y-4">
-                    {[
-                      { id: "ORD-7845", risk: "Low", score: 92, status: "Processing" },
-                      { id: "ORD-7846", risk: "Medium", score: 76, status: "Verification" },
-                      { id: "ORD-7847", risk: "Low", score: 95, status: "Processing" },
-                      { id: "ORD-7848", risk: "High", score: 38, status: "Flagged" },
-                      { id: "ORD-7849", risk: "Low", score: 89, status: "Processing" }
-                    ].map((order, index) => (
-                      <div 
-                        key={order.id} 
-                        className="flex items-center justify-between p-3 rounded-lg border border-gray-100 hover:bg-gray-50 transition-colors"
-                      >
-                        <div>
-                          <div className="font-medium">{order.id}</div>
-                          <div className="text-sm text-gray-500">{order.status}</div>
+                </div>
+                
+                <div className="space-y-4">
+                  {[
+                    { id: "ORD-7845", risk: "Low", score: 92, status: "Processing" },
+                    { id: "ORD-7846", risk: "Medium", score: 76, status: "Verification" },
+                    { id: "ORD-7847", risk: "Low", score: 95, status: "Processing" },
+                    { id: "ORD-7848", risk: "High", score: 38, status: "Flagged" },
+                    { id: "ORD-7849", risk: "Low", score: 89, status: "Processing" }
+                  ].map((order, index) => (
+                    <div 
+                      key={order.id} 
+                      className="flex items-center justify-between p-3 newspaper-card hover:bg-muted/50 transition-colors"
+                    >
+                      <div>
+                        <div className="font-medium">{order.id}</div>
+                        <div className="text-sm text-gray-500">{order.status}</div>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div 
+                          className={cn(
+                            "text-xs font-medium px-2 py-1 rounded",
+                            order.risk === "Low" ? "bg-green-50 text-green-600" :
+                            order.risk === "Medium" ? "bg-yellow-50 text-yellow-600" :
+                            "bg-red-50 text-red-600"
+                          )}
+                        >
+                          {order.risk} Risk
                         </div>
-                        <div className="flex items-center gap-3">
-                          <div 
-                            className={cn(
-                              "text-xs font-medium px-2 py-1 rounded",
-                              order.risk === "Low" ? "bg-green-50 text-green-600" :
-                              order.risk === "Medium" ? "bg-yellow-50 text-yellow-600" :
-                              "bg-red-50 text-red-600"
-                            )}
-                          >
-                            {order.risk} Risk
-                          </div>
-                          <div 
-                            className={cn(
-                              "w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium",
-                              order.score >= 80 ? "bg-green-50 text-green-600" :
-                              order.score >= 60 ? "bg-yellow-50 text-yellow-600" :
-                              "bg-red-50 text-red-600"
-                            )}
-                          >
-                            {order.score}
-                          </div>
+                        <div 
+                          className={cn(
+                            "w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium",
+                            order.score >= 80 ? "bg-green-50 text-green-600" :
+                            order.score >= 60 ? "bg-yellow-50 text-yellow-600" :
+                            "bg-red-50 text-red-600"
+                          )}
+                        >
+                          {order.score}
                         </div>
                       </div>
-                    ))}
-                  </div>
-                  
-                  <div className="flex justify-between items-center text-sm">
-                    <div className="text-gray-500">Showing 5 of 248 orders</div>
-                    <div className="flex items-center text-primary font-medium cursor-pointer hover:underline">
-                      View All Orders
-                      <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
                     </div>
+                  ))}
+                </div>
+                
+                <div className="flex justify-between items-center text-sm">
+                  <div className="text-gray-500">Showing 5 of 248 orders</div>
+                  <div className="flex items-center text-primary font-medium cursor-pointer hover:underline">
+                    View All Orders
+                    <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
                   </div>
                 </div>
               </div>

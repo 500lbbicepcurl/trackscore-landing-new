@@ -47,19 +47,10 @@ const Hero = () => {
     <motion.section 
       ref={sectionRef} 
       style={{ opacity }} 
-      className="relative min-h-screen gradient-hero overflow-hidden"
+      className="relative min-h-screen bg-background overflow-hidden"
     >
-      {/* Background Elements */}
-      <motion.div className="absolute inset-0 -z-10 overflow-hidden">
-        <motion.div 
-          className="absolute top-1/4 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" 
-          style={{ y: y1 }}
-        />
-        <motion.div 
-          className="absolute bottom-0 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl" 
-          style={{ y: y2 }}
-        />
-      </motion.div>
+      {/* Clean minimal background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background to-muted/30 -z-10"></div>
 
       <div className="container mx-auto px-6 lg:px-8 pt-32 pb-20">
         <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
@@ -69,7 +60,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm font-medium text-primary mb-8"
+            className="inline-flex items-center gap-2 px-3 py-1.5 bg-secondary border border-border rounded-md text-sm font-medium text-foreground mb-8"
           >
             <TrendingDown className="w-4 h-4" />
             Reduce RTO by 40% with AI-powered calling
@@ -119,11 +110,11 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 mb-16"
           >
-            <Button size="lg" className="gradient-primary text-white px-8 py-6 text-lg font-semibold shadow-large">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg font-medium shadow-card">
               <Phone className="w-5 h-5 mr-2" />
               Book a Demo
             </Button>
-            <Button variant="outline" size="lg" className="px-8 py-6 text-lg font-semibold border-2">
+            <Button variant="outline" size="lg" className="px-8 py-6 text-lg font-medium border border-border">
               Try Free
             </Button>
           </motion.div>
@@ -135,18 +126,18 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="w-full max-w-4xl"
           >
-            <div className="bg-card border border-border rounded-2xl p-8 shadow-large">
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+            <div className="newspaper-card p-6">
+              <div className="flex items-center justify-between mb-6 border-b border-border pb-3">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                  <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 </div>
-                <div className="text-sm text-muted-foreground">Live AI Call Demo</div>
+                <div className="text-sm text-muted-foreground font-medium">Live AI Call Demo</div>
               </div>
               
               {/* Waveform visualization */}
-              <div className="bg-muted/50 rounded-xl p-6 mb-6">
+              <div className="bg-muted rounded-md p-4 mb-6 border border-border">
                 <Waveform />
               </div>
               
