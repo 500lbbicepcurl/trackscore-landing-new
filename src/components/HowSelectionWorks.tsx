@@ -52,12 +52,12 @@ const HowSelectionWorks = () => {
   }, []);
   const steps = [{
     number: 1,
-    title: "Fetch AWB Links From Each Shopify Order",
-    description: "Our AI engine automatically scans and processes all of your Cash-on-Delivery orders from your Shopify store in real-time."
+    title: "Connect Your Store Data",
+    description: "Scalysis continuously learns from your logistics and customer behavior data to improve order-level precision."
   }, {
     number: 2,
-    title: "Extract Tracking Status + Maintain Database",
-    description: "Our proprietary algorithm extracts tracking information and maintains a comprehensive database for all your shipments."
+    title: "Analyze Order Patterns",
+    description: "Our AI analyzes customer interactions and delivery patterns to identify risk indicators before shipping."
   }, {
     number: 3,
     title: "AI Trains on Data + Product Specific Training",
@@ -125,11 +125,11 @@ const HowSelectionWorks = () => {
                       <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                         <div className="flex items-center gap-3">
                           <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center">
-                            <span className="font-medium text-green-600">AWB</span>
+                            <span className="font-medium text-green-600">AI</span>
                           </div>
                           <div>
-                            <p className="font-medium">AWB Link Extraction</p>
-                            <p className="text-sm text-gray-500">Automated tracking setup</p>
+                            <p className="font-medium">Smart Data Processing</p>
+                            <p className="text-sm text-gray-500">Automated analysis setup</p>
                           </div>
                         </div>
                         <div className="flex items-center">
@@ -201,16 +201,16 @@ const HowSelectionWorks = () => {
                         <div className="font-medium mb-2">Recent Tracking Updates</div>
                         <div className="space-y-2 text-sm">
                           {[{
-                        id: "AWB-112233",
-                        status: "Out for Delivery",
+                        id: "ORD-112233",
+                        status: "Processing",
                         time: "12 min ago"
                       }, {
-                        id: "AWB-445566",
-                        status: "In Transit",
+                        id: "ORD-445566",
+                        status: "Analyzing",
                         time: "45 min ago"
                       }, {
-                        id: "AWB-778899",
-                        status: "Delivered",
+                        id: "ORD-778899",
+                        status: "Approved",
                         time: "2 hrs ago"
                       }].map(item => <div key={item.id} className="flex justify-between">
                               <span>{item.id}: <span className="text-blue-600">{item.status}</span></span>

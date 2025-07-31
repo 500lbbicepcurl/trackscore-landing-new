@@ -27,7 +27,7 @@ const CoreValuePoints = () => {
   const valuePoints = [{
     icon: <ArrowRight className="h-5 w-5" />,
     title: "Precision Tagging Engine",
-    description: "Detects fake names, fraud loops, dead zones, timing abuse — and flags what kills profit."
+    description: "Identifies behavioral and regional patterns linked to RTO risk — across name formats, delivery timing, communication gaps, and more."
   }, {
     icon: <Zap className="h-5 w-5" />,
     title: "10,000+ Orders Scanned in Seconds",

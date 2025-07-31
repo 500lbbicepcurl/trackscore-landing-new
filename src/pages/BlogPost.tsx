@@ -30,7 +30,7 @@ const firstBlogContent = {
     <ol>
       <li>
         <h3>Fake or impulsive orders</h3>
-        <p>Customers use fake names (e.g. "Rahul Dravid", "Free Product") or abandoned carts.</p>
+        <p>Customers use suspicious order patterns or show signs of delivery avoidance behavior.</p>
       </li>
       <li>
         <h3>High-risk pin codes</h3>
@@ -67,7 +67,7 @@ const firstBlogContent = {
     <ul>
       <li>No check on COD orders</li>
       <li>Shipping to every pincode</li>
-      <li>Fake names and prank orders</li>
+      <li>Suspicious order patterns and unreliable customers</li>
     </ul>
     
     <h3>Solution:</h3>
@@ -438,7 +438,7 @@ const placeholderContent = {
       
       <div class="bg-blue-50 p-4 rounded-lg my-4">
         <h3>Step 1: Database Creation</h3>
-        <p>Compile known fake names and suspicious patterns from past orders</p>
+        <p>Compile behavioral patterns and risk indicators from historical order data</p>
       </div>
       
       <div class="bg-blue-50 p-4 rounded-lg my-4">
