@@ -3,14 +3,14 @@ import { Mail, Twitter, Linkedin, Youtube, Phone } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-foreground text-background border-t border-border">
+    <footer className="bg-foreground text-background">
       <div className="container mx-auto px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 rounded-md bg-primary flex items-center justify-center">
-                <Phone className="w-5 h-5 text-primary-foreground" />
+              <div className="w-8 h-8 rounded-lg gradient-primary flex items-center justify-center">
+                <Phone className="w-5 h-5 text-white" />
               </div>
               <span className="text-2xl font-bold">Scalysis</span>
             </div>
@@ -20,9 +20,9 @@ const Footer = () => {
             </p>
             
             {/* Founder Quote */}
-            <div className="bg-muted/10 border border-muted/20 rounded-lg p-6 mb-6">
+            <div className="bg-muted/10 border border-muted/20 rounded-xl p-6 mb-6">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold">
+                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold">
                   A
                 </div>
                 <div>
@@ -120,7 +120,7 @@ const Footer = () => {
                 placeholder="Enter your email"
                 className="flex-1 md:w-64 px-4 py-2 bg-muted/10 border border-muted/20 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
               />
-              <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-2 rounded-md text-sm font-medium transition-colors shadow-newspaper">
+              <button className="gradient-primary text-white px-6 py-2 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity">
                 Subscribe
               </button>
             </div>

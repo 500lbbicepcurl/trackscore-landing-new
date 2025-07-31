@@ -5,75 +5,75 @@
  
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 0 0% 8%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 8%;
+    --card-foreground: 0 0% 3.9%;
  
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 8%;
+    --popover-foreground: 0 0% 3.9%;
  
-    --primary: 220 100% 15%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
  
-    --secondary: 0 0% 95%;
-    --secondary-foreground: 0 0% 20%;
+    --secondary: 210 40% 98%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
  
-    --muted: 0 0% 95%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 210 40% 98%;
+    --muted-foreground: 215.4 16.3% 46.9%;
  
-    --accent: 220 70% 50%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 262 83% 58%;
+    --accent-foreground: 210 40% 98%;
  
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 88%;
-    --input: 0 0% 95%;
-    --ring: 220 100% 15%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
  
-    --radius: 0.375rem;
+    --radius: 0.75rem;
 
-    /* Clean newspaper-tech theme */
-    --gradient-primary: linear-gradient(135deg, hsl(220 100% 15%), hsl(220 70% 50%));
-    --gradient-hero: linear-gradient(180deg, hsl(0 0% 98%), hsl(0 0% 95%));
-    --shadow-newspaper: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px 0 rgb(0 0 0 / 0.06);
-    --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.06);
-    --shadow-elevated: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.05);
+    /* Custom gradients and effects */
+    --gradient-primary: linear-gradient(135deg, hsl(221.2 83.2% 53.3%), hsl(262 83% 58%));
+    --gradient-hero: linear-gradient(180deg, hsl(0 0% 100%), hsl(220 14% 96%));
+    --shadow-soft: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-medium: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-large: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   }
  
   .dark {
-    --background: 0 0% 5%;
-    --foreground: 0 0% 95%;
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
  
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 95%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 220 100% 85%;
-    --primary-foreground: 0 0% 8%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 85%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 240 5% 64.9%;
 
-    --accent: 220 70% 70%;
-    --accent-foreground: 0 0% 8%;
+    --accent: 262 83% 58%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 18%;
-    --input: 0 0% 12%;
-    --ring: 220 100% 85%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 221.2 83.2% 53.3%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(220 100% 85%), hsl(220 70% 70%));
-    --gradient-hero: linear-gradient(180deg, hsl(0 0% 5%), hsl(0 0% 8%));
+    --gradient-primary: linear-gradient(135deg, hsl(221.2 83.2% 53.3%), hsl(262 83% 58%));
+    --gradient-hero: linear-gradient(180deg, hsl(0 0% 3.9%), hsl(0 0% 14.9%));
   }
 }
  
@@ -113,26 +113,22 @@
   background: var(--gradient-primary);
 }
 
-/* Newspaper-tech shadows */
-.shadow-newspaper {
-  box-shadow: var(--shadow-newspaper);
+/* Modern shadows */
+.shadow-soft {
+  box-shadow: var(--shadow-soft);
 }
 
-.shadow-card {
-  box-shadow: var(--shadow-card);
+.shadow-medium {
+  box-shadow: var(--shadow-medium);
 }
 
-.shadow-elevated {
-  box-shadow: var(--shadow-elevated);
+.shadow-large {
+  box-shadow: var(--shadow-large);
 }
 
-/* Clean newspaper cards */
-.newspaper-card {
-  @apply bg-card border border-border rounded-md shadow-newspaper;
-}
-
-.elevated-card {
-  @apply bg-card border border-border rounded-lg shadow-card;
+/* Glass morphism effect */
+.glass-morphism {
+  @apply backdrop-blur-xl bg-white/80 border border-white/20;
 }
 
 /* Waveform animation */

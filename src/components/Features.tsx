@@ -30,7 +30,7 @@ const Features = () => {
   }, []);
 
   return (
-    <section id="features" className="py-20 bg-muted/30">
+    <section id="features" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div 
           id="features-section"
@@ -41,9 +41,9 @@ const Features = () => {
         >
           {/* Left Column - Text Content */}
           <div className="space-y-6">
-            <div className="inline-block text-sm font-medium px-3 py-1 bg-secondary border border-border rounded-md mb-4">
+            <p className="inline-block text-sm font-medium px-3 py-1 bg-primary/10 text-primary rounded-full mb-4">
               Powerful Features
-            </div>
+            </p>
             <h2 className="text-3xl md:text-4xl font-medium mb-4">
               Ship <span className="text-gradient font-semibold">Smart Every Day</span>
             </h2>
@@ -70,7 +70,7 @@ const Features = () => {
             </div>
             
             {/* Tab Content */}
-            <div className="elevated-card p-6 min-h-40">
+            <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-100 min-h-40">
               {activeTab === "pnl" ? (
                 <div className="space-y-4">
                   <h3 className="text-xl font-medium text-blue-600">Automatic PnL Tracking</h3>
@@ -109,7 +109,8 @@ const Features = () => {
             isVisible ? "animate-slideUp animation-delay-200" : "opacity-0"
           )}>
             <div className="relative">
-              <div className="elevated-card overflow-hidden p-2">
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 rounded-xl blur-xl"></div>
+              <div className="relative bg-white rounded-xl shadow-medium overflow-hidden border border-gray-100">
                 {activeTab === "pnl" ? (
                   <img 
                     src="/lovable-uploads/c408b62f-1bf7-42d2-8132-857456402690.png" 
