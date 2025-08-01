@@ -26,6 +26,12 @@ import GlassBoxSection from "@/components/GlassBoxSection";
 import CoreValuePoints from "@/components/CoreValuePoints";
 import FeatureEcosystem from "@/components/FeatureEcosystem";
 import OrderFilteringSection from "@/components/OrderFilteringSection";
+import SmartOrderSelection from "@/components/SmartOrderSelection";
+import CustomPixelBehavior from "@/components/CustomPixelBehavior";
+import CODCashflowGraphs from "@/components/CODCashflowGraphs";
+import PincodeHeatmap from "@/components/PincodeHeatmap";
+import CustomAudienceSegmentation from "@/components/CustomAudienceSegmentation";
+import RTOGPTChat from "@/components/RTOGPTChat";
 
 const Index = () => {
   useEffect(() => {
@@ -57,14 +63,12 @@ const Index = () => {
         <MarketComparisonSlider />
         <CodMarketStats />
         <WhatsInsideScalysis />
-        
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={sectionVariants}
-        >
-        </motion.div>
+        <SmartOrderSelection />
+        <CustomPixelBehavior />
+        <CODCashflowGraphs />
+        <PincodeHeatmap />
+        <CustomAudienceSegmentation />
+        <RTOGPTChat />
         
         <motion.div
           initial="hidden"
@@ -117,39 +121,6 @@ const Index = () => {
           variants={sectionVariants}
         >
           <GlassBoxSection />
-        </motion.div>
-        
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={sectionVariants}
-        >
-         
-        </motion.div>
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={sectionVariants}
-        >
-
-        </motion.div>
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={sectionVariants}
-        >
-  
-        </motion.div>
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={sectionVariants}
-        >
-       
         </motion.div>
         
         <CTA />
