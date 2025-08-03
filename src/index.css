@@ -179,3 +179,34 @@
 .rotate-y-180 {
   transform: rotateY(180deg);
 }
+
+/* Audio slider styling */
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: hsl(var(--muted));
+  outline: none;
+  border-radius: 0.5rem;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: hsl(var(--primary));
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid hsl(var(--background));
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: hsl(var(--primary));
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid hsl(var(--background));
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

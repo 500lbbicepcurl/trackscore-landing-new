@@ -3,9 +3,11 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { Button } from "@/components/ui/button";
 import { Play, Phone, TrendingDown } from "lucide-react";
+import { SynchronizedAudioPlayer } from "@/components/ui/SynchronizedAudioPlayer";
 
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [showAudioPlayer, setShowAudioPlayer] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
   
   const { scrollYProgress } = useScroll({
@@ -135,53 +137,64 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="w-full max-w-4xl"
           >
-            <div className="bg-card border border-border rounded-2xl p-8 shadow-large">
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+            {showAudioPlayer ? (
+              <SynchronizedAudioPlayer 
+                audioSrc="/anuj.wav" 
+                onClose={() => setShowAudioPlayer(false)}
+              />
+            ) : (
+              <div className="bg-card border border-border rounded-2xl p-8 shadow-large">
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  </div>
+                  <div className="text-sm text-muted-foreground">Live AI Call Demo</div>
                 </div>
-                <div className="text-sm text-muted-foreground">Live AI Call Demo</div>
-              </div>
-              
-              {/* Waveform visualization */}
-              <div className="bg-muted/50 rounded-xl p-6 mb-6">
-                <Waveform />
-              </div>
-              
-              {/* Call transcript preview */}
-              <div className="space-y-4 text-left">
-                <div className="flex gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">AI Assistant</p>
-                    <p className="text-foreground">"Hello! This is regarding your recent order. Can you confirm your delivery address?"</p>
+                
+                {/* Waveform visualization */}
+                <div className="bg-muted/50 rounded-xl p-6 mb-6">
+                  <Waveform />
+                </div>
+                
+                {/* Call transcript preview */}
+                <div className="space-y-4 text-left">
+                  <div className="flex gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                    <div>
+                      <p className="text-sm text-muted-foreground">AI Assistant</p>
+                      <p className="text-foreground">"Hello! This is regarding your recent order. Can you confirm your delivery address?"</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3">
+                    <div className="w-2 h-2 bg-accent rounded-full mt-2"></div>
+                    <div>
+                      <p className="text-sm text-muted-foreground">Customer</p>
+                      <p className="text-foreground">"Yes, it's 123 MG Road, Bangalore. But I might not be available tomorrow."</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                    <div>
+                      <p className="text-sm text-muted-foreground">AI Assistant</p>
+                      <p className="text-foreground">"No problem! When would be a better time for delivery?"</p>
+                    </div>
                   </div>
                 </div>
-                <div className="flex gap-3">
-                  <div className="w-2 h-2 bg-accent rounded-full mt-2"></div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">Customer</p>
-                    <p className="text-foreground">"Yes, it's 123 MG Road, Bangalore. But I might not be available tomorrow."</p>
-                  </div>
-                </div>
-                <div className="flex gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">AI Assistant</p>
-                    <p className="text-foreground">"No problem! When would be a better time for delivery?"</p>
-                  </div>
+                
+                <div className="mt-6 flex items-center justify-center">
+                  <Button 
+                    variant="ghost" 
+                    className="text-primary"
+                    onClick={() => setShowAudioPlayer(true)}
+                  >
+                    <Play className="w-4 h-4 mr-2" />
+                    Hear a real call
+                  </Button>
                 </div>
               </div>
-              
-              <div className="mt-6 flex items-center justify-center">
-                <Button variant="ghost" className="text-primary">
-                  <Play className="w-4 h-4 mr-2" />
-                  Hear a real call
-                </Button>
-              </div>
-            </div>
+            )}
           </motion.div>
         </div>
       </div>
