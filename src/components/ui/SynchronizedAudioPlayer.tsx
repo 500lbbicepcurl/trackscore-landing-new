@@ -186,29 +186,50 @@ export const SynchronizedAudioPlayer = ({ audioSrc, onClose }: SynchronizedAudio
       </div>
 
       {/* Transcript Display */}
-      <div className="bg-muted/30 rounded-xl p-4 max-h-96 overflow-y-auto">
-        <div className="space-y-4">
+      <div className="bg-muted/30 rounded-xl p-6 max-h-96 overflow-y-auto">
+        <div className="space-y-6">
           {transcript.map((entry, index) => (
             <div
               key={index}
-              className={`flex gap-3 p-3 rounded-lg transition-all duration-300 ${
+              className={`transition-all duration-300 ${
                 index === currentTranscriptIndex 
-                  ? 'bg-primary/10 border border-primary/20 shadow-sm' 
+                  ? 'opacity-100' 
                   : 'opacity-60'
               }`}
             >
-              <div className={`w-2 h-2 rounded-full mt-2 ${
-                entry.speaker === 'Scalysis AI' ? 'bg-primary' : 'bg-accent'
-              }`}></div>
-              <div className="flex-1">
-                <p className="text-sm text-muted-foreground mb-1">
-                  {entry.speaker} • {formatTime(entry.startTime)}
-                </p>
-                <p className={`${
-                  index === currentTranscriptIndex ? 'text-foreground font-medium' : 'text-muted-foreground'
+              <div className={`flex items-start gap-3 ${
+                entry.speaker === 'Customer' ? 'flex-row-reverse' : ''
+              }`}>
+                <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-medium ${
+                  entry.speaker === 'Scalysis AI' 
+                    ? 'bg-primary text-white' 
+                    : 'bg-accent text-accent-foreground'
                 }`}>
-                  {entry.text}
-                </p>
+                  {entry.speaker === 'Scalysis AI' ? 'AI' : 'C'}
+                </div>
+                <div className={`flex-1 max-w-[80%] ${
+                  entry.speaker === 'Customer' ? 'text-right' : ''
+                }`}>
+                  <div className="flex items-center gap-2 mb-1">
+                    <p className="text-sm font-medium text-foreground">
+                      {entry.speaker}
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      {formatTime(entry.startTime)}
+                    </p>
+                  </div>
+                  <div className={`inline-block p-3 rounded-2xl ${
+                    entry.speaker === 'Scalysis AI'
+                      ? 'bg-primary/10 text-foreground rounded-tl-none'
+                      : 'bg-muted text-foreground rounded-tr-none'
+                  } ${
+                    index === currentTranscriptIndex ? 'ring-2 ring-primary/20' : ''
+                  }`}>
+                    <p className="text-sm leading-relaxed">
+                      {entry.text}
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           ))}
