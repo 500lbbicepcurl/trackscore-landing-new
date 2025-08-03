@@ -42,27 +42,35 @@ export const SynchronizedAudioPlayer = ({ audioSrc, onClose }: SynchronizedAudio
     const lines = text.split('\n').filter(line => line.trim());
     const entries: TranscriptEntry[] = [];
     
-    for (let i = 0; i < lines.length; i += 3) {
+    let i = 0;
+    while (i < lines.length) {
       const timeLine = lines[i];
-      const textLine = lines[i + 1];
       
-      if (timeLine && textLine) {
-        const timeMatch = timeLine.match(/(\d{2}:\d{2}:\d{2},\d{3}) --> (\d{2}:\d{2}:\d{2},\d{3}) \[(.*?)\]/);
-        if (timeMatch) {
-          const [, startTimeStr, endTimeStr, speaker] = timeMatch;
-          const startTime = parseTimeToSeconds(startTimeStr);
-          const endTime = parseTimeToSeconds(endTimeStr);
-          
-          entries.push({
-            startTime,
-            endTime,
-            speaker: speaker.trim(),
-            text: textLine.trim()
-          });
+      // Check if this line contains timestamp and speaker info
+      const timeMatch = timeLine.match(/(\d{2}:\d{2}:\d{2},\d{3}) --> (\d{2}:\d{2}:\d{2},\d{3}) \[(.*?)\]/);
+      if (timeMatch) {
+        const [, startTimeStr, endTimeStr, speaker] = timeMatch;
+        const startTime = parseTimeToSeconds(startTimeStr);
+        const endTime = parseTimeToSeconds(endTimeStr);
+        
+        // Get the text content (next line after timestamp)
+        i++;
+        let text = '';
+        if (i < lines.length) {
+          text = lines[i].trim();
         }
+        
+        entries.push({
+          startTime,
+          endTime,
+          speaker: speaker.trim(),
+          text: text
+        });
       }
+      i++;
     }
     
+    console.log('Parsed transcript entries:', entries.length, entries);
     return entries;
   };
 
