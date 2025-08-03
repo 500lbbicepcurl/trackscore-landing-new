@@ -1,0 +1,65 @@
+00:00:00,280 --> 00:00:01,959 [Scalysis AI]
+Hello. 
+
+00:00:01,959 --> 00:00:04,380 [Customer]
+Hello. 
+
+00:00:04,380 --> 00:00:14,579 [Scalysis AI]
+Hello, this is Monica calling from Dimplery Customer Support. You had placed a shampoo order with us. Are you comfortable speaking in English or we can continue in Hindi too? 
+
+00:00:14,579 --> 00:00:18,520 [Customer]
+Which, which website? 
+
+00:00:18,520 --> 00:00:25,180 [Scalysis AI]
+We are Dimplery, a brand for hair care and personal care. Are you comfortable speaking in English or we can- 
+
+00:00:25,180 --> 00:00:25,440 [Customer]
+Yeah, yeah 
+
+00:00:25,440 --> 00:00:26,079 [Scalysis AI]
+... continue in Hindi too? 
+
+00:00:26,079 --> 00:00:27,979 [Customer]
+Please. Please continue. 
+
+00:00:27,979 --> 00:00:33,659 [Scalysis AI]
+[foreign language] 
+
+00:00:33,659 --> 00:00:37,659 [Scalysis AI]
+March 19th dispatch [foreign language]. 
+
+00:00:37,659 --> 00:00:44,299 [Scalysis AI]
+Near Pretty Day Apartments, Senik Colony, Sector D Extension. [foreign language]? 
+
+00:00:44,299 --> 00:00:46,639 [Customer]
+You told me to talk in English. Now you're talking in Hindi. 
+
+00:00:46,639 --> 00:00:49,180 [Scalysis AI]
+I apologize. 
+
+00:00:49,180 --> 00:01:01,559 [Scalysis AI]
+I apologize for the confusion. We will dispatch your order by 19th, 18th March. Just wanted to confirm your address near Pretty Day Apartments, Senik Colony, Sector D Extension. Is that correct? 
+
+00:01:01,559 --> 00:01:04,159 [Customer]
+Yeah, the address is correct. Please tell me- 
+
+00:01:04,159 --> 00:01:04,459 [Scalysis AI]
+Thank you 
+
+00:01:04,459 --> 00:01:06,500 [Customer]
+... when will it get delivered? 
+
+00:01:06,500 --> 00:01:10,159 [Scalysis AI]
+Your order will be dispatched by 19th. 
+
+00:01:10,159 --> 00:01:12,680 [Customer]
+Deliver, deliver, delivery date. 
+
+00:01:12,680 --> 00:01:16,919 [Scalysis AI]
+Delivery usually takes five, seven days after dispatch. 
+
+00:01:16,919 --> 00:01:27,119 [Scalysis AI]
+Thank you so much for shopping at Dimplery, Aditya. We ship hundreds of orders, but we make sure every single one reaches the customer safely. Have a great day. 
+
+00:01:27,119 --> 00:01:27,600 [Customer]
+Okay.
