@@ -17,7 +17,7 @@ const Hero = () => {
 
   const y1 = useTransform(scrollYProgress, [0, 1], [0, 100]);
   const y2 = useTransform(scrollYProgress, [0, 1], [0, -100]);
-  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  // Remove opacity transform that causes blurring on scroll
 
   useEffect(() => {
     setIsLoaded(true);
@@ -48,7 +48,6 @@ const Hero = () => {
   return (
     <motion.section 
       ref={sectionRef} 
-      style={{ opacity }} 
       className="relative min-h-screen gradient-hero overflow-hidden"
     >
       {/* Background Elements */}
