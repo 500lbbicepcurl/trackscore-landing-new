@@ -14,7 +14,7 @@ const FeatureEcosystem = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold leading-tight mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 pt-12">
             Complete <span className="text-blue-500">Feature Ecosystem</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -54,7 +54,7 @@ const FeatureEcosystem = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"
           >
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8 shadow-xl">
+            <div className="group bg-gradient-to-br from-blue-50 to-indigo-100 hover:from-white-500 hover:to-blue-200 rounded-2xl p-8 shadow-xl transition-all duration-300 hover:shadow-2xl hover:scale-105">
               <div className="text-center">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   Integrated Solution
@@ -63,7 +63,7 @@ const FeatureEcosystem = () => {
                   All features work together seamlessly to provide maximum RTO reduction.
                 </p>
                 <div className="flex justify-center">
-                  <ArrowRight className="h-8 w-8 text-blue-500" />
+                  <ArrowRight className="h-8 w-8 text-blue-500 transition-all duration-300 group-hover:text-blue-600 group-hover:translate-x-1" />
                 </div>
               </div>
             </div>

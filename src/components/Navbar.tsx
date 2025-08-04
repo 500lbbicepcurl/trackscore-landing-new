@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import ScalysisLogo from "./ScalysisLogo";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,9 +42,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-lg gradient-primary flex items-center justify-center">
-              <Phone className="w-5 h-5 text-white" />
-            </div>
+            <ScalysisLogo size={32} className="flex-shrink-0" />
             <span className="text-2xl font-bold text-foreground">Scalysis</span>
           </Link>
 

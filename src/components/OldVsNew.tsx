@@ -21,16 +21,16 @@ const OldVsNew = () => {
     };
   }, []);
   return <section className="py-16 sm:py-0">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-12">
         <div id="old-vs-new-section" className={cn("max-w-6xl mx-auto transition-all duration-500", isVisible ? "animate-fadeIn" : "opacity-0")}>
-          <h2 className="text-2xl md:text-3xl font-medium text-center mb-10 md:mb-16 lg:text-5xl">
-            Go Kwik Vs <span className="font-semibold">Scalysis AI</span>
+          <h2 className="text-2xl md:text-3xl font-semibold text-center mb-10 md:mb-16 lg:text-5xl">
+            "Vague Tagging" vs <span className="font-bold text-blue-500">Scalysis AI</span>
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8 md:gap-12">
             {/* Traditional Approach */}
             <div className={cn("relative bg-white rounded-xl border border-gray-200 shadow-md p-5 sm:p-6 transition-all duration-700", isVisible ? "animate-slideUp" : "opacity-0 translate-y-8")}>
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-red-100 text-red-700 px-4 py-1 rounded-full font-medium text-sm">Go Kwik</div>
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-red-100 text-red-700 px-4 py-1 rounded-full font-medium text-sm">High, Low, Medium Tags</div>
               <div className="mt-6 space-y-5">
                 <div className="p-3 sm:p-4 border-b border-gray-100">
                   <div className="flex items-center">
@@ -78,7 +78,7 @@ const OldVsNew = () => {
             
             {/* Scalysis Approach */}
             <div className={cn("relative bg-white rounded-xl border border-gray-200 shadow-md p-5 sm:p-6 transition-all duration-700", isVisible ? "animate-slideUp animation-delay-300" : "opacity-0 translate-y-8")}>
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-green-100 text-green-700 px-4 py-1 rounded-full font-medium text-sm">Scalysis</div>
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-100 text-blue-700 px-4 py-1 rounded-full font-medium text-base">Scalysis</div>
               <div className="mt-6 space-y-5">
                 <div className="p-3 sm:p-4 border-b border-gray-100">
                   <div className="flex items-center">
@@ -117,7 +117,7 @@ const OldVsNew = () => {
                 </div>
                 
                 <div className="mt-6 flex justify-center">
-                  <div className="bg-green-100 text-green-700 px-4 py-2 rounded-lg text-sm sm:text-base font-light">
+                  <div className="bg-blue-100 text-blue-700 px-4 py-2 rounded-lg text-sm sm:text-base font-light">
                     <span className="font-bold">90%+</span> precision where it matters
                   </div>
                 </div>

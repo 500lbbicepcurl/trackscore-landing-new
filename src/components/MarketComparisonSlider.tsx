@@ -238,7 +238,7 @@ const MarketComparisonSlider = () => {
     const totalMarkers = getTotalMarkers();
     return allMarkers.slice(0, Math.min(totalMarkers, allMarkers.length));
   };
-  return <section className="bg-white overflow-hidden py-[12px]">
+  return <section className="bg-white overflow-hidden py-[12px] mt-6">
       <div className="container mx-auto px-4">
         <motion.div initial={{
         opacity: 0,
@@ -251,7 +251,7 @@ const MarketComparisonSlider = () => {
       }} transition={{
         duration: 0.6
       }} className="text-center mb-12">
-          <h2 className="text-5xl font-bold mb-4 md:text-5xl">
+          <h2 className="text-5xl font-bold mb-4 md:text-5xl pt-12">
             Scale <span className="text-blue-500">6X Faster</span> with Scalysis. No Profit Leaks.
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">

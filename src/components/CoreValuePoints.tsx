@@ -66,8 +66,8 @@ const CoreValuePoints = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div id="core-value-section" className={cn("max-w-7xl mx-auto transition-all duration-500", isVisible ? "animate-fadeIn" : "opacity-0")}>
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <span className="text-blue-600">All Shipping.</span> <span className="text-gray-400">&gt;</span> <span className="text-gray-900">Blind Shipping.</span>
+            <h2 className="text-5xl font-bold leading-tight mb-4 md:text-5xl pt-12">
+              <span className="text-blue-500">All Shipping</span> <span className="text-gray-400">&gt;</span> <span className="text-gray-900">Blind Shipping</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
              Less RTOs, More Savings and Faster Scaling.

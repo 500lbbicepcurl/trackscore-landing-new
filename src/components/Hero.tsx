@@ -70,7 +70,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm font-medium text-primary mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm font-medium text-primary mb-7"
           >
             <TrendingDown className="w-4 h-4" />
             Reduce RTO by 40% with AI-powered calling
@@ -81,7 +81,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl md:text-7xl font-black leading-tight tracking-tight text-foreground mb-6"
+            className="text-5xl md:text-7xl font-bold leading-tight tracking-tight text-foreground mb-6"
           >
             Talk to every COD customer.{" "}
             <span className="text-gradient">Filter fraud.</span>{" "}

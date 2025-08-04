@@ -14,8 +14,8 @@ const BuiltForDropshippers = () => {
         once: true
       }} transition={{
         duration: 0.6
-      }} className="text-center mb-12 py-[15px]">
-          <h2 className="text-5xl font-bold leading-tight mb-4 md:text-5xl">
+      }} className="text-center mb-12 py-[15px] mt-12">
+          <h2 className="text-5xl font-bold leading-tight mb-4 md:text-5xl pt-12">
             Imagine COD <span className="text-blue-500">Without RTO.</span> 
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
