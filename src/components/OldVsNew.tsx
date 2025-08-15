@@ -21,9 +21,9 @@ const OldVsNew = () => {
     };
   }, []);
   return <section className="py-16 sm:py-0">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-20 mb-10">
         <div id="old-vs-new-section" className={cn("max-w-6xl mx-auto transition-all duration-500", isVisible ? "animate-fadeIn" : "opacity-0")}>
-          <h2 className="text-2xl md:text-3xl font-semibold text-center mb-10 md:mb-16 lg:text-5xl">
+          <h2 className="text-3xl md:text-4xl font-semibold text-center mb-10 md:mb-16 lg:text-4xl">
             "Vague Tagging" vs <span className="font-bold text-blue-500">Scalysis AI</span>
           </h2>
           

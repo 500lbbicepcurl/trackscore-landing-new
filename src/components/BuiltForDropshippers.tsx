@@ -44,7 +44,7 @@ const BuiltForDropshippers = () => {
   };
 
   return (
-    <section className="py-16">
+    <section className="py-16" style={{ backgroundColor: 'rgb(249, 250, 251, 1)' }}>
       <div className="container mx-auto px-4 max-w-7xl">
         {/* Main Title */}
         <motion.div
@@ -54,7 +54,7 @@ const BuiltForDropshippers = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-bold leading-tight mb-4 md:text-5xl">
+          <h2 className="text-3xl font-bold leading-tight mb-4 md:text-4xl">
             Imagine COD <span className="text-blue-500">Without RTO.</span>
           </h2>
         </motion.div>

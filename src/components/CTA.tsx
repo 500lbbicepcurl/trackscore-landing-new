@@ -30,7 +30,7 @@ const CTA = () => {
             </div>
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
             Stop losing money on 
             <br />
             <span className="text-white/90">failed COD deliveries</span>
@@ -44,7 +44,7 @@ const CTA = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <Button
               size="lg"
-              className="bg-white text-primary hover:bg-white/90 px-8 py-6 text-lg font-semibold shadow-large"
+              className="bg-white text-primary hover:bg-blue-500 hover:text-white px-8 py-6 text-lg font-semibold shadow-large"
               onClick={handleGetStarted}
             >
               <Phone className="w-5 h-5 mr-2" />
@@ -54,7 +54,7 @@ const CTA = () => {
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-6 text-lg font-semibold"
+              className="border-2 border-white text-blue-600 hover:bg-blue-500 hover:text-white px-8 py-6 text-lg font-semibold"
             >
               See Live Demo
             </Button>
