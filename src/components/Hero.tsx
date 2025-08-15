@@ -5,6 +5,12 @@ import { Button } from "@/components/ui/button";
 import { Play, Phone, TrendingDown } from "lucide-react";
 import { SynchronizedAudioPlayer } from "@/components/ui/SynchronizedAudioPlayer";
 
+// Import brand images
+import brand1 from "./BRAND 1.png";
+import brand2 from "./BRAND 2.png";
+import brand3 from "./BRAND 3.png";
+import brand4 from "./BRAND 4.png";
+
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [showAudioPlayer, setShowAudioPlayer] = useState(false);
@@ -62,7 +68,7 @@ const Hero = () => {
         />
       </motion.div>
 
-      <div className="container mx-auto px-6 lg:px-8 pt-32 pb-20">
+      <div className="container mx-auto px-6 lg:px-8 pt-32 pb-10">
         <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
           
           {/* Badge */}
@@ -196,6 +202,89 @@ const Hero = () => {
               </div>
             )}
           </motion.div>
+        </div>
+      </div>
+
+      {/* Brands and Stats Section */}
+      <div className="w-full">
+        {/* Brands Section - Hero Background */}
+        <div className="w-full pt-6 pb-12">
+          <div className="w-full">
+            {/* Sliding Brands */}
+            <div className="relative overflow-hidden">
+              <div className="flex animate-scroll px-10">
+                {/* First set */}
+                <div className="flex items-center gap-20 whitespace-nowrap">
+                  <div className="flex items-center justify-center w-32 h-12">
+                    <img src={brand1} alt="Brand 1" className="max-w-full max-h-full object-contain" />
+                  </div>
+                  <div className="flex items-center justify-center w-32 h-12">
+                    <img src={brand2} alt="Brand 2" className="max-w-full max-h-full object-contain" />
+                  </div>
+                  <div className="flex items-center justify-center w-32 h-12">
+                    <img src={brand3} alt="Brand 3" className="max-w-full max-h-full object-contain" />
+                  </div>
+                  <div className="flex items-center justify-center w-32 h-12">
+                    <img src={brand4} alt="Brand 4" className="max-w-full max-h-full object-contain" />
+                  </div>
+                </div>
+                
+                {/* Gap between sets */}
+                <div className="w-20"></div>
+                
+                {/* Second set */}
+                <div className="flex items-center gap-20 whitespace-nowrap">
+                  <div className="flex items-center justify-center w-32 h-12">
+                    <img src={brand1} alt="Brand 1" className="max-w-full max-h-full object-contain" />
+                  </div>
+                  <div className="flex items-center justify-center w-32 h-12">
+                    <img src={brand2} alt="Brand 2" className="max-w-full max-h-full object-contain" />
+                  </div>
+                  <div className="flex items-center justify-center w-32 h-12">
+                    <img src={brand3} alt="Brand 3" className="max-w-full max-h-full object-contain" />
+                  </div>
+                  <div className="flex items-center justify-center w-32 h-12">
+                    <img src={brand4} alt="Brand 4" className="max-w-full max-h-full object-contain" />
+                  </div>
+                </div>
+                
+                {/* Gap between sets */}
+                <div className="w-20"></div>
+                
+                {/* Third set for extra smoothness */}
+                <div className="flex items-center gap-20 whitespace-nowrap">
+                  <div className="flex items-center justify-center w-32 h-12">
+                    <img src={brand1} alt="Brand 1" className="max-w-full max-h-full object-contain" />
+                  </div>
+                  <div className="flex items-center justify-center w-32 h-12">
+                    <img src={brand2} alt="Brand 2" className="max-w-full max-h-full object-contain" />
+                  </div>
+                  <div className="flex items-center justify-center w-32 h-12">
+                    <img src={brand3} alt="Brand 3" className="max-w-full max-h-full object-contain" />
+                  </div>
+                  <div className="flex items-center justify-center w-32 h-12">
+                    <img src={brand4} alt="Brand 4" className="max-w-full max-h-full object-contain" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Stats Section - Blue Background */}
+        <div className="bg-blue-600 py-16">
+          <div className="container mx-auto px-6">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-white">
+              <div className="text-5xl md:text-6xl font-bold">
+                42%
+              </div>
+              <div className="text-center md:text-left max-w-xs">
+                <p className="text-lg md:text-xl leading-relaxed">
+                  average <span className="font-bold">increase</span> in new customer revenue <span className="font-bold">90 days after signing up</span> with Scalysis
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </motion.section>

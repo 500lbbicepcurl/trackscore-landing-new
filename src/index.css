@@ -210,3 +210,19 @@
   border: 2px solid hsl(var(--background));
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+/* Sliding brands animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 25s linear infinite;
+  display: flex;
+  width: max-content;
+}

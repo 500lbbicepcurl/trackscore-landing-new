@@ -69,9 +69,32 @@ const BuiltForDropshippers = () => {
                   className="w-full flex items-center justify-between py-6 text-left hover:bg-gray-50 transition-colors"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
-                      <div className="w-4 h-4 bg-blue-500 rounded-full"></div>
-                    </div>
+                    <motion.div 
+                      className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center"
+                      animate={{
+                        scale: [1, 1.1, 1],
+                        opacity: [0.8, 1, 0.8]
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
+                    >
+                      <motion.div 
+                        className="w-4 h-4 bg-blue-500 rounded-full"
+                        animate={{
+                          scale: [1, 1.2, 1],
+                          opacity: [0.7, 1, 0.7]
+                        }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                          delay: 0.5
+                        }}
+                      />
+                    </motion.div>
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900">
                         {tab.title}
