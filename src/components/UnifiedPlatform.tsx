@@ -81,13 +81,13 @@ const UnifiedPlatform = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="bg-blue-600 rounded-xl p-8 text-white cursor-pointer hover:bg-blue-700 transition-colors"
+            className="bg-blue-600 rounded-xl pr-16 pl-10 py-4 text-white cursor-pointer hover:bg-blue-700 transition-colors"
             onClick={handleScrollToTop}
           >
             <div className="flex items-center gap-4">
-              <Phone className="w-6 h-6" />
+              <Phone className="w-8 h-8" />
               <div>
-                <h3 className="text-lg font-bold mb-2">AI CALLING</h3>
+                <h3 className="text-base font-semibold mb-2">AI CALLING</h3>
                 <p className="text-blue-100 leading-relaxed text-sm">
                   Intelligent customer verification calls that confirm addresses, understand intent, and predict RTO risk in real-time.
                 </p>
@@ -101,13 +101,13 @@ const UnifiedPlatform = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-blue-600 rounded-xl p-8 text-white cursor-pointer hover:bg-blue-700 transition-colors"
+            className="bg-blue-600 rounded-xl pr-16 pl-10 py-4 text-white cursor-pointer hover:bg-blue-700 transition-colors"
             onClick={handleSmartOrderSelection}
           >
             <div className="flex items-center gap-4">
-              <Filter className="w-6 h-6" />
+              <Filter className="w-8 h-8" />
               <div>
-                <h3 className="text-lg font-bold mb-2">SMART ORDER SELECTION</h3>
+                <h3 className="text-base font-semibold mb-2">SMART ORDER SELECTION</h3>
                 <p className="text-blue-100 leading-relaxed text-sm">
                   Custom ML Model for your store that learns from your delivery data to maximize profit and minimize RTO risk.
                 </p>
