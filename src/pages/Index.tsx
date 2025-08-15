@@ -56,7 +56,6 @@ const Index = () => {
         <Hero />
               <OldVsNew />
         <BuiltForDropshippers />
-        <OrderFilteringSection />
         <GeminiEffectSection />
         <CoreValuePoints />
         <FeatureEcosystem />
