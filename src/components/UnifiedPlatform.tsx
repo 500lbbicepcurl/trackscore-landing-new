@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
 import { 
   Phone, 
   Filter, 
@@ -15,14 +14,13 @@ import {
 } from "lucide-react";
 
 const UnifiedPlatform = () => {
-  const navigate = useNavigate();
-
   const handleScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleSmartOrderSelection = () => {
-    navigate('/smart-order-selection');
+    // Will be implemented later for new page
+    console.log("Smart Order Selection clicked");
   };
 
   return (
