@@ -11,6 +11,15 @@ import BlogPost from "./pages/BlogPost";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import PrivacyDataProtection from "./pages/PrivacyDataProtection";
 import OneClickCheckoutTruth from "./pages/OneClickCheckoutTruth";
+import FeaturesPage from "./pages/FeaturesPage";
+import CustomPixelPage from "./pages/CustomPixelPage";
+import CashflowPage from "./pages/CashflowPage";
+import PincodePage from "./pages/PincodePage";
+import SmartMetaPage from "./pages/SmartMetaPage";
+import CustomAudiencePage from "./pages/CustomAudiencePage";
+import RTOGPTPage from "./pages/RTOGPTPage";
+import DecisionEnginePage from "./pages/DecisionEnginePage";
+import SavingsCalculatorPage from "./pages/SavingsCalculatorPage";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +31,15 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/features" element={<FeaturesPage />} />
+          <Route path="/custom-pixel" element={<CustomPixelPage />} />
+          <Route path="/cashflow" element={<CashflowPage />} />
+          <Route path="/pincode" element={<PincodePage />} />
+          <Route path="/smart-meta" element={<SmartMetaPage />} />
+          <Route path="/custom-audience" element={<CustomAudiencePage />} />
+          <Route path="/rto-gpt" element={<RTOGPTPage />} />
+          <Route path="/decision-engine" element={<DecisionEnginePage />} />
+          <Route path="/savings-calculator" element={<SavingsCalculatorPage />} />
           <Route path="/reduce-rto" element={<ReduceRTO />} />
           <Route path="/reduce-rto/:slug" element={<BlogPost />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />

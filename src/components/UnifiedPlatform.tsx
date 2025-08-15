@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import { 
   Phone, 
   Filter, 
@@ -14,13 +15,46 @@ import {
 } from "lucide-react";
 
 const UnifiedPlatform = () => {
+  const navigate = useNavigate();
+
   const handleScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleSmartOrderSelection = () => {
-    // Will be implemented later for new page
-    console.log("Smart Order Selection clicked");
+    navigate('/features');
+  };
+
+  const handleCustomPixel = () => {
+    navigate('/custom-pixel');
+  };
+
+  const handleCashflow = () => {
+    navigate('/cashflow');
+  };
+
+  const handlePincodeExclusion = () => {
+    navigate('/pincode');
+  };
+
+  const handleSmartMetaTargeting = () => {
+    navigate('/smart-meta');
+  };
+
+  const handleCustomAudience = () => {
+    navigate('/custom-audience');
+  };
+
+  const handleRTOGPT = () => {
+    navigate('/rto-gpt');
+  };
+
+  const handleDecisionEngine = () => {
+    navigate('/decision-engine');
+  };
+
+  const handleSavingsCalculator = () => {
+    navigate('/savings-calculator');
   };
 
   return (
@@ -91,6 +125,7 @@ const UnifiedPlatform = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="bg-blue-50 rounded-xl p-6 hover:bg-blue-100 transition-colors cursor-pointer"
+            onClick={handleCustomPixel}
           >
             <div className="flex items-center gap-3">
               <MousePointer className="w-5 h-5 text-blue-600" />
@@ -105,6 +140,7 @@ const UnifiedPlatform = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="bg-blue-50 rounded-xl p-6 hover:bg-blue-100 transition-colors cursor-pointer"
+            onClick={handleCashflow}
           >
             <div className="flex items-center gap-3">
               <TrendingUp className="w-5 h-5 text-blue-600" />
@@ -119,6 +155,7 @@ const UnifiedPlatform = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.5 }}
             className="bg-blue-50 rounded-xl p-6 hover:bg-blue-100 transition-colors cursor-pointer"
+            onClick={handlePincodeExclusion}
           >
             <div className="flex items-center gap-3">
               <MapPin className="w-5 h-5 text-blue-600" />
@@ -133,6 +170,7 @@ const UnifiedPlatform = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.6 }}
             className="bg-blue-50 rounded-xl p-6 hover:bg-blue-100 transition-colors cursor-pointer"
+            onClick={handleSmartMetaTargeting}
           >
             <div className="flex items-center gap-3">
               <Target className="w-5 h-5 text-blue-600" />
@@ -150,6 +188,7 @@ const UnifiedPlatform = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.7 }}
             className="bg-blue-50 rounded-xl p-6 hover:bg-blue-100 transition-colors cursor-pointer"
+            onClick={handleCustomAudience}
           >
             <div className="flex items-center gap-3">
               <Users className="w-5 h-5 text-blue-600" />
@@ -164,6 +203,7 @@ const UnifiedPlatform = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.8 }}
             className="bg-blue-50 rounded-xl p-6 hover:bg-blue-100 transition-colors cursor-pointer"
+            onClick={handleRTOGPT}
           >
             <div className="flex items-center gap-3">
               <MessageSquare className="w-5 h-5 text-blue-600" />
@@ -178,6 +218,7 @@ const UnifiedPlatform = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.9 }}
             className="bg-blue-50 rounded-xl p-6 hover:bg-blue-100 transition-colors cursor-pointer"
+            onClick={handleDecisionEngine}
           >
             <div className="flex items-center gap-3">
               <Brain className="w-5 h-5 text-blue-600" />
@@ -192,6 +233,7 @@ const UnifiedPlatform = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 1.0 }}
             className="bg-blue-50 rounded-xl p-6 hover:bg-blue-100 transition-colors cursor-pointer"
+            onClick={handleSavingsCalculator}
           >
             <div className="flex items-center gap-3">
               <Calculator className="w-5 h-5 text-blue-600" />
