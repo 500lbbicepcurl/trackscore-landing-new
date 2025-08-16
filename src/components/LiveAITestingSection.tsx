@@ -150,6 +150,109 @@ const LiveAITestingSection = () => {
 
               {/* Iframe container */}
               <div className="relative h-[500px] rounded-2xl overflow-hidden border border-border/30">
+                                 {/* Animated Bubbles */}
+                 <motion.div
+                   className="absolute top-4 right-4 w-24 h-8 bg-blue-100/90 backdrop-blur-sm rounded-2xl border border-blue-200/60 flex items-center justify-center text-[9px] font-medium text-blue-700 z-10 px-3 py-1.5 whitespace-nowrap"
+                   animate={{
+                     scale: [0.8, 1.05, 0.8],
+                     opacity: [0.4, 1, 0.4],
+                     y: [-6, 0, -6],
+                   }}
+                   transition={{
+                     duration: 3,
+                     repeat: Infinity,
+                     ease: "easeInOut",
+                   }}
+                 >
+                   Where is my order?
+                 </motion.div>
+
+                 <motion.div
+                   className="absolute bottom-6 left-6 w-26 h-8 bg-green-100/90 backdrop-blur-sm rounded-2xl border border-green-200/60 flex items-center justify-center text-[9px] font-medium text-green-700 z-10 px-3 py-1.5 whitespace-nowrap"
+                   animate={{
+                     scale: [0.7, 1.1, 0.7],
+                     opacity: [0.4, 1, 0.4],
+                     x: [-3, 3, -3],
+                   }}
+                   transition={{
+                     duration: 4,
+                     repeat: Infinity,
+                     ease: "easeInOut",
+                     delay: 1,
+                   }}
+                 >
+                   When will it arrive?
+                 </motion.div>
+
+                 <motion.div
+                   className="absolute top-1/2 -left-8 w-20 h-8 bg-purple-100/90 backdrop-blur-sm rounded-2xl border border-purple-200/60 flex items-center justify-center text-[9px] font-medium text-purple-700 z-10 px-3 py-1.5 whitespace-nowrap"
+                   animate={{
+                     scale: [0.6, 1.2, 0.6],
+                     opacity: [0.3, 1, 0.3],
+                     y: [-4, 0, -4],
+                   }}
+                   transition={{
+                     duration: 3.5,
+                     repeat: Infinity,
+                     ease: "easeInOut",
+                     delay: 2,
+                   }}
+                 >
+                   Order confirmed!
+                 </motion.div>
+
+                 <motion.div
+                   className="absolute top-1/3 -right-10 w-28 h-8 bg-orange-100/90 backdrop-blur-sm rounded-2xl border border-orange-200/60 flex items-center justify-center text-[9px] font-medium text-orange-700 z-10 px-3 py-1.5 whitespace-nowrap"
+                   animate={{
+                     scale: [0.9, 1.05, 0.9],
+                     opacity: [0.5, 1, 0.5],
+                     y: [0, -8, 0],
+                   }}
+                   transition={{
+                     duration: 2.5,
+                     repeat: Infinity,
+                     ease: "easeInOut",
+                     delay: 0.5,
+                   }}
+                 >
+                   Please confirm address
+                 </motion.div>
+
+                 <motion.div
+                   className="absolute bottom-4 right-4 w-18 h-8 bg-pink-100/90 backdrop-blur-sm rounded-2xl border border-pink-200/60 flex items-center justify-center text-[9px] font-medium text-pink-700 z-10 px-3 py-1.5 whitespace-nowrap"
+                   animate={{
+                     scale: [0.5, 1.2, 0.5],
+                     opacity: [0.3, 1, 0.3],
+                     y: [-3, 0, -3],
+                   }}
+                   transition={{
+                     duration: 4.5,
+                     repeat: Infinity,
+                     ease: "easeInOut",
+                     delay: 1.5,
+                   }}
+                 >
+                   Track order
+                 </motion.div>
+
+                 <motion.div
+                   className="absolute top-1/4 left-1/4 w-20 h-8 bg-indigo-100/90 backdrop-blur-sm rounded-2xl border border-indigo-200/60 flex items-center justify-center text-[9px] font-medium text-indigo-700 z-10 px-3 py-1.5 whitespace-nowrap"
+                   animate={{
+                     scale: [0.8, 1.1, 0.8],
+                     opacity: [0.4, 1, 0.4],
+                     x: [0, 6, 0],
+                     y: [0, -3, 0],
+                   }}
+                   transition={{
+                     duration: 3.2,
+                     repeat: Infinity,
+                     ease: "easeInOut",
+                     delay: 0.8,
+                   }}
+                 >
+                   Delivery status
+                 </motion.div>
+
                 <motion.div
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
