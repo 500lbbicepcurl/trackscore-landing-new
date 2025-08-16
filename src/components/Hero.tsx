@@ -109,7 +109,7 @@ const Hero = () => {
             className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mb-8"
           >
             Scalysis calls your customers instantly, understands intent, confirms address, 
-            and learns who will RTO – before it's too late.
+            and learns who will RTO before it's too late.
           </motion.p>
 
           {/* Founder badge */}
@@ -122,7 +122,7 @@ const Hero = () => {
             <div className="w-8 h-8 bg-gradient-primary rounded-full flex items-center justify-center text-white text-sm font-bold">
               A
             </div>
-            <span>Built by a ₹6Cr D2C founder — out of RTO pain.</span>
+            <span>Built by a ₹6Cr D2C founder out of RTO pain.</span>
           </motion.div>
 
           {/* CTA Buttons */}
