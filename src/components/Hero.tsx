@@ -2,8 +2,9 @@ import { useEffect, useState, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { Button } from "@/components/ui/button";
-import { Play, Phone, TrendingDown } from "lucide-react";
+import { Play, Phone, TrendingDown, Mic } from "lucide-react";
 import { SynchronizedAudioPlayer } from "@/components/ui/SynchronizedAudioPlayer";
+import { useNavigate } from "react-router-dom";
 
 // Import brand images
 import brand1 from "./BRAND 1.png";
@@ -15,6 +16,7 @@ const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [showAudioPlayer, setShowAudioPlayer] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
   
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -33,6 +35,10 @@ const Hero = () => {
     document.getElementById("get-started")?.scrollIntoView({
       behavior: "smooth"
     });
+  };
+
+  const handleLiveAICallClick = () => {
+    navigate('/live-ai-testing');
   };
 
   // Waveform visualization component
@@ -130,8 +136,14 @@ const Hero = () => {
               <Phone className="w-5 h-5 mr-2" />
               Book a Demo
             </Button>
-            <Button variant="outline" size="lg" className="px-8 py-6 text-lg font-semibold border-2">
-              Try Free
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="px-8 py-6 text-lg font-semibold border-2"
+              onClick={handleLiveAICallClick}
+            >
+              <Mic className="w-5 h-5 mr-2" />
+              Live AI Call
             </Button>
           </motion.div>
 
