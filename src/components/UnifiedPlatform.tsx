@@ -18,7 +18,7 @@ const UnifiedPlatform = () => {
   const navigate = useNavigate();
 
   const handleScrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    navigate('/live-ai-testing');
   };
 
   const handleSmartOrderSelection = () => {

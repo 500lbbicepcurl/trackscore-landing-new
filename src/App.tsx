@@ -20,6 +20,7 @@ import CustomAudiencePage from "./pages/CustomAudiencePage";
 import RTOGPTPage from "./pages/RTOGPTPage";
 import DecisionEnginePage from "./pages/DecisionEnginePage";
 import SavingsCalculatorPage from "./pages/SavingsCalculatorPage";
+import LiveAITestingPage from "./pages/LiveAITestingPage";
 
 const queryClient = new QueryClient();
 
@@ -40,6 +41,7 @@ const App = () => (
           <Route path="/rto-gpt" element={<RTOGPTPage />} />
           <Route path="/decision-engine" element={<DecisionEnginePage />} />
           <Route path="/savings-calculator" element={<SavingsCalculatorPage />} />
+          <Route path="/live-ai-testing" element={<LiveAITestingPage />} />
           <Route path="/reduce-rto" element={<ReduceRTO />} />
           <Route path="/reduce-rto/:slug" element={<BlogPost />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />

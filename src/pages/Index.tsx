@@ -61,7 +61,7 @@ const Index = () => {
         <GeminiEffectSection />
         <UnifiedPlatform />
         <AgentIntelligence />
-        <LiveAITestingSection />
+        {/* <LiveAITestingSection /> */}
         {/* <CoreValuePoints />
         <FeatureEcosystem />
         <MarketComparisonSlider />
