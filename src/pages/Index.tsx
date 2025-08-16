@@ -27,7 +27,7 @@ import YouDecideWhatShips from "@/components/YouDecideWhatShips";
 import GlassBoxSection from "@/components/GlassBoxSection";
 import CoreValuePoints from "@/components/CoreValuePoints";
 import FeatureEcosystem from "@/components/FeatureEcosystem";
-import OrderFilteringSection from "@/components/OrderFilteringSection";
+import LiveAITestingSection from "@/components/LiveAITestingSection";
 import SmartOrderSelection from "@/components/SmartOrderSelection";
 import CustomPixelBehavior from "@/components/CustomPixelBehavior";
 import CODCashflowGraphs from "@/components/CODCashflowGraphs";
@@ -61,6 +61,7 @@ const Index = () => {
         <GeminiEffectSection />
         <UnifiedPlatform />
         <AgentIntelligence />
+        <LiveAITestingSection />
         {/* <CoreValuePoints />
         <FeatureEcosystem />
         <MarketComparisonSlider />
