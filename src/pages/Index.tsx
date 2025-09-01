@@ -34,6 +34,7 @@ import CODCashflowGraphs from "@/components/CODCashflowGraphs";
 import PincodeHeatmap from "@/components/PincodeHeatmap";
 import CustomAudienceSegmentation from "@/components/CustomAudienceSegmentation";
 import RTOGPTChat from "@/components/RTOGPTChat";
+import AIBrainSection from "@/components/AIBrainSection";
 
 const Index = () => {
   useEffect(() => {
@@ -56,7 +57,8 @@ const Index = () => {
       <Navbar />
       <main className="flex-grow">
         <Hero />
-              <OldVsNew />
+        <AIBrainSection />
+        <OldVsNew />
         <BuiltForDropshippers />
         <GeminiEffectSection />
         <UnifiedPlatform />
