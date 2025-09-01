@@ -1,7 +1,7 @@
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Sphere, Html } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
-import { useRef, useState } from 'react'
+import { useRef, useState, Suspense, useEffect } from 'react'
 import * as THREE from 'three'
 import { motion } from 'framer-motion'
 
@@ -76,28 +76,65 @@ function DataStream({ position, color, label, direction = 'in' }: {
 // 3D Scene Component
 function AIBrainScene() {
   return (
-    <Canvas camera={{ position: [0, 0, 8], fov: 45 }}>
-      <ambientLight intensity={0.4} />
-      <pointLight position={[10, 10, 10]} intensity={1} />
-      <pointLight position={[-10, -10, -10]} intensity={0.5} />
-      
-      <Brain />
-      
-      {/* Incoming Data Streams */}
-      <DataStream position={[-4, 1.5, 0]} color="#3b82f6" label="Orders" direction="in" />
-      <DataStream position={[-4, 0.5, 0]} color="#eab308" label="Pin Codes" direction="in" />
-      <DataStream position={[-4, -0.5, 0]} color="#22c55e" label="Customers" direction="in" />
-      <DataStream position={[-4, -1.5, 0]} color="#a855f7" label="Deliveries" direction="in" />
-      <DataStream position={[-4, -2.5, 0]} color="#f97316" label="Ad Signals" direction="in" />
-      
-      {/* Outgoing Decision Streams */}
-      <DataStream position={[4, 1, 0]} color="#10b981" label="🟢 Safe to Ship" direction="out" />
-      <DataStream position={[4, 0, 0]} color="#ef4444" label="🔴 High RTO Risk" direction="out" />
-      <DataStream position={[4, -1, 0]} color="#f59e0b" label="💰 Profitable Zones" direction="out" />
-      
-      <OrbitControls enableZoom={false} enablePan={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
+    <Canvas 
+      camera={{ position: [0, 0, 8], fov: 45 }}
+      gl={{ antialias: true, alpha: true }}
+      onCreated={({ gl }) => {
+        gl.setClearColor('#000000', 0)
+      }}
+    >
+      <Suspense fallback={null}>
+        <ambientLight intensity={0.4} />
+        <pointLight position={[10, 10, 10]} intensity={1} />
+        <pointLight position={[-10, -10, -10]} intensity={0.5} />
+        
+        <Brain />
+        
+        {/* Incoming Data Streams */}
+        <DataStream position={[-4, 1.5, 0]} color="#3b82f6" label="Orders" direction="in" />
+        <DataStream position={[-4, 0.5, 0]} color="#eab308" label="Pin Codes" direction="in" />
+        <DataStream position={[-4, -0.5, 0]} color="#22c55e" label="Customers" direction="in" />
+        <DataStream position={[-4, -1.5, 0]} color="#a855f7" label="Deliveries" direction="in" />
+        <DataStream position={[-4, -2.5, 0]} color="#f97316" label="Ad Signals" direction="in" />
+        
+        {/* Outgoing Decision Streams */}
+        <DataStream position={[4, 1, 0]} color="#10b981" label="🟢 Safe to Ship" direction="out" />
+        <DataStream position={[4, 0, 0]} color="#ef4444" label="🔴 High RTO Risk" direction="out" />
+        <DataStream position={[4, -1, 0]} color="#f59e0b" label="💰 Profitable Zones" direction="out" />
+        
+        <OrbitControls enableZoom={false} enablePan={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
+      </Suspense>
     </Canvas>
   )
+}
+
+// Error Boundary for Canvas
+function CanvasWrapper({ children }: { children: React.ReactNode }) {
+  const [hasError, setHasError] = useState(false)
+  
+  useEffect(() => {
+    const handleError = () => setHasError(true)
+    window.addEventListener('error', handleError)
+    return () => window.removeEventListener('error', handleError)
+  }, [])
+  
+  if (hasError) {
+    return (
+      <div className="flex items-center justify-center h-full bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl border border-white/10">
+        <div className="text-center space-y-4">
+          <div className="w-24 h-24 mx-auto bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
+            🧠
+          </div>
+          <div className="text-white">
+            <div className="text-xl font-semibold mb-2">AI Brain Processing</div>
+            <div className="text-gray-300 text-sm">Your personalized RTO intelligence model</div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+  
+  return <>{children}</>
 }
 
 export default function AIBrainSection() {
@@ -168,7 +205,9 @@ export default function AIBrainSection() {
             className="relative h-[500px] lg:h-[600px]"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl backdrop-blur-sm border border-white/10" />
-            <AIBrainScene />
+            <CanvasWrapper>
+              <AIBrainScene />
+            </CanvasWrapper>
             
             {/* Glow Effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl blur-xl -z-10" />
@@ -184,8 +223,8 @@ export default function AIBrainSection() {
             key={i}
             className="absolute w-1 h-1 bg-blue-400 rounded-full"
             initial={{ 
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
+              x: Math.random() * 1200,
+              y: Math.random() * 800,
               opacity: 0
             }}
             animate={{
