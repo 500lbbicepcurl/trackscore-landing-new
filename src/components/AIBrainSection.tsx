@@ -121,5 +121,74 @@ function CanvasWrapper({
   return <>{children}</>;
 }
 export default function AIBrainSection() {
-  return;
+  return (
+    <section className="py-20 bg-gradient-to-b from-background to-background/50 relative overflow-hidden">
+      <div className="container mx-auto px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left: Copy */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="space-y-6"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm font-medium text-primary">
+              🧠 AI-Powered Intelligence
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-bold">
+              Your Brand's Personal
+              <br />
+              <span className="gradient-text">RTO Brain</span>
+            </h2>
+            
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Every COD order teaches your AI model. It learns which pin codes work, 
+              which customers are genuine, and which shipments are risky — so you only 
+              ship where profits are safe.
+            </p>
+            
+            <ul className="space-y-3">
+              <li className="flex items-start gap-3">
+                <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span className="text-xs">✓</span>
+                </div>
+                <span className="text-muted-foreground">Learns from <span className="text-foreground font-semibold">your orders, not generic data</span></span>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span className="text-xs">✓</span>
+                </div>
+                <span className="text-muted-foreground">Adapts to <span className="text-foreground font-semibold">your regions & repeat buyers</span></span>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span className="text-xs">✓</span>
+                </div>
+                <span className="text-muted-foreground">Grows smarter with <span className="text-foreground font-semibold">every delivery</span></span>
+              </li>
+            </ul>
+            
+            <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all">
+              See Your Model in Action →
+            </button>
+          </motion.div>
+          
+          {/* Right: 3D Brain Animation */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="h-[500px] relative"
+          >
+            <CanvasWrapper>
+              <AIBrainScene />
+            </CanvasWrapper>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
 }

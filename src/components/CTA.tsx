@@ -45,10 +45,10 @@ const CTA = () => {
             <Button
               size="lg"
               className="bg-white text-primary hover:bg-blue-500 hover:text-white px-8 py-6 text-lg font-semibold shadow-large"
-              onClick={handleGetStarted}
+              onClick={() => window.location.href = 'https://scalysis-app.onrender.com/login'}
             >
               <Phone className="w-5 h-5 mr-2" />
-              Book Your Demo Call
+              Start For Free
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <Button
