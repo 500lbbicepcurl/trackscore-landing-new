@@ -64,9 +64,9 @@ const Navbar = () => {
             </div>
             <Button
               className="gradient-primary text-white px-6 py-2"
-              onClick={handleGetStarted}
+              onClick={() => window.location.href = 'https://scalysis-app.onrender.com/login'}
             >
-              Get Started
+              Start For Free
             </Button>
           </div>
 
@@ -105,10 +105,10 @@ const Navbar = () => {
                 One-Click Truth
               </Link>
               <Button
-                onClick={handleGetStarted}
+                onClick={() => window.location.href = 'https://scalysis-app.onrender.com/login'}
                 className="gradient-primary text-white text-left justify-start"
               >
-                Get Started
+                Start For Free
               </Button>
             </div>
           </motion.div>
