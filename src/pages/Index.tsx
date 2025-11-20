@@ -35,6 +35,10 @@ import PincodeHeatmap from "@/components/PincodeHeatmap";
 import CustomAudienceSegmentation from "@/components/CustomAudienceSegmentation";
 import RTOGPTChat from "@/components/RTOGPTChat";
 import AIBrainSection from "@/components/AIBrainSection";
+import PDFFeaturesSection from "@/components/PDFFeaturesSection";
+import UseCasesSection from "@/components/UseCasesSection";
+import PDFTechSection from "@/components/PDFTechSection";
+import PDFTestimonialSection from "@/components/PDFTestimonialSection";
 
 const Index = () => {
   useEffect(() => {
@@ -57,13 +61,10 @@ const Index = () => {
       <Navbar />
       <main className="flex-grow">
         <Hero />
-        <AIBrainSection />
-        <OldVsNew />
-        <BuiltForDropshippers />
-        <GeminiEffectSection />
-        <UnifiedPlatform />
-        <AgentIntelligence />
-        {/* <LiveAITestingSection /> */}
+        <PDFFeaturesSection />
+        <UseCasesSection />
+        <PDFTechSection />
+        <PDFTestimonialSection />
         {/* <CoreValuePoints />
         <FeatureEcosystem />
         <MarketComparisonSlider />

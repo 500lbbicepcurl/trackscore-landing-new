@@ -31,14 +31,13 @@ const CTA = () => {
           </div>
           
           <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Stop losing money on 
+            Ready to build your
             <br />
-            <span className="text-white/90">failed COD deliveries</span>
+            <span className="text-white/90">team's dream D2C Brand?</span>
           </h2>
           
           <p className="text-xl text-white/80 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Join 200+ D2C brands using Scalysis AI to call every COD customer, 
-            confirm orders, and reduce returns before they happen.
+            Scale with security. Scalysis is audited and certified by industry-leading third-party standards & DND security.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">

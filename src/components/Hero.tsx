@@ -60,45 +60,47 @@ const Hero = () => {
   return (
     <motion.section 
       ref={sectionRef} 
-      className="relative min-h-screen gradient-hero overflow-hidden"
+      className="relative min-h-screen bg-white overflow-hidden"
     >
-      {/* Background Elements */}
-      <motion.div className="absolute inset-0 -z-10 overflow-hidden">
-        <motion.div 
-          className="absolute top-1/4 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" 
-          style={{ y: y1 }}
+      {/* White Background with Visible Grid Pattern */}
+      <div className="absolute inset-0 -z-10 bg-white">
+        {/* Visible grid pattern - matching PDF */}
+        <div 
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `
+              linear-gradient(to right, rgba(0,0,0,0.08) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(0,0,0,0.08) 1px, transparent 1px)
+            `,
+            backgroundSize: '60px 60px',
+            backgroundPosition: '0 0'
+          }}
         />
-        <motion.div 
-          className="absolute bottom-0 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl" 
-          style={{ y: y2 }}
-        />
-      </motion.div>
-
-      <div className="container mx-auto px-6 lg:px-8 pt-32 pb-10">
-        <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
+      </div>
+      
+      <div className="container mx-auto px-6 lg:px-8 pt-24 pb-4 relative z-10">
+        <div className="flex flex-col items-center text-center max-w-6xl mx-auto">
           
-          {/* Badge */}
+          {/* Badge - Matching PDF */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm font-medium text-primary mb-7"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#1c1c1f] rounded-lg text-sm font-medium text-white mb-8"
           >
-            <TrendingDown className="w-4 h-4" />
-            Reduce RTO by 40% with AI-powered calling
+            <span className="font-bold">40%</span> Reduction in RTO Rates with AI-Powered{" "}
+            <span className="text-[#266def]">→</span>
           </motion.div>
 
-          {/* Main Headline */}
+          {/* Main Headline - Matching PDF exactly with correct sizes */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl md:text-7xl font-bold leading-tight tracking-tight text-foreground mb-6"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.15] tracking-tight text-[#1c1c1f] mb-6 max-w-5xl"
           >
-            Talk to every COD customer.{" "}
-            <span className="text-gradient">Filter fraud.</span>{" "}
-            Reduce RTO.{" "}
-            <span className="text-gradient">With AI.</span>
+            Replace Manual Calling with one{" "}
+            <span className="text-[#266def]">AI Calling</span> Ecosystem
           </motion.h1>
 
           {/* Subheadline */}
@@ -106,202 +108,271 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mb-8"
+            className="text-lg md:text-xl text-[#1c1c1f] leading-relaxed max-w-3xl mb-12"
           >
-            Scalysis calls your customers instantly, understands intent, confirms address, 
-            and learns who will RTO before it's too late.
+            Built in RTO-Engine. 85%+ Conversion rates.
           </motion.p>
 
-          {/* Founder badge */}
+          {/* CTA Buttons - Matching PDF */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex items-center gap-3 text-muted-foreground mb-10"
-          >
-            <div className="w-8 h-8 bg-gradient-primary rounded-full flex items-center justify-center text-white text-sm font-bold">
-              A
-            </div>
-            <span>Built by a ₹6Cr D2C founder out of RTO pain.</span>
-          </motion.div>
-
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 mb-16"
+            className="flex flex-col sm:flex-row gap-4 items-center mb-8"
           >
             <Button 
               size="lg" 
-              className="gradient-primary text-white px-8 py-6 text-lg font-semibold shadow-large"
-              onClick={() => window.location.href = 'https://scalysis-app.onrender.com/login'}
+              className="bg-[#1c1c1f] text-white hover:bg-[#2a2a2d] px-8 py-6 text-base font-semibold shadow-large"
             >
-              <Phone className="w-5 h-5 mr-2" />
-              Start For Free
+              Dashboard
             </Button>
             <Button 
               variant="outline" 
               size="lg" 
-              className="px-8 py-6 text-lg font-semibold border-2"
-              onClick={handleLiveAICallClick}
+              className="bg-white border-2 border-gray-300 text-[#1c1c1f] hover:bg-gray-50 px-8 py-6 text-base font-semibold"
             >
-              <Mic className="w-5 h-5 mr-2" />
-              Live AI Call
+              AI Call
             </Button>
           </motion.div>
 
-          {/* Interactive Demo Section */}
+          {/* Free calls badge with arrow - Matching PDF */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="w-full max-w-4xl"
-            style={{ opacity: showAudioPlayer ? 1 : undefined }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="relative flex items-center justify-center gap-2 text-[#266def] text-sm font-medium italic mt-2"
           >
-            {showAudioPlayer ? (
-              <SynchronizedAudioPlayer 
-                audioSrc="/anuj.wav" 
-                onClose={() => setShowAudioPlayer(false)}
-              />
-            ) : (
-              <div className="bg-card border border-border rounded-2xl p-8 shadow-large">
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  </div>
-                  <div className="text-sm text-muted-foreground">Live AI Call Demo</div>
-                </div>
-                
-                {/* Waveform visualization */}
-                <div className="bg-muted/50 rounded-xl p-6 mb-6">
-                  <Waveform />
-                </div>
-                
-                {/* Call transcript preview */}
-                <div className="space-y-4 text-left">
-                  <div className="flex gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                    <div>
-                      <p className="text-sm text-muted-foreground">AI Assistant</p>
-                      <p className="text-foreground">"Hello! This is regarding your recent order. Can you confirm your delivery address?"</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-3">
-                    <div className="w-2 h-2 bg-accent rounded-full mt-2"></div>
-                    <div>
-                      <p className="text-sm text-muted-foreground">Customer</p>
-                      <p className="text-foreground">"Yes, it's 123 MG Road, Bangalore. But I might not be available tomorrow."</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                    <div>
-                      <p className="text-sm text-muted-foreground">AI Assistant</p>
-                      <p className="text-foreground">"No problem! When would be a better time for delivery?"</p>
-                    </div>
+            <span className="relative z-10">get free 100 calls</span>
+            <svg 
+              className="w-24 h-5 text-[#266def] relative -ml-2" 
+              viewBox="0 0 140 25" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="2.5" 
+              strokeDasharray="5,5"
+            >
+              <path d="M 5 12 Q 50 8, 80 12 T 130 12" />
+              <path d="M 125 8 L 135 12 L 125 16" fill="currentColor" />
+            </svg>
+          </motion.div>
+
                   </div>
                 </div>
                 
-                <div className="mt-6 flex items-center justify-center">
-                  <Button 
-                    variant="ghost" 
-                    className="text-primary"
-                    onClick={() => setShowAudioPlayer(true)}
-                  >
-                    <Play className="w-4 h-4 mr-2" />
-                    Hear a real call
-                  </Button>
+      {/* Video Player Section - After Text Content with Grid Background */}
+      <div className="relative w-full mt-12 mb-10 z-0">
+        <div className="relative w-full max-w-6xl mx-auto px-6">
+          {/* Video Container with Grid Background Visible */}
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            {/* Grid pattern overlay on video - visible through */}
+            <div 
+              className="absolute inset-0 z-10 pointer-events-none"
+              style={{
+                backgroundImage: `
+                  linear-gradient(to right, rgba(255,255,255,0.15) 1px, transparent 1px),
+                  linear-gradient(to bottom, rgba(255,255,255,0.15) 1px, transparent 1px)
+                `,
+                backgroundSize: '40px 40px'
+              }}
+            />
+            
+            {/* Video with dark gradient background */}
+            <div className="relative w-full h-[500px] md:h-[600px] bg-gradient-to-br from-[#1c1833] via-[#262044] to-[#1c192c]">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+              >
+                <source src="/hero-video.mp4" type="video/mp4" />
+              </video>
+              
+              {/* Dark overlay for better contrast */}
+              <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
+              
                 </div>
               </div>
-            )}
-          </motion.div>
         </div>
       </div>
 
       {/* Brands and Stats Section */}
       <div className="w-full">
-        {/* Brands Section - Hero Background */}
-        <div className="w-full pt-6 pb-12">
+        {/* Partner Logos Section - Matching PDF with actual logo designs */}
+        <div className="w-full pt-6 pb-12 bg-white">
           <div className="w-full">
-            {/* Sliding Brands */}
+            {/* Sliding Partner Logos */}
             <div className="relative overflow-hidden">
               <div className="flex animate-scroll px-10">
-                {/* First set */}
-                <div className="flex items-center gap-20 whitespace-nowrap">
-                  <div className="flex items-center justify-center w-32 h-12">
-                    <img src={brand1} alt="Brand 1" className="max-w-full max-h-full object-contain" />
+                {/* Partner logos with visual designs */}
+                {[
+                  { name: "Coca-Cola", type: "cocacola" },
+                  { name: "OpenAI", type: "openai" },
+                  { name: "Pallet", type: "pallet" },
+                  { name: "CAUSAL", type: "causal" },
+                  { name: "Plain.", type: "plain" },
+                  { name: "passionfroot", type: "passionfroot" },
+                  { name: "DOPT", type: "dopt" },
+                  { name: "HYPERLINE", type: "hyperline" },
+                  { name: "On Deck", type: "ondeck" },
+                  { name: "BRAVADO", type: "bravado" },
+                  { name: "Beacons", type: "beacons" }
+                ].map((logo, idx) => (
+                  <div key={idx} className="flex items-center justify-center px-8 whitespace-nowrap min-w-[120px]">
+                    <div className="flex items-center gap-2">
+                      {/* Logo visual representation */}
+                      {logo.type === "cocacola" && (
+                        <span className="text-red-600 font-bold italic text-lg" style={{ fontFamily: "serif" }}>Coca-Cola</span>
+                      )}
+                      {logo.type === "openai" && (
+                        <div className="flex items-center gap-2">
+                          <div className="w-6 h-6 bg-gray-800 rounded-sm"></div>
+                          <span className="text-gray-800 font-semibold">{logo.name}</span>
+                        </div>
+                      )}
+                      {logo.type === "pallet" && (
+                        <div className="flex items-center gap-1">
+                          <div className="w-4 h-4 bg-gray-400"></div>
+                          <div className="w-4 h-4 bg-gray-600"></div>
+                          <span className="text-gray-800 font-semibold ml-1">{logo.name}</span>
+                        </div>
+                      )}
+                      {logo.type === "causal" && (
+                        <div className="flex items-center gap-2">
+                          <div className="w-5 h-5 border-2 border-gray-400 rounded-full"></div>
+                          <span className="text-gray-800 font-bold">{logo.name}</span>
+                        </div>
+                      )}
+                      {logo.type === "plain" && (
+                        <span className="text-gray-800 font-bold">{logo.name}</span>
+                      )}
+                      {logo.type === "passionfroot" && (
+                        <span className="text-gray-800 font-bold lowercase">{logo.name}</span>
+                      )}
+                      {logo.type === "dopt" && (
+                        <span className="text-gray-800 font-black text-lg tracking-tight">{logo.name}</span>
+                      )}
+                      {logo.type === "hyperline" && (
+                        <div className="flex items-center gap-2">
+                          <span className="text-gray-800 font-bold">{logo.name}</span>
+                          <div className="w-2 h-2 bg-gray-600"></div>
+                        </div>
+                      )}
+                      {logo.type === "ondeck" && (
+                        <div className="flex items-center gap-2">
+                          <div className="w-6 h-6 bg-gray-800 rounded-full flex items-center justify-center">
+                            <div className="w-3 h-3 border border-white"></div>
+                          </div>
+                          <span className="text-gray-800 font-medium">{logo.name}</span>
+                        </div>
+                      )}
+                      {logo.type === "bravado" && (
+                        <div className="flex items-center gap-2">
+                          <div className="w-5 h-5 bg-gray-800 rounded-sm"></div>
+                          <span className="text-gray-800 font-bold">{logo.name}</span>
+                        </div>
+                      )}
+                      {logo.type === "beacons" && (
+                        <div className="flex items-center gap-2">
+                          <div className="flex gap-1">
+                            <div className="w-2 h-2 bg-gray-600 rounded-full"></div>
+                            <div className="w-2 h-2 bg-gray-600 rounded-full"></div>
+                            <div className="w-2 h-2 bg-gray-600 rounded-full"></div>
                   </div>
-                  <div className="flex items-center justify-center w-32 h-12">
-                    <img src={brand2} alt="Brand 2" className="max-w-full max-h-full object-contain" />
+                          <span className="text-gray-800 font-bold">{logo.name}</span>
                   </div>
-                  <div className="flex items-center justify-center w-32 h-12">
-                    <img src={brand3} alt="Brand 3" className="max-w-full max-h-full object-contain" />
+                      )}
                   </div>
-                  <div className="flex items-center justify-center w-32 h-12">
-                    <img src={brand4} alt="Brand 4" className="max-w-full max-h-full object-contain" />
                   </div>
-                </div>
+                ))}
                 
-                {/* Gap between sets */}
+                {/* Repeat for seamless scroll */}
                 <div className="w-20"></div>
                 
-                {/* Second set */}
-                <div className="flex items-center gap-20 whitespace-nowrap">
-                  <div className="flex items-center justify-center w-32 h-12">
-                    <img src={brand1} alt="Brand 1" className="max-w-full max-h-full object-contain" />
+                {[
+                  { name: "Coca-Cola", type: "cocacola" },
+                  { name: "OpenAI", type: "openai" },
+                  { name: "Pallet", type: "pallet" },
+                  { name: "CAUSAL", type: "causal" },
+                  { name: "Plain.", type: "plain" },
+                  { name: "passionfroot", type: "passionfroot" },
+                  { name: "DOPT", type: "dopt" },
+                  { name: "HYPERLINE", type: "hyperline" },
+                  { name: "On Deck", type: "ondeck" },
+                  { name: "BRAVADO", type: "bravado" },
+                  { name: "Beacons", type: "beacons" }
+                ].map((logo, idx) => (
+                  <div key={`repeat-${idx}`} className="flex items-center justify-center px-8 whitespace-nowrap min-w-[120px]">
+                    <div className="flex items-center gap-2">
+                      {logo.type === "cocacola" && (
+                        <span className="text-red-600 font-bold italic text-lg" style={{ fontFamily: "serif" }}>Coca-Cola</span>
+                      )}
+                      {logo.type === "openai" && (
+                        <div className="flex items-center gap-2">
+                          <div className="w-6 h-6 bg-gray-800 rounded-sm"></div>
+                          <span className="text-gray-800 font-semibold">{logo.name}</span>
+                        </div>
+                      )}
+                      {logo.type === "pallet" && (
+                        <div className="flex items-center gap-1">
+                          <div className="w-4 h-4 bg-gray-400"></div>
+                          <div className="w-4 h-4 bg-gray-600"></div>
+                          <span className="text-gray-800 font-semibold ml-1">{logo.name}</span>
+                        </div>
+                      )}
+                      {logo.type === "causal" && (
+                        <div className="flex items-center gap-2">
+                          <div className="w-5 h-5 border-2 border-gray-400 rounded-full"></div>
+                          <span className="text-gray-800 font-bold">{logo.name}</span>
                   </div>
-                  <div className="flex items-center justify-center w-32 h-12">
-                    <img src={brand2} alt="Brand 2" className="max-w-full max-h-full object-contain" />
+                      )}
+                      {logo.type === "plain" && (
+                        <span className="text-gray-800 font-bold">{logo.name}</span>
+                      )}
+                      {logo.type === "passionfroot" && (
+                        <span className="text-gray-800 font-bold lowercase">{logo.name}</span>
+                      )}
+                      {logo.type === "dopt" && (
+                        <span className="text-gray-800 font-black text-lg tracking-tight">{logo.name}</span>
+                      )}
+                      {logo.type === "hyperline" && (
+                        <div className="flex items-center gap-2">
+                          <span className="text-gray-800 font-bold">{logo.name}</span>
+                          <div className="w-2 h-2 bg-gray-600"></div>
                   </div>
-                  <div className="flex items-center justify-center w-32 h-12">
-                    <img src={brand3} alt="Brand 3" className="max-w-full max-h-full object-contain" />
+                      )}
+                      {logo.type === "ondeck" && (
+                        <div className="flex items-center gap-2">
+                          <div className="w-6 h-6 bg-gray-800 rounded-full flex items-center justify-center">
+                            <div className="w-3 h-3 border border-white"></div>
                   </div>
-                  <div className="flex items-center justify-center w-32 h-12">
-                    <img src={brand4} alt="Brand 4" className="max-w-full max-h-full object-contain" />
+                          <span className="text-gray-800 font-medium">{logo.name}</span>
                   </div>
+                      )}
+                      {logo.type === "bravado" && (
+                        <div className="flex items-center gap-2">
+                          <div className="w-5 h-5 bg-gray-800 rounded-sm"></div>
+                          <span className="text-gray-800 font-bold">{logo.name}</span>
                 </div>
-                
-                {/* Gap between sets */}
-                <div className="w-20"></div>
-                
-                {/* Third set for extra smoothness */}
-                <div className="flex items-center gap-20 whitespace-nowrap">
-                  <div className="flex items-center justify-center w-32 h-12">
-                    <img src={brand1} alt="Brand 1" className="max-w-full max-h-full object-contain" />
+                      )}
+                      {logo.type === "beacons" && (
+                        <div className="flex items-center gap-2">
+                          <div className="flex gap-1">
+                            <div className="w-2 h-2 bg-gray-600 rounded-full"></div>
+                            <div className="w-2 h-2 bg-gray-600 rounded-full"></div>
+                            <div className="w-2 h-2 bg-gray-600 rounded-full"></div>
                   </div>
-                  <div className="flex items-center justify-center w-32 h-12">
-                    <img src={brand2} alt="Brand 2" className="max-w-full max-h-full object-contain" />
+                          <span className="text-gray-800 font-bold">{logo.name}</span>
                   </div>
-                  <div className="flex items-center justify-center w-32 h-12">
-                    <img src={brand3} alt="Brand 3" className="max-w-full max-h-full object-contain" />
+                      )}
                   </div>
-                  <div className="flex items-center justify-center w-32 h-12">
-                    <img src={brand4} alt="Brand 4" className="max-w-full max-h-full object-contain" />
                   </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
 
-        {/* Stats Section - Blue Background */}
-        <div className="bg-blue-600 py-16">
-          <div className="container mx-auto px-6">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-white">
-              <div className="text-5xl md:text-6xl font-bold">
-                42%
-              </div>
-              <div className="text-center md:text-left max-w-xs">
-                <p className="text-lg md:text-xl leading-relaxed">
-                  average <span className="font-bold">increase</span> in new customer revenue <span className="font-bold">90 days after signing up</span> with Scalysis
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </motion.section>
   );
