@@ -1,286 +1,135 @@
 import { motion } from "framer-motion";
-import { Mic, RefreshCw, PhoneCall, BarChart3 } from "lucide-react";
+
+// Figma image assets - EXACT from node-id=1-249
+const imgImage3 = "https://www.figma.com/api/mcp/asset/eefeed19-5d02-4a50-a5c3-292f77790110";
+const imgFrame = "https://www.figma.com/api/mcp/asset/b5f62c42-1596-4975-8bce-159c09115621";
+const imgGroup = "https://www.figma.com/api/mcp/asset/d1bc4dfa-99f6-4a91-9155-c486bd5bba59";
+const imgGroup1 = "https://www.figma.com/api/mcp/asset/7b62ff65-cce3-4e78-8764-2bbbc9b4f6ea";
+const imgFrame1 = "https://www.figma.com/api/mcp/asset/71c5364b-6542-4f95-bae5-83c955b66fc3";
+const imgFrame2 = "https://www.figma.com/api/mcp/asset/61ee7ac7-0c1e-41f4-8871-009db6d72357";
 
 const UseCasesSection = () => {
   const templates = [
     {
       title: "Voice Intent",
-      icon: Mic,
-      description: "Multiple Voice intents to figure out better, how to select the order RTO and cancellation."
+      icon: imgFrame,
+      description: "Multiple Voice intents to figure out better, how to select the order RTO and cancellation.",
+      active: true
     },
     {
       title: "NDR Automations",
-      icon: RefreshCw,
-      description: "Use Attio's intuitive UI and ultra-customizable blocks to craft your ideal workflows."
+      icon: imgGroup,
+      description: "Use Attio's intuitive UI and ultra-customizable blocks to craft your ideal workflows.",
+      active: false
     },
     {
       title: "Address Recovery Calls",
-      icon: PhoneCall,
-      description: "Help your business scale with enriched data, custom attributes, and integrations."
+      icon: imgFrame1,
+      description: "Help your business scale with enriched data, custom attributes, and integrations.",
+      active: false
     },
     {
       title: "Sentiment Analyst",
-      icon: BarChart3,
-      description: "Analyze, track and share reports built on real-time data from across your workspace."
+      icon: imgFrame2,
+      description: "Analyze, track and share reports built on real-time data from across your workspace.",
+      active: false
     }
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-6">
-        <div className="max-w-7xl mx-auto">
-          {/* Title Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mb-12"
-          >
-            <div className="w-8 h-8 border-2 border-gray-300 rounded mb-4"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1c1c1f] mb-2">
-              Build the Use-Cases that's truly your own.
-            </h2>
-            <p className="text-xl text-gray-600">
-              Pre-Built Templates.
-            </p>
-          </motion.div>
+    <section className="py-[60px] bg-white">
+      <div className="container mx-auto px-6 lg:px-8">
+        <div className="max-w-[1155px] mx-auto relative">
+          <div className="flex flex-col gap-20">
+            {/* Title Section - EXACT Figma Match (node-id=1-272) */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="pl-10"
+            >
+              <h2 
+                className="text-[49px] font-bold leading-[57.2px] tracking-[-1.2px] text-[#1d1e20] mb-4"
+                style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+              >
+                In Built RTO Engine.
+                <br />
+                Capture Sentiment For Every Call
+              </h2>
+              <p className="text-[22px] font-medium leading-[30.8px] tracking-[-0.3px] text-[#31373d] max-w-[480px]">
+                Voice helps spot the real intent
+              </p>
+            </motion.div>
 
-          {/* Feature Cards */}
-          <div className="grid md:grid-cols-4 gap-6 mb-12">
-            {templates.map((template, index) => {
-              const IconComponent = template.icon;
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm"
-                >
-                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
-                    <IconComponent className="w-6 h-6 text-gray-700" />
-                  </div>
-                  <h3 className="text-lg font-bold text-[#1c1c1f] mb-2">
-                    {template.title}
-                  </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    {template.description}
-                  </p>
-                </motion.div>
-              );
-            })}
-          </div>
-
-          {/* Dashboard Preview */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="bg-white rounded-xl border border-gray-200 shadow-lg overflow-hidden"
-          >
-            {/* Dashboard Header */}
-            <div className="bg-gray-50 border-b border-gray-200 px-6 py-4 flex items-center justify-between">
-              <div className="flex items-center gap-4">
-                <span className="text-lg font-semibold text-[#1c1c1f]">Scalysis Dashboard</span>
-                <div className="flex items-center gap-2 px-3 py-1.5 bg-white border border-gray-300 rounded text-sm text-gray-600">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
-                  <input type="text" placeholder="Search..." className="outline-none bg-transparent w-32" />
-                </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <span className="text-sm text-gray-600">50 Orders/day</span>
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
-                    <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-                    </svg>
-                  </div>
-                  <div className="w-8 h-8 bg-[#266def] rounded-full flex items-center justify-center text-white font-bold text-sm">
-                    A
-                  </div>
-                  <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
-                    <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </div>
-                  <div className="flex items-center gap-1 text-sm text-gray-600">
-                    <span>scalysis</span>
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Dashboard Content */}
-            <div className="flex">
-              {/* Sidebar */}
-              <div className="w-64 bg-gray-50 border-r border-gray-200 p-4">
-                <div className="space-y-6">
-                  <div>
-                    <div className="text-xs font-bold text-gray-500 uppercase mb-2">OPERATE</div>
-                    <div className="space-y-1">
-                      <div className="px-3 py-2 bg-[#266def] text-white rounded text-sm font-medium">Dashboard</div>
-                      <div className="px-3 py-2 text-gray-700 rounded text-sm hover:bg-gray-100">Calls</div>
-                      <div className="px-3 py-2 text-gray-700 rounded text-sm hover:bg-gray-100">Campaigns</div>
-                      <div className="px-3 py-2 text-gray-700 rounded text-sm hover:bg-gray-100">NDR</div>
-                      <div className="px-3 py-2 text-gray-700 rounded text-sm hover:bg-gray-100">Test</div>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="text-xs font-bold text-gray-500 uppercase mb-2">ANALYTICS</div>
-                    <div className="space-y-1">
-                      <div className="px-3 py-2 text-gray-700 rounded text-sm hover:bg-gray-100">RTO</div>
-                      <div className="px-3 py-2 text-gray-700 rounded text-sm hover:bg-gray-100">Call</div>
-                      <div className="px-3 py-2 text-gray-700 rounded text-sm hover:bg-gray-100">Voice & AI</div>
-                      <div className="px-3 py-2 text-gray-700 rounded text-sm hover:bg-gray-100">NDR</div>
-                      <div className="px-3 py-2 text-gray-700 rounded text-sm hover:bg-gray-100">Volu</div>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="text-xs font-bold text-gray-500 uppercase mb-2">SETTINGS</div>
-                    <div className="space-y-1">
-                      <div className="px-3 py-2 text-gray-700 rounded text-sm hover:bg-gray-100">Settings</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Main Table Area */}
-              <div className="flex-1 p-6">
-                <div className="overflow-x-auto">
-                  <table className="w-full text-sm">
-                    <thead>
-                      <tr className="border-b border-gray-200">
-                        <th className="text-left py-3 px-4 font-semibold text-gray-700">ORDER</th>
-                        <th className="text-left py-3 px-4 font-semibold text-gray-700">DATE</th>
-                        <th className="text-left py-3 px-4 font-semibold text-gray-700">CUSTOMER</th>
-                        <th className="text-left py-3 px-4 font-semibold text-gray-700">PHONE</th>
-                        <th className="text-left py-3 px-4 font-semibold text-gray-700">ADDRESS</th>
-                        <th className="text-left py-3 px-4 font-semibold text-gray-700">PAYMENT</th>
-                        <th className="text-left py-3 px-4 font-semibold text-gray-700">FULFILLMENT</th>
-                        <th className="text-left py-3 px-4 font-semibold text-gray-700">REASON</th>
-                        <th className="text-left py-3 px-4 font-semibold text-gray-700">CALLING STATUS</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr className="border-b border-gray-100 hover:bg-gray-50">
-                        <td className="py-3 px-4 text-gray-900">#799876</td>
-                        <td className="py-3 px-4 text-gray-600">Saturday at 7:12 am</td>
-                        <td className="py-3 px-4 text-gray-900">Kulwinder Kaur</td>
-                        <td className="py-3 px-4 text-gray-600">+917847076974</td>
-                        <td className="py-3 px-4 text-gray-600">Khetribarpur golagola naya...</td>
-                        <td className="py-3 px-4"><span className="px-2 py-1 bg-orange-100 text-orange-700 rounded text-xs">COD</span></td>
-                        <td className="py-3 px-4"><span className="px-2 py-1 bg-red-100 text-red-700 rounded text-xs">Unfulfilled</span></td>
-                        <td className="py-3 px-4"><span className="px-2 py-1 bg-yellow-100 text-yellow-700 rounded text-xs">Bad Address</span></td>
-                        <td className="py-3 px-4"><span className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Not initiated</span></td>
-                      </tr>
-                      <tr className="border-b border-gray-100 hover:bg-gray-50 relative">
-                        <td className="py-3 px-4 text-gray-900">#799900</td>
-                        <td className="py-3 px-4 text-gray-600">Saturday at 7:37 am</td>
-                        <td className="py-3 px-4 text-gray-900">Asok kumar Nath</td>
-                        <td className="py-3 px-4 text-gray-600">+919434255999</td>
-                        <td className="py-3 px-4 text-gray-600">25 Nirupama Devi Road, Ra...</td>
-                        <td className="py-3 px-4"><span className="px-2 py-1 bg-green-100 text-green-700 rounded text-xs">Prepaid</span></td>
-                        <td className="py-3 px-4"><span className="px-2 py-1 bg-green-100 text-green-700 rounded text-xs">Fulfilled</span></td>
-                        <td className="py-3 px-4 relative">
-                          <span className="px-2 py-1 bg-purple-100 text-purple-700 rounded text-xs">Impulsive Orders</span>
-                          {/* Popup */}
-                          <div className="absolute left-0 top-full mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-xl z-10 p-4">
-                            <h4 className="font-bold text-gray-900 mb-1">Impulsive Orders</h4>
-                            <p className="text-xs text-gray-600 mb-3">meaning that the orders are impulsive</p>
-                            <div className="space-y-2 mb-3">
-                              <div className="flex items-center gap-2 text-xs text-gray-700">
-                                <div className="w-4 h-4 bg-gray-200 rounded"></div>
-                                <span>10 line address</span>
-                              </div>
-                              <div className="flex items-center gap-2 text-xs text-gray-700">
-                                <div className="w-4 h-4 bg-gray-200 rounded"></div>
-                                <span>Unusual Words</span>
-                              </div>
-                              <div className="flex items-center gap-2 text-xs text-gray-700">
-                                <div className="w-4 h-4 bg-gray-200 rounded"></div>
-                                <span>Missing Fields</span>
+            {/* White Card Container - EXACT Figma Match (node-id=1-278) */}
+            <div className="bg-white rounded-[20px] shadow-[0px_0px_0px_0.5px_#e4e5e9,0px_0px_0px_1px_rgba(228,229,233,0.6),0px_0px_0px_3.5px_#f9f9fb,0px_0px_0px_4px_#f3f4f7] overflow-hidden relative h-[604px]">
+              {/* Feature Cards at TOP - EXACT Figma Match */}
+              <div className="absolute top-[36px] left-1/2 transform -translate-x-1/2 w-[1075px] max-w-[1076px] z-10">
+                <div className="flex gap-6 pb-[64px]">
+                  {templates.map((template, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      className="flex flex-col gap-2 min-w-[250.75px] rounded-xl"
+                    >
+                      <div className="h-[25px] flex items-center gap-2">
+                        <div className="w-5 h-5 flex items-center justify-center">
+                          {index === 1 ? (
+                            <div className="w-5 h-5 relative">
+                              <div className="absolute inset-[7.14%_9.29%]">
+                                <img src={imgGroup1} alt="" className="w-full h-full" style={{ maskImage: `url('${imgGroup}')` }} />
                               </div>
                             </div>
-                            <button className="w-full px-3 py-2 bg-[#266def] text-white rounded text-xs font-medium hover:bg-[#1e5ad8]">
-                              View Customer
-                            </button>
-                          </div>
-                        </td>
-                        <td className="py-3 px-4"><span className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Not initiated</span></td>
-                      </tr>
-                      <tr className="border-b border-gray-100 hover:bg-gray-50">
-                        <td className="py-3 px-4 text-gray-900">#799909</td>
-                        <td className="py-3 px-4 text-gray-600">Saturday at 7:48 am</td>
-                        <td className="py-3 px-4 text-gray-900">Suraj Suraj</td>
-                        <td className="py-3 px-4 text-gray-600">+919651367135</td>
-                        <td className="py-3 px-4 text-gray-600">Marteenganj road Chhittep...</td>
-                        <td className="py-3 px-4"><span className="px-2 py-1 bg-orange-100 text-orange-700 rounded text-xs">COD</span></td>
-                        <td className="py-3 px-4"><span className="px-2 py-1 bg-red-100 text-red-700 rounded text-xs">Unfulfilled</span></td>
-                        <td className="py-3 px-4">-</td>
-                        <td className="py-3 px-4">-</td>
-                      </tr>
-                      <tr className="border-b border-gray-100 hover:bg-gray-50">
-                        <td className="py-3 px-4 text-gray-900">#799929</td>
-                        <td className="py-3 px-4 text-gray-600">Saturday at 8:04 am</td>
-                        <td className="py-3 px-4 text-gray-900">tapas kumar mitra</td>
-                        <td className="py-3 px-4 text-gray-600">+918348160476</td>
-                        <td className="py-3 px-4 text-gray-600">Kumar bagar, BC road, Rani...</td>
-                        <td className="py-3 px-4"><span className="px-2 py-1 bg-green-100 text-green-700 rounded text-xs">Prepaid</span></td>
-                        <td className="py-3 px-4"><span className="px-2 py-1 bg-green-100 text-green-700 rounded text-xs">Fulfilled</span></td>
-                        <td className="py-3 px-4">-</td>
-                        <td className="py-3 px-4">-</td>
-                      </tr>
-                      <tr className="border-b border-gray-100 hover:bg-gray-50">
-                        <td className="py-3 px-4 text-gray-900">#799931</td>
-                        <td className="py-3 px-4 text-gray-600">Saturday at 8:11 am</td>
-                        <td className="py-3 px-4 text-gray-900">Hari Goud</td>
-                        <td className="py-3 px-4 text-gray-600">+916309432007</td>
-                        <td className="py-3 px-4 text-gray-600">10-35 gopinagar, Serilingam...</td>
-                        <td className="py-3 px-4"><span className="px-2 py-1 bg-orange-100 text-orange-700 rounded text-xs">COD</span></td>
-                        <td className="py-3 px-4"><span className="px-2 py-1 bg-red-100 text-red-700 rounded text-xs">Unfulfilled</span></td>
-                        <td className="py-3 px-4">-</td>
-                        <td className="py-3 px-4">-</td>
-                      </tr>
-                      <tr className="border-b border-gray-100 hover:bg-gray-50">
-                        <td className="py-3 px-4 text-gray-900">#799937</td>
-                        <td className="py-3 px-4 text-gray-600">Saturday at 8:15 am</td>
-                        <td className="py-3 px-4 text-gray-900">Rahul Pradhan</td>
-                        <td className="py-3 px-4 text-gray-600">+918389091679</td>
-                        <td className="py-3 px-4 text-gray-600">Heera Vastugraam, Thal kit...</td>
-                        <td className="py-3 px-4"><span className="px-2 py-1 bg-green-100 text-green-700 rounded text-xs">Prepaid</span></td>
-                        <td className="py-3 px-4"><span className="px-2 py-1 bg-green-100 text-green-700 rounded text-xs">Fulfilled</span></td>
-                        <td className="py-3 px-4">-</td>
-                        <td className="py-3 px-4">-</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                          ) : (
+                            <img src={template.icon} alt="" className="w-5 h-5" />
+                          )}
+                        </div>
+                        <h3 className={`text-[18px] font-semibold leading-[25.2px] tracking-[-0.2px] ${
+                          template.active ? 'text-[#24292f]' : 'text-[#99a2af]'
+                        }`}>
+                          {template.title}
+                        </h3>
+                      </div>
+                      <p className={`text-[16px] leading-[24px] tracking-[-0.2px] font-medium ${
+                        template.active ? 'text-[#57606a]' : 'text-[#99a2af]'
+                      }`}>
+                        {template.description}
+                      </p>
+                    </motion.div>
+                  ))}
                 </div>
-                {/* Pagination */}
-                <div className="mt-4 flex items-center gap-2 text-sm text-gray-600">
-                  <button className="p-2 border border-gray-300 rounded hover:bg-gray-50">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                    </svg>
-                  </button>
-                  <span>1-NaN of</span>
-                  <button className="p-2 border border-gray-300 rounded hover:bg-gray-50">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </button>
+              </div>
+
+              {/* Dashboard Image at BOTTOM - EXACT Figma Match */}
+              <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 w-[1071px] h-[396px] p-[2px]">
+                <div className="relative h-[492px] rounded-tl-[50px] rounded-tr-[50px] overflow-hidden">
+                  {/* Background Image */}
+                  <img 
+                    src={imgImage3} 
+                    alt="Dashboard" 
+                    className="absolute inset-0 w-full h-full object-cover rounded-tl-[50px] rounded-tr-[50px]" 
+                  />
+                  {/* Dark Overlay - EXACT (node-id=5-2744) */}
+                  <div className="absolute inset-0 bg-[rgba(0,0,0,0.29)] rounded-tl-[50px] rounded-tr-[50px]" />
+                  
+                  {/* Inner Dashboard Image - EXACT positioning */}
+                  <div className="absolute left-[46px] top-[36px] w-[980px] h-[360px] rounded-tl-[12px] rounded-tr-[12px] shadow-[0px_0px_36.1px_0px_rgba(0,0,0,0.64)] overflow-hidden">
+                    <div className="absolute inset-0 overflow-hidden rounded-tl-[12px] rounded-tr-[12px]">
+                      <img 
+                        src={imgImage3} 
+                        alt="Dashboard Detail" 
+                        className="absolute h-[163.46%] left-[-23.12%] top-[-63.46%] w-[130.84%] object-cover" 
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
@@ -288,4 +137,3 @@ const UseCasesSection = () => {
 };
 
 export default UseCasesSection;
-

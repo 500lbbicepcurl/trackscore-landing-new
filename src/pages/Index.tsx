@@ -39,6 +39,8 @@ import PDFFeaturesSection from "@/components/PDFFeaturesSection";
 import UseCasesSection from "@/components/UseCasesSection";
 import PDFTechSection from "@/components/PDFTechSection";
 import PDFTestimonialSection from "@/components/PDFTestimonialSection";
+import ScaleWithSecurity from "@/components/ScaleWithSecurity";
+import CompanyLogosSection from "@/components/CompanyLogosSection";
 
 const Index = () => {
   useEffect(() => {
@@ -61,10 +63,12 @@ const Index = () => {
       <Navbar />
       <main className="flex-grow">
         <Hero />
+        <CompanyLogosSection />
         <PDFFeaturesSection />
         <UseCasesSection />
         <PDFTechSection />
         <PDFTestimonialSection />
+        <ScaleWithSecurity />
         {/* <CoreValuePoints />
         <FeatureEcosystem />
         <MarketComparisonSlider />

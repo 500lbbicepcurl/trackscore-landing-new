@@ -1,79 +1,63 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Phone, TrendingDown, ArrowRight } from "lucide-react";
+
+// Figma image assets
+const imgGroup = "https://www.figma.com/api/mcp/asset/a9eac770-11e1-49ba-ab77-0d7f3faa35ce";
+const imgGroup1 = "https://www.figma.com/api/mcp/asset/49bb0f98-f5ee-4e0f-9bd6-1d92aaea6516";
+const imgVector2 = "https://www.figma.com/api/mcp/asset/962beb69-9a4e-4f4c-aad9-33d19512ca70";
 
 const CTA = () => {
-  const handleGetStarted = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
-    <section id="get-started" className="py-20 gradient-primary relative overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+    <section className="relative bg-gradient-to-br from-[#266df0] to-[#1e5ad8] border-l border-[#4b8bff] overflow-hidden min-h-[346px]">
+      {/* Background decorative image */}
+      <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-[708px] h-[346px]">
+        <div className="relative w-full h-full">
+          <div className="absolute inset-0" style={{ maskImage: `url('${imgGroup}')` }}>
+            <img src={imgGroup1} alt="" className="w-full h-full object-cover" />
+          </div>
+          <div className="absolute left-[402px] top-[192px] w-[49.5px] h-[52.5px]">
+            <img src={imgVector2} alt="" className="w-full h-full" />
+          </div>
+        </div>
       </div>
-      
-      <div className="container mx-auto px-6 lg:px-8 relative">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center text-white"
-        >
-          <div className="flex justify-center mb-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 border border-white/30 rounded-full text-sm font-medium">
-              <TrendingDown className="w-4 h-4" />
-              Cut RTO by 40% with AI calling
+
+      {/* Content */}
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
+        <div className="max-w-[1440px] mx-auto py-20">
+          <div className="relative min-h-[346px]">
+            {/* Left Content */}
+            <div className="absolute left-[143px] top-1/2 transform -translate-y-1/2">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <h2 
+                  className="text-[49px] font-bold leading-[57.2px] tracking-[-1.2px] text-[#a0c2ff] mb-8"
+                  style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                >
+                  Ready to build your
+                  <br />
+                  <span className="text-white">team's dream D2C Brand?</span>
+                </h2>
+
+                {/* Buttons */}
+                <div className="flex gap-3">
+                  <button className="bg-white/10 border-[0.5px] border-white rounded-[12px] px-4 py-[13px] backdrop-blur-sm">
+                    <span className="text-[#edeef0] text-[16px] font-medium leading-[24px] tracking-[-0.2px]">
+                      Start for free
+                    </span>
+                  </button>
+                  <button className="border-[0.5px] border-white rounded-[12px] px-4 py-[13px]">
+                    <span className="text-white text-[16px] font-medium leading-[24px] tracking-[-0.2px]">
+                      Talk to sales
+                    </span>
+                  </button>
+                </div>
+              </motion.div>
             </div>
           </div>
-          
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Ready to build your
-            <br />
-            <span className="text-white/90">team's dream D2C Brand?</span>
-          </h2>
-          
-          <p className="text-xl text-white/80 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Scale with security. Scalysis is audited and certified by industry-leading third-party standards & DND security.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <Button
-              size="lg"
-              className="bg-white text-primary hover:bg-blue-500 hover:text-white px-8 py-6 text-lg font-semibold shadow-large"
-              onClick={() => window.location.href = 'https://scalysis-app.onrender.com/login'}
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              Start For Free
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-white text-blue-600 hover:bg-blue-500 hover:text-white px-8 py-6 text-lg font-semibold"
-            >
-              See Live Demo
-            </Button>
-          </div>
-          
-          <div className="flex items-center justify-center gap-8 text-white/60 text-sm">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-              <span>Free 14-day trial</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-              <span>No setup fees</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-              <span>Cancel anytime</span>
-            </div>
-          </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
