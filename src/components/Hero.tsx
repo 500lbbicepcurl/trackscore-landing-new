@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 // Figma image assets
 // node-id=1-1977: Video background image
+// Updated to match Figma design
 const imgImage1 = "https://www.figma.com/api/mcp/asset/8d084fb7-5469-4247-a5eb-aa8ecf6b7939";
 const imgFrame = "https://www.figma.com/api/mcp/asset/bfba363c-276b-41c5-9b2e-1feb106fb751";
 const imgGroup = "https://www.figma.com/api/mcp/asset/bfeefd5e-2ac4-4d14-83c2-f5a9838e3e6b";
