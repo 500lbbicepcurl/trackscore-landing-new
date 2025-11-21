@@ -76,7 +76,7 @@ const Navbar = () => {
               Careers
             </Link>
             <Link
-              to="#"
+              to="/pricing"
               className="text-[#1d1e20] hover:text-[#5066d3] transition-colors font-medium text-base"
             >
               Pricing
@@ -157,7 +157,7 @@ const Navbar = () => {
                 Careers
               </Link>
               <Link
-                to="#"
+                to="/pricing"
                 className="text-[#1d1e20] hover:text-[#5066d3] transition-colors font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
