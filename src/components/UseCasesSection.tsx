@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 // Local dashboard image
-const imgImage3 = "/rto-dashboard.png";
+const imgImage3 = "/rto-dashboard-new.png";
 
 // Figma image assets - EXACT from node-id=1-283
 const imgFrame = "https://www.figma.com/api/mcp/asset/ae7f5b4e-1884-4c69-8fff-accb1d3e6aaa";
