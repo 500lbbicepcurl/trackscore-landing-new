@@ -1,12 +1,14 @@
 import { motion } from "framer-motion";
 
-// Figma image assets - EXACT from node-id=1-249
-const imgImage3 = "https://www.figma.com/api/mcp/asset/eefeed19-5d02-4a50-a5c3-292f77790110";
-const imgFrame = "https://www.figma.com/api/mcp/asset/b5f62c42-1596-4975-8bce-159c09115621";
-const imgGroup = "https://www.figma.com/api/mcp/asset/d1bc4dfa-99f6-4a91-9155-c486bd5bba59";
-const imgGroup1 = "https://www.figma.com/api/mcp/asset/7b62ff65-cce3-4e78-8764-2bbbc9b4f6ea";
-const imgFrame1 = "https://www.figma.com/api/mcp/asset/71c5364b-6542-4f95-bae5-83c955b66fc3";
-const imgFrame2 = "https://www.figma.com/api/mcp/asset/61ee7ac7-0c1e-41f4-8871-009db6d72357";
+// Local dashboard image
+const imgImage3 = "/rto-dashboard.png";
+
+// Figma image assets - EXACT from node-id=1-283
+const imgFrame = "https://www.figma.com/api/mcp/asset/ae7f5b4e-1884-4c69-8fff-accb1d3e6aaa";
+const imgGroup = "https://www.figma.com/api/mcp/asset/1d08a38c-e380-4430-b2ae-c6d9207990a5";
+const imgGroup1 = "https://www.figma.com/api/mcp/asset/ee506181-6ee6-48b6-80a2-337b22e16043";
+const imgFrame1 = "https://www.figma.com/api/mcp/asset/ebae33fc-02e6-457c-b0f2-e7150280bd87";
+const imgFrame2 = "https://www.figma.com/api/mcp/asset/577119e9-7339-4b93-a4b6-3371856d3ce3";
 
 const UseCasesSection = () => {
   const templates = [
@@ -63,10 +65,10 @@ const UseCasesSection = () => {
             </motion.div>
 
             {/* White Card Container - EXACT Figma Match (node-id=1-278) */}
-            <div className="bg-white rounded-[20px] shadow-[0px_0px_0px_0.5px_#e4e5e9,0px_0px_0px_1px_rgba(228,229,233,0.6),0px_0px_0px_3.5px_#f9f9fb,0px_0px_0px_4px_#f3f4f7] overflow-hidden relative h-[604px]">
-              {/* Feature Cards at TOP - EXACT Figma Match */}
-              <div className="absolute top-[36px] left-1/2 transform -translate-x-1/2 w-[1075px] max-w-[1076px] z-10">
-                <div className="flex gap-6 pb-[64px]">
+            <div className="bg-white rounded-[20px] shadow-[0px_0px_0px_0.5px_#e4e5e9,0px_0px_0px_1px_rgba(228,229,233,0.6),0px_0px_0px_3.5px_#f9f9fb,0px_0px_0px_4px_#f3f4f7] overflow-hidden relative h-[604.2px]">
+              {/* Feature Cards at TOP - EXACT Figma Match (node-id=1-283) */}
+              <div className="absolute bottom-[399.11px] left-1/2 transform -translate-x-1/2 w-full max-w-[1076px] pb-[64px] pt-0 px-4 z-10">
+                <div className="flex gap-6">
                   {templates.map((template, index) => (
                     <motion.div
                       key={index}
@@ -74,10 +76,10 @@ const UseCasesSection = () => {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.6, delay: index * 0.1 }}
-                      className="flex flex-col gap-2 min-w-[250.75px] rounded-xl"
+                      className="flex flex-col gap-2 min-w-[250.75px] flex-shrink-0 rounded-xl"
                     >
                       <div className="h-[25px] flex items-center gap-2">
-                        <div className="w-5 h-5 flex items-center justify-center">
+                        <div className="w-5 h-5 flex items-center justify-center flex-shrink-0">
                           {index === 1 ? (
                             <div className="w-5 h-5 relative">
                               <div className="absolute inset-[7.14%_9.29%]">
@@ -104,20 +106,22 @@ const UseCasesSection = () => {
                 </div>
               </div>
 
-              {/* Dashboard Image at BOTTOM - EXACT Figma Match */}
-              <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 w-[1071px] h-[396px] p-[2px]">
-                <div className="relative h-[492px] rounded-tl-[50px] rounded-tr-[50px] overflow-hidden">
-                  {/* Background Image */}
-                  <img 
-                    src={imgImage3} 
-                    alt="Dashboard" 
-                    className="absolute inset-0 w-full h-full object-cover rounded-tl-[50px] rounded-tr-[50px]" 
-                  />
+              {/* Dashboard Image at BOTTOM - Using local image */}
+              <div className="absolute left-1/2 top-[calc(50%+102.6px)] transform -translate-x-1/2 -translate-y-1/2 w-full max-w-[1204px] p-[2px]">
+                <div className="h-[396px] w-full max-w-[1071px] mx-auto relative overflow-hidden">
+                  {/* Background Image with rounded top corners */}
+                  <div className="absolute h-[492px] left-0 rounded-tl-[50px] rounded-tr-[50px] top-0 w-full">
+                    <img 
+                      src={imgImage3} 
+                      alt="Dashboard" 
+                      className="absolute inset-0 w-full h-full object-cover rounded-tl-[50px] rounded-tr-[50px]" 
+                    />
+                  </div>
                   {/* Dark Overlay - EXACT (node-id=5-2744) */}
-                  <div className="absolute inset-0 bg-[rgba(0,0,0,0.29)] rounded-tl-[50px] rounded-tr-[50px]" />
+                  <div className="absolute bg-[rgba(0,0,0,0.29)] h-[492px] left-0 rounded-tl-[50px] rounded-tr-[50px] top-0 w-full" />
                   
-                  {/* Inner Dashboard Image - EXACT positioning */}
-                  <div className="absolute left-[46px] top-[36px] w-[980px] h-[360px] rounded-tl-[12px] rounded-tr-[12px] shadow-[0px_0px_36.1px_0px_rgba(0,0,0,0.64)] overflow-hidden">
+                  {/* Inner Dashboard Image - EXACT positioning (node-id=5-2742) */}
+                  <div className="absolute h-[360px] left-[46px] rounded-tl-[12px] rounded-tr-[12px] shadow-[0px_0px_36.1px_0px_rgba(0,0,0,0.64)] top-[36px] w-[980px]">
                     <div className="absolute inset-0 overflow-hidden rounded-tl-[12px] rounded-tr-[12px]">
                       <img 
                         src={imgImage3} 
