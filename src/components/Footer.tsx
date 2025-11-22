@@ -7,10 +7,8 @@ const imgGroup1 = "https://www.figma.com/api/mcp/asset/55b5fb09-eb6b-41d9-ade5-3
 const imgGroup2 = "https://www.figma.com/api/mcp/asset/4d1c7a32-6fb4-4a5a-ac2d-404cad8091de";
 const imgGroup3 = "https://www.figma.com/api/mcp/asset/5d3acf07-d183-437b-a4ae-0f3eea13e62b";
 const imgGroup4 = "https://www.figma.com/api/mcp/asset/41e99304-221e-4736-8c73-0c695436bc6a";
-
 const Footer = () => {
-  return (
-    <footer className="bg-[#1c1d1f] text-white relative">
+  return <footer className="bg-[#1c1d1f] text-white relative">
       <div className="container mx-auto px-6 lg:px-8 py-24">
         <div className="max-w-[1440px] mx-auto">
           {/* Logo - EXACT Figma Match */}
@@ -45,7 +43,9 @@ const Footer = () => {
                   <span>Chrome extension</span>
                   <div className="w-[17px] h-[21px] relative">
                     <div className="absolute inset-[1.05%_2.36%_3.71%_3.53%]">
-                      <div className="absolute inset-[34.38%_43.53%_37.05%_21.17%]" style={{ maskImage: `url('${imgGroup}')` }}>
+                      <div className="absolute inset-[34.38%_43.53%_37.05%_21.17%]" style={{
+                      maskImage: `url('${imgGroup}')`
+                    }}>
                         <div className="absolute inset-[-10.83%_-10.83%_-7.66%_-7.66%]">
                           <img src={imgGroup1} alt="" className="w-full h-full" />
                         </div>
@@ -57,7 +57,9 @@ const Footer = () => {
                   <span>iOS app</span>
                   <div className="w-[17px] h-[21px] relative">
                     <div className="absolute inset-[1.05%_2.36%_3.71%_3.53%]">
-                      <div className="absolute inset-[34.38%_43.53%_37.05%_21.17%]" style={{ maskImage: `url('${imgGroup}')` }}>
+                      <div className="absolute inset-[34.38%_43.53%_37.05%_21.17%]" style={{
+                      maskImage: `url('${imgGroup}')`
+                    }}>
                         <div className="absolute inset-[-10.83%_-10.83%_-7.66%_-7.66%]">
                           <img src={imgGroup1} alt="" className="w-full h-full" />
                         </div>
@@ -69,7 +71,9 @@ const Footer = () => {
                   <span>Android app</span>
                   <div className="w-[17px] h-[21px] relative">
                     <div className="absolute inset-[1.05%_2.36%_3.71%_3.53%]">
-                      <div className="absolute inset-[34.38%_43.53%_37.05%_21.17%]" style={{ maskImage: `url('${imgGroup}')` }}>
+                      <div className="absolute inset-[34.38%_43.53%_37.05%_21.17%]" style={{
+                      maskImage: `url('${imgGroup}')`
+                    }}>
                         <div className="absolute inset-[-10.83%_-10.83%_-7.66%_-7.66%]">
                           <img src={imgGroup1} alt="" className="w-full h-full" />
                         </div>
@@ -81,7 +85,9 @@ const Footer = () => {
                   <span>Zapier</span>
                   <div className="w-[17px] h-[21px] relative">
                     <div className="absolute inset-[1.05%_2.36%_3.71%_3.53%]">
-                      <div className="absolute inset-[34.38%_43.53%_37.05%_21.17%]" style={{ maskImage: `url('${imgGroup}')` }}>
+                      <div className="absolute inset-[34.38%_43.53%_37.05%_21.17%]" style={{
+                      maskImage: `url('${imgGroup}')`
+                    }}>
                         <div className="absolute inset-[-10.83%_-10.83%_-7.66%_-7.66%]">
                           <img src={imgGroup1} alt="" className="w-full h-full" />
                         </div>
@@ -93,7 +99,9 @@ const Footer = () => {
                   <span>Integromat</span>
                   <div className="w-[17px] h-[21px] relative">
                     <div className="absolute inset-[1.05%_2.36%_3.71%_3.53%]">
-                      <div className="absolute inset-[34.38%_43.53%_37.05%_21.17%]" style={{ maskImage: `url('${imgGroup}')` }}>
+                      <div className="absolute inset-[34.38%_43.53%_37.05%_21.17%]" style={{
+                      maskImage: `url('${imgGroup}')`
+                    }}>
                         <div className="absolute inset-[-10.83%_-10.83%_-7.66%_-7.66%]">
                           <img src={imgGroup1} alt="" className="w-full h-full" />
                         </div>
@@ -162,7 +170,9 @@ const Footer = () => {
                   <span>API docs</span>
                   <div className="w-[17px] h-[21px] relative">
                     <div className="absolute inset-[1.05%_2.36%_3.71%_3.53%]">
-                      <div className="absolute inset-[34.38%_43.53%_37.05%_21.17%]" style={{ maskImage: `url('${imgGroup}')` }}>
+                      <div className="absolute inset-[34.38%_43.53%_37.05%_21.17%]" style={{
+                      maskImage: `url('${imgGroup}')`
+                    }}>
                         <div className="absolute inset-[-10.83%_-10.83%_-7.66%_-7.66%]">
                           <img src={imgGroup1} alt="" className="w-full h-full" />
                         </div>
@@ -174,7 +184,9 @@ const Footer = () => {
                   <span>System status</span>
                   <div className="w-[17px] h-[21px] relative">
                     <div className="absolute inset-[1.05%_2.36%_3.71%_3.53%]">
-                      <div className="absolute inset-[34.38%_43.53%_37.05%_21.17%]" style={{ maskImage: `url('${imgGroup}')` }}>
+                      <div className="absolute inset-[34.38%_43.53%_37.05%_21.17%]" style={{
+                      maskImage: `url('${imgGroup}')`
+                    }}>
                         <div className="absolute inset-[-10.83%_-10.83%_-7.66%_-7.66%]">
                           <img src={imgGroup1} alt="" className="w-full h-full" />
                         </div>
@@ -211,7 +223,7 @@ const Footer = () => {
           {/* Bottom Section - EXACT Figma Match */}
           <div className="relative flex items-center justify-center">
             <p className="text-[11px] font-normal leading-[16.5px] tracking-[-0.1px] text-white opacity-40">
-              © 2023 Attio Ltd. All rights reserved.
+              © 2023 scalysis Ltd. All rights reserved.
             </p>
             <div className="absolute right-[278.92px] flex items-center gap-4">
               <Link to="#" className="text-[11px] font-normal leading-[16.5px] tracking-[-0.1px] text-white opacity-40 hover:opacity-100 transition-opacity">
@@ -248,8 +260,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
