@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 
 // Figma image assets
 const imgImage2 = "https://www.figma.com/api/mcp/asset/6c200d88-a7fd-4cbb-9721-65e50b1fe7e6";
-// EXACT from node-id=1-2678
-const imgDelhiveryLogo20191 = "https://www.figma.com/api/mcp/asset/314ef401-a970-4819-b190-be70b3fcdc8c";
-const imgSrLogoWiki1 = "https://www.figma.com/api/mcp/asset/eb7f8141-9707-4787-9f03-7a71c5d08fb1";
-const imgUnnamed1 = "https://www.figma.com/api/mcp/asset/232f1061-bff5-4ce3-8914-52bafecafb10";
+// EXACT from node-id=2017-141
+const imgDelhiveryLogo20191 = "https://www.figma.com/api/mcp/asset/74d6b039-0a3c-49bc-8f4a-4f0bb08502f4";
+const imgSrLogoWiki1 = "https://www.figma.com/api/mcp/asset/1b5ef57c-65fb-4b91-a8fe-c3236b3186dd";
+const imgUnnamed1 = "https://www.figma.com/api/mcp/asset/49fb9a62-3619-44e1-9a45-b21ebc0717d6";
 const imgFrame = "https://www.figma.com/api/mcp/asset/75d75225-5add-4884-8b58-49b33922f575";
 const imgFrame1 = "https://www.figma.com/api/mcp/asset/47a5e68a-22fc-4ef6-a96c-392efe5280a2";
 
