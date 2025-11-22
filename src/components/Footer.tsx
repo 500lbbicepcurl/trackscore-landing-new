@@ -135,11 +135,11 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Attio for Column */}
+            {/* Scalysis for Column */}
             <div className="flex flex-col gap-4 h-[264.38px] pb-[172.6px]">
               <div className="flex items-center justify-between pb-[0.59px]">
                 <h3 className="text-[14px] font-medium leading-[19.6px] tracking-[-0.1px] text-[#9098a0]">
-                  Attio for
+                  Scalysis for
                 </h3>
               </div>
               <div className="flex flex-col gap-[7.01px] pb-[8px]">
