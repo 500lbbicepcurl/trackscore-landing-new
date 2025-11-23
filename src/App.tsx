@@ -24,6 +24,8 @@ import LiveAITestingPage from "./pages/LiveAITestingPage";
 import Pricing from "./pages/Pricing";
 import HumanVsAI from "./pages/HumanVsAI";
 import Metrics from "./pages/Metrics";
+import ScalysisVsOther from "./pages/ScalysisVsOther";
+import Contact from "./pages/Contact";
 
 const queryClient = new QueryClient();
 
@@ -48,6 +50,8 @@ const App = () => (
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/human-vs-ai" element={<HumanVsAI />} />
           <Route path="/metrics" element={<Metrics />} />
+          <Route path="/scalysis-vs-other" element={<ScalysisVsOther />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/reduce-rto" element={<ReduceRTO />} />
           <Route path="/reduce-rto/:slug" element={<BlogPost />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />

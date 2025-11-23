@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 // Figma image assets - EXACT from node-id=1-851
 const imgGdprReadyBadgeXel6QvfiWebp = "https://www.figma.com/api/mcp/asset/c041bfd2-25e2-46e1-9310-d687ad73d205";
@@ -40,16 +41,24 @@ const ScaleWithSecurity = () => {
 
               {/* CTA Buttons */}
               <div className="flex gap-3">
-                <button className="bg-[#1d1e20] border border-[#505967] rounded-[12px] px-[16px] py-[13px] hover:bg-[#2a2a2d] transition-colors">
+                <a
+                  href="https://scalysis-app.onrender.com/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#1d1e20] border border-[#505967] rounded-[12px] px-[16px] py-[13px] hover:bg-[#2a2a2d] transition-colors inline-block"
+                >
                   <span className="text-[#edeef0] text-[16px] font-medium leading-[24px] tracking-[-0.2px]">
                     Start for free
                   </span>
-                </button>
-                <button className="border border-[#cdd3db] rounded-[12px] px-[17px] py-[13px] hover:bg-gray-50 transition-colors">
+                </a>
+                <Link
+                  to="/contact"
+                  className="border border-[#cdd3db] rounded-[12px] px-[17px] py-[13px] hover:bg-gray-50 transition-colors inline-block"
+                >
                   <span className="text-[#31373d] text-[16px] font-medium leading-[24px] tracking-[-0.2px]">
                     Talk to sales
                   </span>
-                </button>
+                </Link>
               </div>
             </motion.div>
 

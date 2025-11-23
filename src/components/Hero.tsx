@@ -48,20 +48,23 @@ const Hero = () => {
         <div className="flex flex-col items-center text-center max-w-6xl mx-auto">
 
           {/* Badge - EXACT Figma Match (node-id=1-12) */}
-          <motion.div
+          <motion.a
+            href="https://scalysis-app.onrender.com/login"
+            target="_blank"
+            rel="noopener noreferrer"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-1 py-1 bg-[#f3f4f5] rounded-[20px] mb-8"
+            className="inline-flex items-center gap-2 px-1 py-1 bg-[#f3f4f5] rounded-[20px] mb-8 hover:bg-[#e8e9eb] transition-colors cursor-pointer"
           >
             <div className="bg-[#383e47] rounded-[20px] px-[10px] py-[2px]">
-              <span className="text-white text-[14px] font-medium leading-[19.6px] tracking-[-0.1px]">40%</span>
+              <span className="text-white text-[14px] font-medium leading-[19.6px] tracking-[-0.1px]">new</span>
             </div>
             <span className="text-[#31373d] text-[14px] font-medium leading-[19.6px] tracking-[-0.1px]">
-              Reduction in RTO Rates with AI-Powered
+              Scalysis Launches Ultra-Realistic Voice Cloning Model
             </span>
             <img src={imgFrame} alt="" className="w-[18px] h-[18px]" />
-          </motion.div>
+          </motion.a>
 
           {/* Main Headline - EXACT Figma Match (node-id=1-21) */}
           <motion.h1
@@ -103,11 +106,6 @@ const Hero = () => {
                 Dashboard
               </span>
             </a>
-            <button className="bg-white border border-[#cdd3db] rounded-[12px] px-[17px] py-[13px]">
-              <span className="text-[#31373d] text-[16px] font-medium leading-[24px] tracking-[-0.2px]">
-                AI Call
-              </span>
-            </button>
           </motion.div>
 
           {/* "get free 100 calls" - EXACT Figma Match (node-id=1-2033) */}

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 // Figma image assets
 const imgGroup = "https://www.figma.com/api/mcp/asset/a9eac770-11e1-49ba-ab77-0d7f3faa35ce";
@@ -43,16 +44,24 @@ const CTA = () => {
           
                 {/* Buttons */}
                 <div className="flex gap-3">
-                  <button className="bg-white/10 border-[0.5px] border-white rounded-[12px] px-4 py-[13px] backdrop-blur-sm">
+                  <a
+                    href="https://scalysis-app.onrender.com/login"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white/10 border-[0.5px] border-white rounded-[12px] px-4 py-[13px] backdrop-blur-sm hover:bg-white/20 transition-colors"
+                  >
                     <span className="text-[#edeef0] text-[16px] font-medium leading-[24px] tracking-[-0.2px]">
                       Start for free
                     </span>
-                  </button>
-                  <button className="border-[0.5px] border-white rounded-[12px] px-4 py-[13px]">
+                  </a>
+                  <Link
+                    to="/contact"
+                    className="border-[0.5px] border-white rounded-[12px] px-4 py-[13px] hover:bg-white/10 transition-colors"
+                  >
                     <span className="text-white text-[16px] font-medium leading-[24px] tracking-[-0.2px]">
                       Talk to sales
                     </span>
-                  </button>
+                  </Link>
           </div>
               </motion.div>
             </div>

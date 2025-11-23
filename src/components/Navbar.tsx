@@ -58,34 +58,22 @@ const Navbar = () => {
               Human Vs AI
             </Link>
             <Link
-              to="#"
-              className="text-[#1d1e20] hover:text-[#5066d3] transition-colors font-medium text-base"
-            >
-              Use Case
-            </Link>
-            <Link
-              to="#"
-              className="text-[#1d1e20] hover:text-[#5066d3] transition-colors font-medium text-base"
-            >
-              Tech
-            </Link>
-            <Link
-              to="#"
-              className="text-[#1d1e20] hover:text-[#5066d3] transition-colors font-medium text-base"
-            >
-              Help
-            </Link>
-            <Link
-              to="#"
-              className="text-[#1d1e20] hover:text-[#5066d3] transition-colors font-medium text-base px-4 py-2 rounded-[12px]"
-            >
-              Careers
-            </Link>
-            <Link
               to="/pricing"
               className="text-[#1d1e20] hover:text-[#5066d3] transition-colors font-medium text-base"
             >
               Pricing
+            </Link>
+            <Link
+              to="/scalysis-vs-other"
+              className="text-[#1d1e20] hover:text-[#5066d3] transition-colors font-medium text-base"
+            >
+              Scalysis vs Others
+            </Link>
+            <Link
+              to="/contact"
+              className="text-[#1d1e20] hover:text-[#5066d3] transition-colors font-medium text-base"
+            >
+              Contact Us
             </Link>
           </div>
 
@@ -99,11 +87,6 @@ const Navbar = () => {
 
           {/* Right side - Buttons - EXACT Figma Match */}
           <div className="flex items-center gap-3">
-            <button
-              className="border border-[#cdd3db] rounded-[12px] px-[17px] py-2 text-[#31373d] hover:bg-gray-50 text-base font-medium transition-colors"
-            >
-              AI Call
-            </button>
             <a
               href="https://scalysis-app.onrender.com/login"
               target="_blank"
@@ -142,34 +125,6 @@ const Navbar = () => {
                 Human Vs AI
               </Link>
               <Link
-                to="#"
-                className="text-[#1d1e20] hover:text-[#5066d3] transition-colors font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Use Case
-              </Link>
-              <Link
-                to="#"
-                className="text-[#1d1e20] hover:text-[#5066d3] transition-colors font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Tech
-              </Link>
-              <Link
-                to="#"
-                className="text-[#1d1e20] hover:text-[#5066d3] transition-colors font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Help
-              </Link>
-              <Link
-                to="#"
-                className="text-[#1d1e20] hover:text-[#5066d3] transition-colors font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Careers
-              </Link>
-              <Link
                 to="/pricing"
                 className="text-[#1d1e20] hover:text-[#5066d3] transition-colors font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
@@ -177,18 +132,20 @@ const Navbar = () => {
                 Pricing
               </Link>
               <Link
-                to="/human-vs-ai"
+                to="/scalysis-vs-other"
                 className="text-[#1d1e20] hover:text-[#5066d3] transition-colors font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Human Vs AI
+                Scalysis vs Others
+              </Link>
+              <Link
+                to="/contact"
+                className="text-[#1d1e20] hover:text-[#5066d3] transition-colors font-medium"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact Us
               </Link>
               <div className="flex flex-col space-y-2 pt-2 border-t border-gray-200">
-                <button
-                  className="border border-[#cdd3db] rounded-[12px] px-4 py-2 text-[#31373d] hover:bg-gray-50 text-base font-medium transition-colors"
-                >
-                  AI Call
-                </button>
                 <a
                   href="https://scalysis-app.onrender.com/login"
                   target="_blank"
