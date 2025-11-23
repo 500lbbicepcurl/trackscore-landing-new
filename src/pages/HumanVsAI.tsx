@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 const HumanVsAI = () => {
   const [totalCallsDaily, setTotalCallsDaily] = useState<string>("200");
   const [numberOfHumans, setNumberOfHumans] = useState<string>("1");
-  const [totalMonthlySalary, setTotalMonthlySalary] = useState<string>("20000");
-  const [pickupRate, setPickupRate] = useState<string>("70");
-  const [conversionRate, setConversionRate] = useState<string>("85");
+  const [totalMonthlySalary, setTotalMonthlySalary] = useState<string>("24000");
+  const [pickupRate, setPickupRate] = useState<string>("75");
+  const [conversionRate, setConversionRate] = useState<string>("80");
   const [showMath, setShowMath] = useState<boolean>(false);
 
   // Calculate Human costs
@@ -33,6 +33,12 @@ const HumanVsAI = () => {
     : 0;
   const aiCostPerConversion = aiCostPerAttempt > 0 && conversionRateDecimal > 0
     ? aiCostPerAttempt / conversionRateDecimal
+    : 0;
+
+  // Calculate Total Spent on Calls
+  const humanTotalSpent = totalMonthlySalary ? Number(totalMonthlySalary) : 0;
+  const aiTotalSpent = monthlyAttempts > 0 && aiCostPerAttempt > 0
+    ? monthlyAttempts * aiCostPerAttempt
     : 0;
 
   return (
@@ -192,7 +198,7 @@ const HumanVsAI = () => {
 
                 <div className="grid grid-cols-2 gap-4 flex-grow">
                   {/* Human Costs - Flip Card */}
-                  <div className="relative h-[240px] flip-card-container">
+                  <div className="relative flip-card-container">
                     <motion.div
                       className="relative w-full h-full flip-card-inner"
                       animate={{ rotateY: showMath ? 180 : 0 }}
@@ -220,6 +226,22 @@ const HumanVsAI = () => {
                             </p>
                             <p className="text-[9px] text-[#99a2af]">
                               Cost per attempt ÷ (Pickup rate × Conversion rate)
+                            </p>
+                          </div>
+                        </div>
+                        
+                        {/* Total Spent on Calls */}
+                        <div className="mb-3 pb-3 border-b border-[#e4e5e9] flex-shrink-0">
+                          <div className="text-center">
+                            <p className="text-[10px] font-medium text-[#57606a] mb-1.5 tracking-wide uppercase">Total Spent on Calls</p>
+                            <p 
+                              className="text-xl font-medium text-[#1d1e20] mb-0.5"
+                              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                            >
+                              ₹{humanTotalSpent.toLocaleString()}
+                            </p>
+                            <p className="text-[9px] text-[#99a2af]">
+                              Total monthly salary
                             </p>
                           </div>
                         </div>
@@ -293,13 +315,26 @@ const HumanVsAI = () => {
                               = ₹{costPerConversion.toFixed(2)}
                             </p>
                           </div>
+
+                          <div className="bg-white rounded-lg p-2">
+                            <p className="font-semibold text-[#1d1e20] mb-1 text-xs">Total Spent on Calls:</p>
+                            <p className="text-[10px] text-[#57606a] font-mono">
+                              = Total Monthly Salary
+                            </p>
+                            <p className="text-[10px] text-[#99a2af] mt-0.5">
+                              = ₹{totalMonthlySalary}
+                            </p>
+                            <p className="text-[10px] text-[#1d1e20] font-semibold mt-0.5">
+                              = ₹{humanTotalSpent.toLocaleString()}
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </motion.div>
                   </div>
 
                   {/* AI Costs - Flip Card */}
-                  <div className="relative h-[240px] flip-card-container">
+                  <div className="relative flip-card-container">
                     <motion.div
                       className="relative w-full h-full flip-card-inner"
                       animate={{ rotateY: showMath ? 180 : 0 }}
@@ -327,6 +362,22 @@ const HumanVsAI = () => {
                             </p>
                             <p className="text-[9px] text-[#99a2af]">
                               Cost per attempt ÷ {conversionRate ? `${conversionRate}%` : 'Conversion rate'}
+                            </p>
+                          </div>
+                        </div>
+                        
+                        {/* Total Spent on Calls */}
+                        <div className="mb-3 pb-3 border-b border-[#5066d3]/20 flex-shrink-0">
+                          <div className="text-center">
+                            <p className="text-[10px] font-medium text-[#57606a] mb-1.5 tracking-wide uppercase">Total Spent on Calls</p>
+                            <p 
+                              className="text-xl font-medium text-[#5066d3] mb-0.5"
+                              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                            >
+                              ₹{aiTotalSpent.toLocaleString('en-IN', { maximumFractionDigits: 0 })}
+                            </p>
+                            <p className="text-[9px] text-[#99a2af]">
+                              Monthly attempts × Cost per attempt
                             </p>
                           </div>
                         </div>
@@ -397,6 +448,19 @@ const HumanVsAI = () => {
                             </p>
                             <p className="text-[10px] text-[#5066d3] font-semibold mt-0.5">
                               = ₹{aiCostPerConversion.toFixed(2)}
+                            </p>
+                          </div>
+
+                          <div className="bg-white/50 rounded-lg p-2">
+                            <p className="font-semibold text-[#1d1e20] mb-1 text-xs">Total Spent on Calls:</p>
+                            <p className="text-[10px] text-[#57606a] font-mono">
+                              = Monthly Attempts × Cost Per Attempt
+                            </p>
+                            <p className="text-[10px] text-[#99a2af] mt-0.5">
+                              = {monthlyAttempts.toLocaleString()} × ₹{aiCostPerAttempt.toFixed(2)}
+                            </p>
+                            <p className="text-[10px] text-[#5066d3] font-semibold mt-0.5">
+                              = ₹{aiTotalSpent.toFixed(2)}
                             </p>
                           </div>
                         </div>
