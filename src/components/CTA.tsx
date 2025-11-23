@@ -19,28 +19,28 @@ const CTA = () => {
           </div>
         </div>
       </div>
-
+      
       {/* Content */}
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-[1440px] mx-auto py-20">
           <div className="relative min-h-[346px]">
             {/* Left Content */}
             <div className="absolute left-[143px] top-1/2 transform -translate-y-1/2">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
               >
                 <h2 
                   className="text-[49px] font-bold leading-[57.2px] tracking-[-1.2px] text-[#a0c2ff] mb-8"
                   style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                 >
-                  Ready to build your
-                  <br />
+            Ready to build your
+            <br />
                   <span className="text-white">team's dream D2C Brand?</span>
-                </h2>
-
+          </h2>
+          
                 {/* Buttons */}
                 <div className="flex gap-3">
                   <button className="bg-white/10 border-[0.5px] border-white rounded-[12px] px-4 py-[13px] backdrop-blur-sm">
@@ -53,7 +53,7 @@ const CTA = () => {
                       Talk to sales
                     </span>
                   </button>
-                </div>
+          </div>
               </motion.div>
             </div>
           </div>

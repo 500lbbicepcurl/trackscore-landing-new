@@ -71,7 +71,7 @@ const PDFTechSection = () => {
                   <div className="flex-1 max-w-[380px] pb-[387px]">
                     <h3 className="text-[18px] font-semibold leading-[25.2px] tracking-[-0.2px] text-[#31373d] mb-1">
                       Instant Voice Cloning
-                    </h3>
+                </h3>
                     <p className="text-[18px] font-medium leading-[25.2px] tracking-[-0.2px] text-[#555e67]">
                       Real-time scalysis3 model, for voice cloning,
                       <br />
@@ -86,7 +86,7 @@ const PDFTechSection = () => {
                           alt="Voice Cloning" 
                           className="absolute h-[110.41%] left-[-0.06%] top-0 w-[115.18%] object-cover" 
                         />
-                      </div>
+                    </div>
                     </div>
                   </div>
                 </div>
@@ -95,10 +95,10 @@ const PDFTechSection = () => {
               {/* Card 2 & 3: Auto Learning and Non-robotic Stack */}
               <div className="flex gap-6">
                 {/* Auto Learning Card - EXACT Figma Match (node-id=1-382) */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.1 }}
                   className="bg-white flex-1 h-[540px] max-w-[566px] rounded-[20px] shadow-[0px_0px_0px_0.5px_#e4e5e9,0px_0px_0px_1px_rgba(228,229,233,0.6),0px_0px_0px_3.5px_#f9f9fb,0px_0px_0px_4px_#f3f4f7] overflow-hidden relative"
                 >
@@ -106,13 +106,13 @@ const PDFTechSection = () => {
                   <div className="absolute top-[40px] right-[106px] w-[420px]">
                     <h3 className="text-[18px] font-semibold leading-[25.2px] tracking-[-0.2px] text-[#31373d] mb-4">
                       Auto Learning / Improving Conversion Rates & Scripts
-                    </h3>
+                </h3>
                     <p className="text-[18px] font-medium leading-[25.2px] tracking-[-0.2px] text-[#555e67]">
                       conversations with a contact or company and
                       <br />
                       create enriched timelines for every interaction.
                     </p>
-                  </div>
+                      </div>
                   {/* Dashboard Image - Smart Address Recovery */}
                   <div className="absolute right-0 top-[calc(50%+88.57px)] transform -translate-y-1/2 w-[526px]">
                     <div className="border-l-2 border-t-2 border-[#e3e3e7] h-[359px] rounded-tl-[50px] overflow-hidden">
@@ -124,9 +124,9 @@ const PDFTechSection = () => {
                         />
                       </div>
                     </div>
-                  </div>
+                      </div>
                 </motion.div>
-
+                    
                 {/* Non-robotic Stack Card */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -146,7 +146,7 @@ const PDFTechSection = () => {
                       <br />
                       API and Zapier integration.
                     </p>
-                  </div>
+                      </div>
                   <div className="absolute bottom-[-16px] left-1/2 transform -translate-x-1/2 top-[189px] w-[565px]">
                     <div className="absolute left-[39.5px] right-[39.5px] top-0 bottom-0">
                       <div className="absolute inset-0" style={{ maskImage: `url('${imgGroup2}')` }}>
@@ -154,29 +154,29 @@ const PDFTechSection = () => {
                       </div>
                       <img src={imgIntegrations5F4Cein7Webp} alt="Integrations" className="absolute inset-0 w-full h-full object-cover" />
                     </div>
-                  </div>
-                </motion.div>
-              </div>
+                </div>
+              </motion.div>
+            </div>
 
               {/* Card 4: Ultra-Low Latency - EXACT Figma Match (node-id=5-2777) */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
                 className="bg-white rounded-[20px] shadow-[0px_0px_0px_0.5px_#e4e5e9,0px_0px_0px_1px_rgba(228,229,233,0.6),0px_0px_0px_3.5px_#f9f9fb,0px_0px_0px_4px_#f3f4f7] overflow-hidden"
-              >
+            >
                 <div className="flex gap-20 items-end pl-10 pt-10 pb-0">
                   <div className="flex-1 max-w-[380px] h-[274px] pb-[387px]">
                     <h3 className="text-[18px] font-semibold leading-[25.2px] tracking-[-0.2px] text-[#31373d] mb-1">
-                      Ultra-Low Latency systems
-                    </h3>
+                    Ultra-Low Latency systems
+                  </h3>
                     <p className="text-[18px] font-medium leading-[25.2px] tracking-[-0.2px] text-[#555e67]">
                       Real-time scalysis3 model, for voice cloning,
                       <br />
                       matching like the exact voice input.
-                    </p>
-                  </div>
+                  </p>
+                </div>
                   <div className="h-[276px] w-[652px] relative">
                     <div className="absolute border-l-2 border-t-2 border-[#dedfe4] h-[276px] rounded-tl-[50px] w-[651px] overflow-hidden">
                       <div className="absolute inset-0 overflow-hidden rounded-tl-[50px]">
@@ -190,7 +190,7 @@ const PDFTechSection = () => {
                   </div>
                 </div>
               </motion.div>
-            </div>
+              </div>
           </div>
         </div>
       </div>

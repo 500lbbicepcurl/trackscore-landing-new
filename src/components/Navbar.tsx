@@ -52,6 +52,12 @@ const Navbar = () => {
               <span className="text-2xl font-semibold text-[#1d1e20]">Scalysis</span>
             </Link>
             <Link
+              to="/human-vs-ai"
+              className="text-[#1d1e20] hover:text-[#5066d3] transition-colors font-medium text-base"
+            >
+              Human Vs AI
+            </Link>
+            <Link
               to="#"
               className="text-[#1d1e20] hover:text-[#5066d3] transition-colors font-medium text-base"
             >
@@ -129,6 +135,13 @@ const Navbar = () => {
           >
             <div className="flex flex-col space-y-4">
               <Link
+                to="/human-vs-ai"
+                className="text-[#1d1e20] hover:text-[#5066d3] transition-colors font-medium"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Human Vs AI
+              </Link>
+              <Link
                 to="#"
                 className="text-[#1d1e20] hover:text-[#5066d3] transition-colors font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
@@ -162,6 +175,13 @@ const Navbar = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Pricing
+              </Link>
+              <Link
+                to="/human-vs-ai"
+                className="text-[#1d1e20] hover:text-[#5066d3] transition-colors font-medium"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Human Vs AI
               </Link>
               <div className="flex flex-col space-y-2 pt-2 border-t border-gray-200">
                 <button

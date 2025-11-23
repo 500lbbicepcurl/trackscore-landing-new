@@ -16,10 +16,10 @@ const Footer = () => {
             <Link to="/" className="inline-block">
               <div className="h-[32px] w-[80px] relative">
                 <img src={imgFrame} alt="Scalysis" className="w-full h-full object-contain" />
-              </div>
+            </div>
             </Link>
           </div>
-
+          
           {/* Footer Links Grid - EXACT Figma Match */}
           <div className="flex gap-[137px] mb-12">
             {/* Product Column */}
@@ -110,8 +110,8 @@ const Footer = () => {
                   </div>
                 </Link>
               </div>
-            </div>
-
+          </div>
+          
             {/* Company Column */}
             <div className="flex flex-col gap-4 h-[264.38px] pb-[117.39px]">
               <div className="flex items-center justify-between pb-[0.59px]">
@@ -133,8 +133,8 @@ const Footer = () => {
                   Startup program
                 </Link>
               </div>
-            </div>
-
+          </div>
+          
             {/* Scalysis for Column */}
             <div className="flex flex-col gap-4 h-[264.38px] pb-[172.6px]">
               <div className="flex items-center justify-between pb-[0.59px]">
@@ -150,8 +150,8 @@ const Footer = () => {
                   Deal flow
                 </Link>
               </div>
-            </div>
-
+          </div>
+          
             {/* Support Column */}
             <div className="flex flex-col gap-4 h-[264.38px] pb-[114.6px]">
               <div className="flex items-center justify-between pb-[0.59px]">
@@ -192,25 +192,25 @@ const Footer = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+          </div>
                 </Link>
-              </div>
-            </div>
-
+          </div>
+        </div>
+        
             {/* Ready to build Column */}
             <div className="flex flex-col gap-4 h-[263.38px] pb-[111.38px]">
               <p className="text-[16px] font-medium leading-[24px] tracking-[-0.2px] text-[#9098a0] pr-[179px]">
-                Ready to build?
+              Ready to build?
               </p>
               <div className="flex flex-col gap-3">
                 <button className="bg-[#383e47] border border-[#424954] rounded-[12px] px-[99.24px] py-[13px]">
                   <span className="text-[#edeef0] text-[16px] font-medium leading-[24px] tracking-[-0.2px]">
-                    Start for free
+                Start for free
                   </span>
                 </button>
                 <button className="border border-[#383e47] rounded-[12px] px-[100.88px] py-[13px]">
                   <span className="text-[#9098a0] text-[16px] font-medium leading-[24px] tracking-[-0.2px]">
-                    Talk to sales
+                Talk to sales
                   </span>
                 </button>
               </div>
@@ -255,8 +255,8 @@ const Footer = () => {
                     </div>
                   </div>
                 </a>
-              </div>
-            </div>
+          </div>
+        </div>
           </div>
         </div>
       </div>

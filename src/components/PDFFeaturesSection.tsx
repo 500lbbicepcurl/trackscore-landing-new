@@ -69,13 +69,13 @@ const PDFFeaturesSection = () => {
             </motion.div>
 
             {/* Card 2: Store Integrations with Shopify */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
               className="bg-gradient-to-b from-white to-[#f4f4f5] border border-zinc-200 rounded-lg relative flex-1 max-w-[453px] overflow-hidden flex flex-col"
-            >
+              >
               {/* Background pattern */}
               <div className="absolute inset-px opacity-50">
                 <img src={imgFrame} alt="" className="w-full h-full object-cover" />
@@ -152,7 +152,7 @@ const PDFFeaturesSection = () => {
                       <div className="w-10 h-[41px] relative">
                         <div className="absolute inset-0 overflow-hidden">
                           <img src={imgSrLogoWiki1} alt="Shiprocket" className="absolute h-[129.27%] left-[0.53%] top-[-15.15%] w-[398.61%] object-cover" />
-                        </div>
+                    </div>
                       </div>
                     </div>
                   </div>
@@ -176,7 +176,7 @@ const PDFFeaturesSection = () => {
                   page. Iterate product faster with confidence.
                 </p>
               </div>
-            </motion.div>
+              </motion.div>
           </div>
         </div>
       </div>

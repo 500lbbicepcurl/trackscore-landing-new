@@ -22,6 +22,7 @@ import DecisionEnginePage from "./pages/DecisionEnginePage";
 import SavingsCalculatorPage from "./pages/SavingsCalculatorPage";
 import LiveAITestingPage from "./pages/LiveAITestingPage";
 import Pricing from "./pages/Pricing";
+import HumanVsAI from "./pages/HumanVsAI";
 
 const queryClient = new QueryClient();
 
@@ -44,6 +45,7 @@ const App = () => (
           <Route path="/savings-calculator" element={<SavingsCalculatorPage />} />
           <Route path="/live-ai-testing" element={<LiveAITestingPage />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/human-vs-ai" element={<HumanVsAI />} />
           <Route path="/reduce-rto" element={<ReduceRTO />} />
           <Route path="/reduce-rto/:slug" element={<BlogPost />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />

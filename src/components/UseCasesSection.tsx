@@ -43,13 +43,13 @@ const UseCasesSection = () => {
         <div className="max-w-[1155px] mx-auto relative">
           <div className="flex flex-col gap-20">
             {/* Title Section - EXACT Figma Match (node-id=1-272) */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
               className="pl-10"
-            >
+          >
               <h2 
                 className="text-[49px] font-bold leading-[57.2px] tracking-[-1.2px] text-[#1d1e20] mb-4"
                 style={{ fontFamily: "'Space Grotesk', sans-serif" }}
@@ -57,11 +57,11 @@ const UseCasesSection = () => {
                 In Built RTO Engine.
                 <br />
                 Capture Sentiment For Every Call
-              </h2>
+            </h2>
               <p className="text-[22px] font-medium leading-[30.8px] tracking-[-0.3px] text-[#31373d] max-w-[480px]">
                 Voice helps spot the real intent
-              </p>
-            </motion.div>
+            </p>
+          </motion.div>
 
             {/* White Card Container - EXACT Figma Match (node-id=1-278) */}
             <div className="bg-white rounded-[20px] shadow-[0px_0px_0px_0.5px_#e4e5e9,0px_0px_0px_1px_rgba(228,229,233,0.6),0px_0px_0px_3.5px_#f9f9fb,0px_0px_0px_4px_#f3f4f7] overflow-hidden relative h-[604.2px]">
@@ -69,35 +69,35 @@ const UseCasesSection = () => {
               <div className="absolute bottom-[399.11px] left-1/2 transform -translate-x-1/2 w-full max-w-[1076px] pb-[64px] pt-0 px-0 z-10">
                 <div className="flex gap-6">
                   {/* Voice Intent Card */}
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                     className="flex flex-col gap-2 min-w-[250.75px] flex-shrink-0 rounded-xl"
-                  >
+                >
                     <div className="h-[25px] relative">
                       <div className="absolute left-0 top-[calc(50%+0.09px)] transform -translate-y-1/2 w-5 h-5">
                         <img src={imgFrame} alt="" className="block max-w-none size-full" />
-                      </div>
+                  </div>
                       <div className="absolute left-[calc(50%+15px)] top-[calc(50%+-0.4px)] transform -translate-x-1/2 -translate-y-1/2">
                         <h3 className="text-[18px] font-semibold leading-[25.2px] tracking-[-0.2px] whitespace-nowrap text-[#24292f]">
                           Voice Intent
-                        </h3>
+                  </h3>
                       </div>
                     </div>
                     <div className="pr-[18.75px]">
                       <p className="text-[16px] leading-[24px] tracking-[-0.2px] font-medium text-[#57606a] whitespace-pre-wrap">
                         Multiple Voice intents to figure out better, how to select the order RTO and cancellation.
-                      </p>
+                  </p>
                     </div>
-                  </motion.div>
+                </motion.div>
 
                   {/* NDR Automations Card */}
-                  <motion.div
+          <motion.div
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.1 }}
                     className="flex flex-col gap-2 min-w-[250.75px] flex-shrink-0 rounded-xl"
                   >
@@ -107,10 +107,10 @@ const UseCasesSection = () => {
                           <div className="absolute inset-[7.14%_9.29%]" style={{ maskImage: `url('${imgGroup}')` }}>
                             <div className="absolute inset-[-4.58%]">
                               <img src={imgGroup1} alt="" className="block max-w-none size-full" />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
                       <div className="absolute left-[26.5px] top-[calc(50%+-0.4px)] transform -translate-y-1/2 right-[-2.5px]">
                         <h3 className="text-[18px] font-semibold leading-[25.2px] tracking-[-0.2px] whitespace-nowrap text-[#99a2af] text-center">
                           NDR Automations
@@ -142,8 +142,8 @@ const UseCasesSection = () => {
                         <h3 className="text-[18px] font-semibold leading-[25.2px] tracking-[-0.2px] whitespace-nowrap text-[#99a2af] text-center">
                           Address Recovery Calls
                         </h3>
-                      </div>
                     </div>
+                  </div>
                     <div className="pr-[1.75px]">
                       <p className="text-[16px] leading-[24px] tracking-[-0.2px] font-medium text-[#99a2af] whitespace-nowrap">
                         <span className="block mb-0">Help your business scale with</span>
@@ -169,7 +169,7 @@ const UseCasesSection = () => {
                         <h3 className="text-[18px] font-semibold leading-[25.2px] tracking-[-0.2px] whitespace-nowrap text-[#99a2af] text-center">
                           Sentiment Analyst
                         </h3>
-                      </div>
+                  </div>
                     </div>
                     <div className="pr-[7.75px]">
                       <p className="text-[16px] leading-[24px] tracking-[-0.2px] font-medium text-[#99a2af] whitespace-nowrap">
@@ -177,7 +177,7 @@ const UseCasesSection = () => {
                         <span className="block mb-0">built on real-time data from</span>
                         <span className="block">across your workspace.</span>
                       </p>
-                    </div>
+                  </div>
                   </motion.div>
                 </div>
               </div>
@@ -192,7 +192,7 @@ const UseCasesSection = () => {
                       alt="Dashboard" 
                       className="absolute inset-0 max-w-none object-cover rounded-tl-[50px] rounded-tr-[50px] size-full" 
                     />
-                  </div>
+                              </div>
                   {/* Dark Overlay - EXACT (node-id=2017-189) */}
                   <div className="absolute bg-[rgba(0,0,0,0.29)] h-[492px] left-0 rounded-tl-[50px] rounded-tr-[50px] top-0 w-full" />
                   
@@ -204,8 +204,8 @@ const UseCasesSection = () => {
                         alt="Dashboard Detail" 
                         className="absolute h-[163.46%] left-[-23.12%] max-w-none top-[-63.46%] w-[130.84%]" 
                       />
-                    </div>
-                  </div>
+                              </div>
+                            </div>
                 </div>
               </div>
             </div>
