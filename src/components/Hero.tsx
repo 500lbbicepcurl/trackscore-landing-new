@@ -94,7 +94,7 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-3 items-center mb-8"
           >
             <a
-              href="https://scalysis-app.onrender.com/login"
+              href="https://scalysis.com"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#1d1e20] border border-[#505967] rounded-[12px] px-[16px] py-[13px] inline-block"

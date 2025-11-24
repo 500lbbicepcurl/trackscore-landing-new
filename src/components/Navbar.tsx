@@ -99,7 +99,7 @@ const Navbar = () => {
               AI Call
             </button>
             <a
-              href="https://scalysis-app.onrender.com/login"
+              href="https://scalysis.com"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#1d1e20] border border-[#505967] rounded-[12px] px-[17px] py-2 text-[#edeef0] hover:bg-[#2a2a2d] text-base font-medium transition-colors inline-block text-center"
@@ -170,7 +170,7 @@ const Navbar = () => {
                   AI Call
                 </button>
                 <a
-                  href="https://scalysis-app.onrender.com/login"
+                  href="https://scalysis.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-[#1d1e20] border border-[#505967] rounded-[12px] px-4 py-2 text-[#edeef0] hover:bg-[#2a2a2d] text-base font-medium transition-colors inline-block text-center"
