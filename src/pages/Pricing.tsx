@@ -96,20 +96,9 @@ const Pricing = () => {
                     <p className="text-gray-500 text-sm">{plan.usage}</p>
                   </div>
 
-                  {plan.buttonText === "Get Started" ? (
-                    <a
-                      href="https://scalysis-app.onrender.com/login"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`w-full py-3 px-6 rounded-xl font-medium transition-colors mb-6 inline-block text-center ${plan.buttonStyle}`}
-                    >
-                      {plan.buttonText}
-                    </a>
-                  ) : (
-                    <button className={`w-full py-3 px-6 rounded-xl font-medium transition-colors mb-6 ${plan.buttonStyle}`}>
-                      {plan.buttonText}
-                    </button>
-                  )}
+                  <button className={`w-full py-3 px-6 rounded-xl font-medium transition-colors mb-6 ${plan.buttonStyle}`}>
+                    {plan.buttonText}
+                  </button>
 
                   <ul className="space-y-3">
                     {plan.features.map((feature, idx) => <li key={idx} className="flex items-start gap-3">
