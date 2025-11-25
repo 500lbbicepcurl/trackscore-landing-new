@@ -218,7 +218,7 @@ const Footer = () => {
                 Terms & Conditions
               </Link>
               <span className="text-[11px] font-normal leading-[16.5px] tracking-[-0.1px] text-white opacity-40">·</span>
-              <Link to="#" className="text-[11px] font-normal leading-[16.5px] tracking-[-0.1px] text-white opacity-40 hover:opacity-100 transition-opacity">
+              <Link to="/privacy-policy" className="text-[11px] font-normal leading-[16.5px] tracking-[-0.1px] text-white opacity-40 hover:opacity-100 transition-opacity">
                 Privacy Policy
               </Link>
               <div className="flex items-center gap-0 ml-[25px] opacity-40">
