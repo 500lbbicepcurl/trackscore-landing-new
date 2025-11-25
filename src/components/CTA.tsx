@@ -45,7 +45,7 @@ const CTA = () => {
                 {/* Buttons */}
                 <div className="flex gap-3">
                   <a
-                    href="https://scalysis-app.onrender.com/login"
+                    href="https://scalysis.com/login"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white/10 border-[0.5px] border-white rounded-[12px] px-4 py-[13px] backdrop-blur-sm hover:bg-white/20 transition-colors"

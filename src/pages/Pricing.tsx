@@ -98,7 +98,7 @@ const Pricing = () => {
 
                   {plan.buttonText === "Get Started" ? (
                     <a
-                      href="https://scalysis-app.onrender.com/login"
+                      href="https://scalysis.com/login"
                       target="_blank"
                       rel="noopener noreferrer"
                       className={`w-full py-3 px-6 rounded-xl font-medium transition-colors mb-6 inline-block text-center ${plan.buttonStyle}`}

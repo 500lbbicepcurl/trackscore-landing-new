@@ -204,7 +204,7 @@ const Footer = () => {
               </p>
               <div className="flex flex-col gap-3">
                 <a
-                  href="https://scalysis-app.onrender.com/login"
+                  href="https://scalysis.com/login"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-[#383e47] border border-[#424954] rounded-[12px] px-[99.24px] py-[13px] hover:bg-[#424954] transition-colors inline-block text-center"

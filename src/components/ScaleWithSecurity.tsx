@@ -42,7 +42,7 @@ const ScaleWithSecurity = () => {
               {/* CTA Buttons */}
               <div className="flex gap-3">
                 <a
-                  href="https://scalysis-app.onrender.com/login"
+                  href="https://scalysis.com/login"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-[#1d1e20] border border-[#505967] rounded-[12px] px-[16px] py-[13px] hover:bg-[#2a2a2d] transition-colors inline-block"

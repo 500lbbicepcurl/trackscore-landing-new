@@ -49,7 +49,7 @@ const Hero = () => {
 
           {/* Badge - EXACT Figma Match (node-id=1-12) */}
           <motion.a
-            href="https://scalysis-app.onrender.com/login"
+            href="https://scalysis.com/login"
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, y: 20 }}
@@ -97,13 +97,13 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-3 items-center mb-8"
           >
             <a
-              href="https://scalysis-app.onrender.com/login"
+              href="https://wa.me/919149874123"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#1d1e20] border border-[#505967] rounded-[12px] px-[16px] py-[13px] inline-block"
             >
               <span className="text-[#edeef0] text-[16px] font-medium leading-[24px] tracking-[-0.2px]">
-                Dashboard
+                Talk to sales
               </span>
             </a>
           </motion.div>
