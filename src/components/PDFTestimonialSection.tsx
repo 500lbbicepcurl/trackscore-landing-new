@@ -26,7 +26,7 @@ const PDFTestimonialSection = () => {
                   build a world-class go-to-market engine
                   <br />
                   with it."
-                </p>
+            </p>
               </div>
 
               {/* Author */}

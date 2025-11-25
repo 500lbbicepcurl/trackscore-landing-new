@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 
 // Figma image assets
 const imgImage2 = "https://www.figma.com/api/mcp/asset/6c200d88-a7fd-4cbb-9721-65e50b1fe7e6";
-// EXACT from node-id=1-2678
-const imgDelhiveryLogo20191 = "https://www.figma.com/api/mcp/asset/314ef401-a970-4819-b190-be70b3fcdc8c";
-const imgSrLogoWiki1 = "https://www.figma.com/api/mcp/asset/eb7f8141-9707-4787-9f03-7a71c5d08fb1";
-const imgUnnamed1 = "https://www.figma.com/api/mcp/asset/232f1061-bff5-4ce3-8914-52bafecafb10";
+// EXACT from node-id=2017-141
+const imgDelhiveryLogo20191 = "https://www.figma.com/api/mcp/asset/74d6b039-0a3c-49bc-8f4a-4f0bb08502f4";
+const imgSrLogoWiki1 = "https://www.figma.com/api/mcp/asset/1b5ef57c-65fb-4b91-a8fe-c3236b3186dd";
+const imgUnnamed1 = "https://www.figma.com/api/mcp/asset/49fb9a62-3619-44e1-9a45-b21ebc0717d6";
 const imgFrame = "https://www.figma.com/api/mcp/asset/75d75225-5add-4884-8b58-49b33922f575";
 const imgFrame1 = "https://www.figma.com/api/mcp/asset/47a5e68a-22fc-4ef6-a96c-392efe5280a2";
 
@@ -69,13 +69,13 @@ const PDFFeaturesSection = () => {
             </motion.div>
 
             {/* Card 2: Store Integrations with Shopify */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
               className="bg-gradient-to-b from-white to-[#f4f4f5] border border-zinc-200 rounded-lg relative flex-1 max-w-[453px] overflow-hidden flex flex-col"
-            >
+              >
               {/* Background pattern */}
               <div className="absolute inset-px opacity-50">
                 <img src={imgFrame} alt="" className="w-full h-full object-cover" />
@@ -152,7 +152,7 @@ const PDFFeaturesSection = () => {
                       <div className="w-10 h-[41px] relative">
                         <div className="absolute inset-0 overflow-hidden">
                           <img src={imgSrLogoWiki1} alt="Shiprocket" className="absolute h-[129.27%] left-[0.53%] top-[-15.15%] w-[398.61%] object-cover" />
-                        </div>
+                    </div>
                       </div>
                     </div>
                   </div>
@@ -176,7 +176,7 @@ const PDFFeaturesSection = () => {
                   page. Iterate product faster with confidence.
                 </p>
               </div>
-            </motion.div>
+              </motion.div>
           </div>
         </div>
       </div>

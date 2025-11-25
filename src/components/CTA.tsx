@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 // Figma image assets
 const imgGroup = "https://www.figma.com/api/mcp/asset/a9eac770-11e1-49ba-ab77-0d7f3faa35ce";
@@ -19,41 +20,49 @@ const CTA = () => {
           </div>
         </div>
       </div>
-
+      
       {/* Content */}
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-[1440px] mx-auto py-20">
           <div className="relative min-h-[346px]">
             {/* Left Content */}
             <div className="absolute left-[143px] top-1/2 transform -translate-y-1/2">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
               >
                 <h2 
                   className="text-[49px] font-bold leading-[57.2px] tracking-[-1.2px] text-[#a0c2ff] mb-8"
                   style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                 >
-                  Ready to build your
-                  <br />
+            Ready to build your
+            <br />
                   <span className="text-white">team's dream D2C Brand?</span>
-                </h2>
-
+          </h2>
+          
                 {/* Buttons */}
                 <div className="flex gap-3">
-                  <button className="bg-white/10 border-[0.5px] border-white rounded-[12px] px-4 py-[13px] backdrop-blur-sm">
+                  <a
+                    href="https://scalysis.com/login"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white/10 border-[0.5px] border-white rounded-[12px] px-4 py-[13px] backdrop-blur-sm hover:bg-white/20 transition-colors"
+            >
                     <span className="text-[#edeef0] text-[16px] font-medium leading-[24px] tracking-[-0.2px]">
                       Start for free
                     </span>
-                  </button>
-                  <button className="border-[0.5px] border-white rounded-[12px] px-4 py-[13px]">
+                  </a>
+                  <Link
+                    to="/contact"
+                    className="border-[0.5px] border-white rounded-[12px] px-4 py-[13px] hover:bg-white/10 transition-colors"
+                  >
                     <span className="text-white text-[16px] font-medium leading-[24px] tracking-[-0.2px]">
                       Talk to sales
                     </span>
-                  </button>
-                </div>
+                  </Link>
+          </div>
               </motion.div>
             </div>
           </div>
