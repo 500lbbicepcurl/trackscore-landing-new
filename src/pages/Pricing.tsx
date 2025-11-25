@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Check } from "lucide-react";
@@ -106,9 +107,12 @@ const Pricing = () => {
                       {plan.buttonText}
                     </a>
                   ) : (
-                    <button className={`w-full py-3 px-6 rounded-xl font-medium transition-colors mb-6 ${plan.buttonStyle}`}>
+                    <Link
+                      to="/contact"
+                      className={`w-full py-3 px-6 rounded-xl font-medium transition-colors mb-6 inline-block text-center ${plan.buttonStyle}`}
+                    >
                       {plan.buttonText}
-                    </button>
+                    </Link>
                   )}
 
                   <ul className="space-y-3">

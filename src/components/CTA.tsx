@@ -49,7 +49,7 @@ const CTA = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white/10 border-[0.5px] border-white rounded-[12px] px-4 py-[13px] backdrop-blur-sm hover:bg-white/20 transition-colors"
-                  >
+            >
                     <span className="text-[#edeef0] text-[16px] font-medium leading-[24px] tracking-[-0.2px]">
                       Start for free
                     </span>

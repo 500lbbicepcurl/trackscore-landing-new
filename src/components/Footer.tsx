@@ -203,20 +203,20 @@ const Footer = () => {
               Ready to build?
               </p>
               <div className="flex flex-col gap-3">
-                <a
+              <a 
                   href="https://scalysis.com/login"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-[#383e47] border border-[#424954] rounded-[12px] px-[99.24px] py-[13px] hover:bg-[#424954] transition-colors inline-block text-center"
-                >
+              >
                   <span className="text-[#edeef0] text-[16px] font-medium leading-[24px] tracking-[-0.2px]">
                 Start for free
                   </span>
-                </a>
+              </a>
                 <Link
                   to="/contact"
                   className="border border-[#383e47] rounded-[12px] px-[100.88px] py-[13px] hover:bg-[#383e47] transition-colors inline-block text-center"
-                >
+              >
                   <span className="text-[#9098a0] text-[16px] font-medium leading-[24px] tracking-[-0.2px]">
                 Talk to sales
                   </span>
